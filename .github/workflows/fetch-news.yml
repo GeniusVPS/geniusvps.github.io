@@ -1,0 +1,47 @@
+name: Fetch News
+
+on:
+  schedule:
+    # 每 3 小時執行一次 (UTC)
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+    # 支援手動觸發
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run Fetch Script
+        env:
+          LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
+        run: |
+          python3 scripts/fetch_news.py
+
+      - name: Commit & Push Changes
+        run: |
+          git config user.name "TechCanto Bot"
+          git config user.email "bot@techcanto.github.io"
+          git add -A
+          CHANGES=$(git status --porcelain)
+          if [ -n "$CHANGES" ]; then
+            git commit -m "📰 更新新聞池 - $(date -u -d '+8 hours' '+%Y-%m-%d %H:%M HKT')"
+            git push
+            echo "✅ 有更新，已 push"
+          else
+            echo "📭 無新新聞，skip commit"
+          fi

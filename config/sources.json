@@ -1,0 +1,76 @@
+{
+  "feeds": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "9to5Mac",
+      "url": "https://9to5mac.com/guides/",
+      "language": "en",
+      "category": "apple"
+    },
+    {
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "ITmedia",
+      "url": "https://rss.itmedia.co.jp/feed/itbusiness.xml",
+      "language": "ja",
+      "category": "general"
+    },
+    {
+      "name": "ASCII.jp",
+      "url": "https://ascii.jp/rss/",
+      "language": "ja",
+      "category": "general"
+    },
+    {
+      "name": "AI News (Japan)",
+      "url": "https://ainews.net/feed/",
+      "language": "ja",
+      "category": "ai"
+    },
+    {
+      "name": "Hacker News Best",
+      "url": "https://hnrss.org/best",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "VentureBeat",
+      "url": "https://venturebeat.com/feed/",
+      "language": "en",
+      "category": "ai"
+    }
+  ]
+}
