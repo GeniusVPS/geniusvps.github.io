@@ -55,13 +55,13 @@
                 const card = document.createElement('div');
                 card.className = 'news-card';
                 card.innerHTML = `
-                    <input type="checkbox" id="news-{{item.id}}" value="{{item.id}}" onchange="toggleSelection('{{item.id}}', this)">
+                    <input type="checkbox" id="news-${item.id}" value="${item.id}" onchange="toggleSelection('${item.id}', this)">
                     <div class="news-content">
                         <div class="news-headline">
-                            <span class="news-id">#{{item.id}}</span> {{item.headline}}
+                            <span class="news-id">#${item.id}</span> ${item.headline}
                         </div>
-                        <div class="news-meta">{{item.date}} | {{item.source}}</div>
-                        <div class="news-summary">{{item.summary}}</div>
+                        <div class="news-meta">${item.date} | ${item.source}</div>
+                        <div class="news-summary">${item.summary}</div>
                     </div>
                 `;
                 list.appendChild(card);
