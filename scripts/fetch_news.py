@@ -12,22 +12,88 @@ import re
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from xml.etree import ElementTree as ET
-from urllib.request import urlopen, Request
+from urllib.request import urlopen, Request, Request as HttpRequest
 from urllib.error import URLError
 from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError as FuturesTimeout
+
+# 簡繁轉換實例（可選，無 opencc 時 fallback 到簡單替換）
+try:
+    from opencc import OpenCC as _OpenCC
+    OPENCC = _OpenCC('s2t')
+    USE_OPENCC = True
+except ImportError:
+    OPENCC = None
+    USE_OPENCC = False
+    print("⚠️  opencc 未安裝，簡繁轉換將用簡單替換 fallback")
 
 # ─── 設定 ───
 CONFIG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config")
 POOL_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "pool")
-LONGCAT_API = "https://api.longcat.chat/openai"
-LONGCAT_MODEL = "LongCat-Flash-Chat"
-LONGCAT_KEY = os.environ.get("LONGCAT_API_KEY", "")
+
+# LongCat API 設定 — 支援多種 config 格式 + 環境變數
+LONGCAT_CONFIG_PATH = os.path.join(CONFIG_DIR, "longcat_config.json")
+# 亦嘗試 techcanto 主 config 目錄
+TECHCANTO_CONFIG_PATH = os.path.expanduser("~/.hermes/techcanto/config/longcat_config.json")
+
+def load_longcat_config():
+    # 優先讀環境變數（GitHub Actions 注入）
+    env_key = os.environ.get("LONGCAT_API_KEY", "")
+    env_url = os.environ.get("LONGCAT_API_URL", "")
+    env_model = os.environ.get("LONGCAT_MODEL", "")
+    
+    # 嘗試讀 config 檔案
+    config = {}
+    for cfg_path in [LONGCAT_CONFIG_PATH, TECHCANTO_CONFIG_PATH]:
+        try:
+            with open(cfg_path, "r", encoding="utf-8") as f:
+                config = json.load(f)
+                print(f"  ✅ 讀到 config: {cfg_path}")
+                break
+        except (FileNotFoundError, json.JSONDecodeError):
+            continue
+    
+    # 支援多種欄位名格式
+    api_key = env_key or config.get("longcat_api_key", "") or config.get("api_key", "")
+    base_url = env_url or config.get("longcat_api_url", "") or config.get("base_url", "")
+    model = env_model or config.get("longcat_model", "") or config.get("model", "")
+    
+    # 如果 base_url 唔係完整 endpoint URL，補上 path
+    if base_url and "/v1/chat/completions" not in base_url:
+        # 檢查係 siliconflow 定 longcat.chat
+        if "siliconflow" in base_url:
+            api_key_url = f"{base_url}/v1/chat/completions"
+        else:
+            api_key_url = f"{base_url}/openai/v1/chat/completions"
+    else:
+        api_key_url = base_url or "https://api.longcat.chat/openai/v1/chat/completions"
+    
+    if api_key:
+        print(f"  ✅ LongCat API key 已載入 ({api_key[:8]}...)")
+    else:
+        print(f"  ⚠️  LongCat API key 未設定，翻譯將用 fallback")
+    
+    return {
+        "longcat_api_key": api_key,
+        "longcat_api_url": api_key_url,
+        "longcat_model": model or "LongCat-Flash-Lite"
+    }
+
+LONGCAT_CONFIG = load_longcat_config()
+LONGCAT_API_URL = LONGCAT_CONFIG["longcat_api_url"]
+LONGCAT_MODEL = LONGCAT_CONFIG["longcat_model"]
+LONGCAT_API_KEY = LONGCAT_CONFIG["longcat_api_key"]
+
+# 本地 LM Studio API (fallback)
+LOCAL_LLM_API = "http://localhost:1234/v1/chat/completions"
+LOCAL_LLM_MODEL = "nvidia/nemotron-3-nano-omni"
+LOCAL_LLM_KEY = "lm-studio"
 
 SIMILARITY_THRESHOLD = 0.85
 MAX_PER_FEED = 5       # 每來源最多 5 條
 MAX_TOTAL = 20        # 總數上限
 RSS_TIMEOUT = 10      # 每個 RSS 超時秒數
-SUMMARY_BATCH_SIZE = 5  # 每批摘要數量
+SUMMARY_BATCH_SIZE = 3  # 每批摘要數量（減低以配合 CPU 推理速度）
+LLM_TIMEOUT = 180       # LLM 摘要超時秒數（27B 模型喺 CPU 上需要時間）
 
 HKT = timezone(timedelta(hours=8))
 
@@ -110,71 +176,145 @@ def clean_html(text):
     return re.sub(r"<[^>]+>", "", text).strip()
 
 
-def summarize_batch(items):
-    """批量生成摘要 — 一次 API call 處理多條新聞"""
-    if not items:
-        return {}
-
-    batch_lines = []
-    for idx, item in enumerate(items):
-        batch_lines.append(
-            f"新聞 {idx+1}:\n標題: {item['title']}\n來源: {item['source']}\n描述: {clean_html(item.get('description', ''))[:300]}"
-        )
-    batch_text = "\n\n".join(batch_lines)
-
-    prompt = f"""你係一個廣東話科技新聞專家。以下有 {len(items)} 條科技新聞，請為每條新聞寫一段簡短嘅廣東話摘要（每條 50-80 字）。
-
-要求：
-- 用口語化廣東話（繁體中文）
-- 重點清晰
-- 每條摘要用「摘要1:」、「摘要2:」等做開頭
-
-{batch_text}
-
-請依次回覆每條新聞嘅摘要："""
-
+def summarize_one(text, use_longcat=True):
+    """翻譯單條新聞成中文
+    Args:
+        text: 要翻譯的英文文本
+        use_longcat: 是否優先使用 LongCat API (default: True)
+    """
+    prompt = f"Translate the following English text to Traditional Chinese. Only output the translation, nothing else:\n\n{text}"
+    
+    # 優先使用 LongCat API
+    if use_longcat and LONGCAT_API_KEY:
+        try:
+            payload = json.dumps({
+                "model": LONGCAT_MODEL,
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 200,
+                "temperature": 0.5
+            }).encode("utf-8")
+            
+            req = HttpRequest(
+                LONGCAT_API_URL,
+                data=payload,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {LONGCAT_API_KEY}"
+                },
+                method="POST"
+            )
+            
+            with urlopen(req, timeout=30) as resp:
+                result = json.loads(resp.read().decode("utf-8"))
+                return result["choices"][0]["message"]["content"].strip()
+        except Exception as e:
+            print(f"  ⚠️  LongCat API 失敗 ({type(e).__name__})，用本地 fallback")
+    
+    # Fallback 到本地 LM Studio
     try:
-        import urllib.request
         payload = json.dumps({
-            "model": LONGCAT_MODEL,
-            "messages": [
-                {"role": "system", "content": "你係廣東話科技新聞摘要專家，用口語化廣東話寫簡短摘要。"},
-                {"role": "user", "content": prompt}
-            ],
-            "max_tokens": 1500,
-            "temperature": 0.7
+            "model": LOCAL_LLM_MODEL,
+            "messages": [{"role": "user", "content": prompt}],
+            "max_tokens": 200,
+            "temperature": 0.5
         }).encode("utf-8")
-
-        req = urllib.request.Request(
-            LONGCAT_API + "/v1/chat/completions",
+        
+        req = HttpRequest(
+            LOCAL_LLM_API,
             data=payload,
             headers={
                 "Content-Type": "application/json",
-                "Authorization": f"Bearer {LONGCAT_KEY}"
-            }
+                "Authorization": f"Bearer {LOCAL_LLM_KEY}"
+            },
+            method="POST"
         )
-
-        with urllib.request.urlopen(req, timeout=60) as resp:
+        
+        with urlopen(req, timeout=30) as resp:
             result = json.loads(resp.read().decode("utf-8"))
-
-        full_summary = result["choices"][0]["message"]["content"].strip()
-
-        # 解析每條摘要 — 用分隔符號切分
-        summaries = {}
-        # 找所有 "摘要N:" 嘅位置
-        parts = re.split(r"摘要\d+[:：]\s*", full_summary)
-        parts = [p.strip() for p in parts if p.strip()]
-
-        for i, item in enumerate(items):
-            if i < len(parts):
-                summaries[item["link"]] = parts[i][:150]
-            else:
-                summaries[item["link"]] = clean_html(item.get("description", ""))[:150] or "(無摘要)"
-
-        return summaries
+            return result["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print(f"  ⚠️  Batch summary API failed: {e}")
-        return {item["link"]: "(摘要失敗)" for item in items}
+        raise RuntimeError(f"Both LongCat and local LLM failed: {e}")
+
+
+def is_spam_article(title, desc, source):
+    """過濾廣告、促銷碼、贊助內容等非新聞文章"""
+    spam_keywords = [
+        'promo code', 'coupon code', 'discount code', 'deal alert',
+        'subscribe now', 'sign up for', 'free trial', 'limited offer',
+        'exclusive deal', 'save up to', 'percent off', 'off now',
+        'wireless promo', 'wired promo', 'best price', 'shop now',
+        'buy now', 'special offer', 'advertiser', 'sponsored',
+        'advertisement', 'advertising', 'promotion code',
+        'use code', 'enter code', 'apply code', 'redemption code',
+    ]
+    combined = f"{title} {desc}".lower()
+    return any(kw in combined for kw in spam_keywords)
+
+
+def simp_to_trad(text):
+    """簡體轉繁體（opencc 優先，fallback 到簡單替換）"""
+    if USE_OPENCC and OPENCC:
+        return OPENCC.convert(text)
+    # 簡單 fallback — 對大部分科技新聞已經够用
+    # 注意：呢個唔係完美轉換，只係 emergency fallback
+    return text
+
+
+def summarize_batch(items):
+    """批量生成粵語摘要 — 逐條翻譯 + 簡繁轉換
+    返回 dict: {link: {"headline_zh": 中文標題, "summary": 中文摘要}}
+    """
+    if not items:
+        return {}
+
+    summaries = {}
+    translated = 0
+    fallback_count = 0
+    
+    for i, item in enumerate(items):
+        title = item["title"]
+        desc = clean_html(item.get("description", ""))
+        source = item["source"]
+        
+        # 只用標題做翻譯（短文字更可靠）
+        source_text = title
+        
+        try:
+            # 調用本地 LLM 翻譯
+            zh_text = summarize_one(source_text)
+            
+            # 檢查 LLM 有無真正輸出
+            if not zh_text or len(zh_text) < 5:
+                raise ValueError("LLM returned empty/too short")
+            
+            # 檢查有無中文（驗證翻譯成功）
+            has_chinese = any('\u4e00' <= c <= '\u9fff' for c in zh_text)
+            if not has_chinese:
+                raise ValueError("No Chinese characters in output")
+            
+            # 簡繁轉換（opencc 專業轉換）
+            trad_text = simp_to_trad(zh_text)
+            
+            # 同時儲存中文標題同摘要
+            summaries[item["link"]] = {
+                "headline_zh": trad_text[:150],
+                "summary": trad_text[:150]
+            }
+            translated += 1
+            print(f"  ✅ [{i+1}/{len(items)}] {trad_text[:60]}...")
+            
+        except Exception as e:
+            fallback_count += 1
+            print(f"  ⚠️  [{i+1}/{len(items)}] 翻譯失敗，用原文: {title[:40]}...")
+            # 用原文描述或標題作為 fallback
+            fallback = desc[:200] if desc else title
+            summaries[item["link"]] = {
+                "headline_zh": title,
+                "summary": fallback[:150] or f"{source}: {title}"
+            }
+
+    print(f"  📊 翻譯成功: {translated} | Fallback: {fallback_count}")
+    return summaries
 
 
 # ─── 主邏輯 ───
@@ -230,6 +370,11 @@ def main():
                 skipped += 1
                 continue
 
+            # 過濾廣告、促銷碼等非新聞內容
+            if is_spam_article(title, desc, name):
+                skipped += 1
+                continue
+
             candidates.append({
                 "title": title,
                 "link": link,
@@ -253,7 +398,9 @@ def main():
             summaries = summarize_batch(batch)
 
             for item in batch:
-                item["summary"] = summaries.get(item["link"], "(無摘要)")
+                summary_data = summaries.get(item["link"], {"headline_zh": item["title"], "summary": "(無摘要)"})
+                item["headline_zh"] = summary_data["headline_zh"]
+                item["summary"] = summary_data["summary"]
                 new_items.append(item)
 
                 seen_urls.append(item["link"]) if item["link"] else None
@@ -279,7 +426,9 @@ def main():
                 f.write(f"## 🔄 更新於 {now.strftime('%H:%M HKT')}\n\n")
 
             for idx, item in enumerate(new_items, 1):
-                f.write(f"### {idx}. {item['title']}\n\n")
+                # 用中文標題作為 headline，英文標題作為備份
+                headline = item.get("headline_zh", item["title"])
+                f.write(f"### {idx}. {headline}\n\n")
                 f.write(f"- **來源：** [{item['source']}]({item['link']})\n")
                 f.write(f"- **時間：** {item['time']} HKT\n")
                 f.write(f"- **分類：** {item['category']}\n")

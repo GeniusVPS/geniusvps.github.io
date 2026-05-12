@@ -13,7 +13,7 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
 
     steps:
       - name: Checkout
@@ -26,11 +26,22 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install Dependencies
+        run: |
+          pip install opencc
+
       - name: Run Fetch Script
         env:
           LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
         run: |
           python3 scripts/fetch_news.py
+
+      - name: Regenerate Selector
+        env:
+          LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
+        run: |
+          # 重新生成 index.html 以反映最新新聞池
+          python3 scripts/regenerate_selector.py || echo "⚠️  Selector regeneration skipped"
 
       - name: Commit & Push Changes
         run: |
