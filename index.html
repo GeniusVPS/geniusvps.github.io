@@ -55,13 +55,13 @@
                 const card = document.createElement('div');
                 card.className = 'news-card';
                 card.innerHTML = `
-                    <input type="checkbox" id="{item.id}" data-id="{item.id}" {selectedIds.has(item.id) ? 'checked' : ''}>
+                    <input type="checkbox" id="${item.id}" data-id="${item.id}" ${selectedIds.has(item.id) ? 'checked' : ''}>
                     <div class="news-content">
                         <div class="news-headline">
-                            <span class="news-id">{item.id}</span> {item.headline}
+                            <span class="news-id">${item.id}</span> ${item.headline}
                         </div>
-                        <div class="news-meta">{item.source} | {item.date}</div>
-                        <div class="news-summary">{item.summary}</div>
+                        <div class="news-meta">${item.source} | ${item.date}</div>
+                        <div class="news-summary">${item.summary}</div>
                     </div>
                 `;
                 list.appendChild(card);
