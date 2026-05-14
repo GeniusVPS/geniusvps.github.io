@@ -33,12 +33,16 @@ jobs:
       - name: Run Fetch Script
         env:
           LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
+          LONGCAT_API_URL: https://api.longcat.chat/openai
+          LONGCAT_MODEL: LongCat-Flash-Thinking-2601
         run: |
           python3 scripts/fetch_news.py
 
       - name: Regenerate Selector
         env:
           LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
+          LONGCAT_API_URL: https://api.longcat.chat/openai
+          LONGCAT_MODEL: LongCat-Flash-Thinking-2601
         run: |
           # 重新生成 index.html 以反映最新新聞池
           python3 scripts/regenerate_selector.py || echo "⚠️  Selector regeneration skipped"

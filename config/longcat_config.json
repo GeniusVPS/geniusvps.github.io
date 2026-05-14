@@ -1,0 +1,5 @@
+{
+  "longcat_api_key": "PLACEHOLDER_USE_SECRET",
+  "longcat_api_url": "https://api.longcat.chat/openai",
+  "longcat_model": "LongCat-Flash-Thinking-2601"
+}
