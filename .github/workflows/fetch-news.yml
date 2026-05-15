@@ -28,7 +28,7 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          pip install opencc
+          pip install -r requirements.txt
 
       - name: Run Fetch Script
         env:
@@ -45,7 +45,7 @@ jobs:
           LONGCAT_MODEL: LongCat-Flash-Thinking-2601
         run: |
           # 重新生成 index.html 以反映最新新聞池
-          python3 scripts/regenerate_selector.py || echo "⚠️  Selector regeneration skipped"
+          python3 scripts/regenerate_selector.py
 
       - name: Commit & Push Changes
         run: |
