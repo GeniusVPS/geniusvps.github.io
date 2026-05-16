@@ -215,7 +215,7 @@ def summarize_one(text, use_longcat=True):
         payload = json.dumps({
             "model": LOCAL_LLM_MODEL,
             "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 200,
+            "max_tokens": 500,  # Increased for reasoning models that use tokens for thinking
             "temperature": 0.5
         }).encode("utf-8")
         
@@ -229,9 +229,19 @@ def summarize_one(text, use_longcat=True):
             method="POST"
         )
         
-        with urlopen(req, timeout=30) as resp:
+        with urlopen(req, timeout=60) as resp:  # Increased timeout for reasoning models
             result = json.loads(resp.read().decode("utf-8"))
-            return result["choices"][0]["message"]["content"].strip()
+            content = result["choices"][0]["message"]["content"].strip()
+            # Handle reasoning models that may put output in reasoning_content
+            if not content:
+                reasoning = result["choices"][0]["message"].get("reasoning_content", "")
+                if reasoning:
+                    # Extract Chinese text from reasoning as fallback
+                    import re
+                    chinese_text = re.findall(r'[\u4e00-\u9fff]+', reasoning)
+                    if chinese_text:
+                        content = ''.join(chinese_text)[:200]
+            return content
     except Exception as e:
         raise RuntimeError(f"Both LongCat and local LLM failed: {e}")
 
