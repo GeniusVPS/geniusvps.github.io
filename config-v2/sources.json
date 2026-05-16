@@ -1,0 +1,94 @@
+{
+  "feeds": [
+    {
+      "name": "TechCrunch",
+      "url": "https://techcrunch.com/feed/",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "The Verge",
+      "url": "https://www.theverge.com/rss/index.xml",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Engadget",
+      "url": "https://www.engadget.com/rss.xml",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Wired",
+      "url": "https://www.wired.com/feed/rss",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Ars Technica",
+      "url": "https://feeds.arstechnica.com/arstechnica/index",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Hacker News Best",
+      "url": "https://hnrss.org/best",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "MIT Technology Review",
+      "url": "https://www.technologyreview.com/feed/",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "VentureBeat",
+      "url": "https://venturebeat.com/feed/",
+      "language": "en",
+      "category": "ai"
+    },
+    {
+      "name": "The Next Web",
+      "url": "https://thenextweb.com/feed",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/feeds/all",
+      "language": "en",
+      "category": "hardware"
+    },
+    {
+      "name": "OpenAI Blog",
+      "url": "https://openai.com/blog/rss.xml",
+      "language": "en",
+      "category": "ai"
+    },
+    {
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
+      "language": "en",
+      "category": "ai"
+    },
+    {
+      "name": "Security Week",
+      "url": "https://www.securityweek.com/feed/",
+      "language": "en",
+      "category": "security"
+    },
+    {
+      "name": "BBC Technology",
+      "url": "http://feeds.bbci.co.uk/news/technology/rss.xml",
+      "language": "en",
+      "category": "general"
+    },
+    {
+      "name": "9to5Google",
+      "url": "https://9to5google.com/feed/",
+      "language": "en",
+      "category": "general"
+    }
+  ]
+}

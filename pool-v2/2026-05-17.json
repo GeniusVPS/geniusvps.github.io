@@ -1,0 +1,32 @@
+[
+  {
+    "id": "news_20260517_001",
+    "date": "2026-05-17",
+    "headline_zh": "OpenAI 聯合創辦人 Greg Brockman 傳掌管產品策略，計劃合併 ChatGPT 同 Codex",
+    "headline_en": "OpenAI co-founder Greg Brockman reportedly takes charge of product strategy",
+    "summary_zh": "OpenAI 聯合創辦人 Greg Brockman 傳掌管產品策略，計劃合併 ChatGPT 同 Codex",
+    "category": "ai",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/05/16/openai-co-founder-greg-brockman-reportedly-takes-charge-of-product-strategy/",
+    "time_hkt": "00:00",
+    "used_in_episodes": [
+      22
+    ],
+    "verified": true
+  },
+  {
+    "id": "news_20260517_002",
+    "date": "2026-05-17",
+    "headline_zh": "Sony 個 AI Camera Assistant 被人鬧爆，佢哋終於出嚟解畫：我哋唔係P相咁簡單！",
+    "headline_en": "Sony tries to explain that its AI Camera Assistant doesn’t suck",
+    "summary_zh": "Sony 個 AI Camera Assistant 被人鬧爆，佢哋終於出嚟解畫：我哋唔係P相咁簡單！",
+    "category": "hardware",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/tech/932133/sony-xperia-1-xiii-ai-camera-assistant",
+    "time_hkt": "00:00",
+    "used_in_episodes": [],
+    "verified": true
+  }
+]

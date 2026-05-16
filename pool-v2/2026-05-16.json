@@ -1,0 +1,106 @@
+[
+  {
+    "id": "news_20260516_001",
+    "date": "2026-05-16",
+    "headline_zh": "AI晶片新貴 Cerebras 差啲執粒！高峰期一個月燒咗800萬美金",
+    "headline_en": "$60B AI chip darling Cerebras almost died early on, burning $8M a month",
+    "summary_zh": "AI晶片新貴 Cerebras 差啲執粒！高峰期一個月燒咗800萬美金",
+    "category": "hardware",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/05/16/60b-ai-chip-darling-cerebras-almost-died-early-on-burning-8m-a-month/",
+    "time_hkt": "23:27",
+    "used_in_episodes": [
+      22
+    ],
+    "verified": true
+  },
+  {
+    "id": "news_20260516_002",
+    "date": "2026-05-16",
+    "headline_zh": "Intel Core Ultra 9 290K Plus 跑分流出：遊戲同應用只快2%，貴價旗艦直接被廢咗",
+    "headline_en": "The Core Ultra 7 270K was too good, so Intel scrapped the flagship Core Ultra 9 290K Plus — benchmarks of the 290K prototype find slim 2% faster performance in gaming and applications",
+    "summary_zh": "Intel Core Ultra 9 290K Plus 跑分流出：遊戲同應用只快2%，貴價旗艦直接被廢咗",
+    "category": "hardware",
+    "score": 7,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/pc-components/cpus/the-core-ultra-7-270k-was-too-good-so-intel-scrapped-the-flagship-core-ultra-9-290k-plus-benchmarks-of-the-290k-prototype-find-slim-2-percent-faster-performance-in-gaming-and-applications",
+    "time_hkt": "23:27",
+    "used_in_episodes": [
+      22
+    ],
+    "verified": true
+  },
+  {
+    "id": "news_20260516_003",
+    "date": "2026-05-16",
+    "headline_zh": "德州一條鄉村地區通過禁令，一年內唔准起數據中心！因為AI公司走佬去偏遠地方避規管，但有州議員話呢啲禁令其實唔合法",
+    "headline_en": "Texas county passes data center ban for rural areas for a year, move comes in wake of AI data centers moving to remote areas to skirt regulations — state senator says counties cannot legally impose these bans",
+    "summary_zh": "德州一條鄉村地區通過禁令，一年內唔准起數據中心！因為AI公司走佬去偏遠地方避規管，但有州議員話呢啲禁令其實唔合法",
+    "category": "cloud",
+    "score": 7,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/tech-industry/big-tech/texas-county-passes-data-center-moratorium-for-a-year-follows-other-local-governments-pausing-similar-projects-but-state-senator-says-counties-cannot-impose-these-bans",
+    "time_hkt": "23:27",
+    "used_in_episodes": [
+      22
+    ],
+    "verified": true
+  },
+  {
+    "id": "news_20260516_004",
+    "date": "2026-05-16",
+    "headline_zh": "NASA Psyche 太空船去小行星途中 順道借火星引力彈弓幫手加速",
+    "headline_en": "NASA's Psyche spacecraft just got an assist from Mars on the way to its asteroid namesake",
+    "summary_zh": "NASA Psyche 太空船去小行星途中 順道借火星引力彈弓幫手加速",
+    "category": "space",
+    "score": 6,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2174433/nasa-psyche-spacecraft-got-an-assist-from-mars-on-way-to-asteroid/",
+    "time_hkt": "23:27",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260516_005",
+    "date": "2026-05-16",
+    "headline_zh": "成部 RTX 5090 打機電腦四千蚊有找 — 仲平過自己砌，唔使捱貴GPU",
+    "headline_en": "Get an entire RTX 5090 gaming PC for around the price of just the GPU — a high-end battle station for under $4,000",
+    "summary_zh": "成部 RTX 5090 打機電腦四千蚊有找 — 仲平過自己砌，唔使捱貴GPU",
+    "category": "hardware",
+    "score": 6,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/desktops/gaming-pcs/get-an-entire-rtx-5090-gaming-pc-for-around-the-price-of-just-the-gpu-a-high-end-battle-station-for-under-usd4-000",
+    "time_hkt": "23:27",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260516_006",
+    "date": "2026-05-16",
+    "headline_zh": "NPR主持Manoush Zomorodi傾點樣同太多科技共存 出新書講科技點影響你身體健康",
+    "headline_en": "NPR’s Manoush Zomorodi talks about living with too much tech",
+    "summary_zh": "NPR主持Manoush Zomorodi傾點樣同太多科技共存 出新書講科技點影響你身體健康",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/report/930171/manoush-zomorodi-body-electric-npr-questionnaire",
+    "time_hkt": "23:27",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260516_007",
+    "date": "2026-05-16",
+    "headline_zh": "Trump calls $14 billion Taiwan arms deal a 'negotiating chip' with China after Xi said Taiwan issue could lead to 'clashes and even conflicts' — Trump says 'Taiwan would be very smart to cool it a little bit'",
+    "headline_en": "Trump calls $14 billion Taiwan arms deal a 'negotiating chip' with China after Xi said Taiwan issue could lead to 'clashes and even conflicts' — Trump says 'Taiwan would be very smart to cool it a little bit'",
+    "summary_zh": "Trump's remarks came at the close of a two-day summit with Chinese President Xi Jinping.",
+    "category": "hardware",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/tech-industry/trump-calls-taiwan-arms-deal-a-negotiating-chip-with-china",
+    "time_hkt": "23:27",
+    "used_in_episodes": [],
+    "verified": true
+  }
+]
