@@ -214,11 +214,12 @@ SCORING_CRITERIA = """
 """
 
 def build_translate_prompt(title, description=""):
-    """建構智能分類 + 粵語口語翻譯 + 評分嘅 prompt"""
-    return f"""你係一個粵語科技新聞編輯。請做三件事：
+    """建構智能分類 + 粵語口語翻譯 + 詳細摘要 + 評分嘅 prompt"""
+    return f"""你係一個粵語科技新聞編輯。請做四件事：
 1. 將以下英文新聞標題翻譯成粵語口語風格嘅中文標題
-2. 從以下分類中選擇最合適的一個分類
-3. 根據評分標準給予 1-10 分嘅新聞評分
+2. 根據新聞標題同描述，寫一段詳細嘅粵語口語摘要（100-150 字），包含新聞背景、重點同影響
+3. 從以下分類中選擇最合適的一個分類
+4. 根據評分標準給予 1-10 分嘅新聞評分
 
 可用分類：
 {CATEGORIES_JSON}
@@ -226,10 +227,10 @@ def build_translate_prompt(title, description=""):
 {SCORING_CRITERIA}
 
 新聞標題：{title}
-{"新聞摘要：" + description[:300] if description else ""}
+{"新聞描述：" + description[:500] if description else ""}
 
 請以 JSON 格式回复，只回复 JSON，不要其他文字：
-{{"headline_zh": "粵語口語標題", "category": "分類代碼", "score": 分數}}"""
+{{"headline_zh": "粵語口語標題", "summary_zh": "詳細粵語摘要 100-150 字", "category": "分類代碼", "score": 分數}}"""
 
 
 def call_llm_api(prompt, api_url, api_key, model, max_tokens, timeout):
@@ -302,10 +303,15 @@ def parse_llm_response(content):
                     data["score"] = max(1, min(10, data["score"]))  # 限制 1-10
                 except (ValueError, TypeError):
                     data["score"] = 5
+                # 如果冇 summary_zh，用 headline_zh 做 fallback
+                if "summary_zh" not in data or not data["summary_zh"]:
+                    data["summary_zh"] = data["headline_zh"]
                 return data
             else:
                 data["category"] = "general"
                 data.setdefault("score", 5)
+                if "summary_zh" not in data or not data["summary_zh"]:
+                    data["summary_zh"] = data.get("headline_zh", "")
                 return data
     except (json.JSONDecodeError, KeyError):
         pass
@@ -319,6 +325,8 @@ def parse_llm_response(content):
             if "headline_zh" in data:
                 data.setdefault("category", "general")
                 data.setdefault("score", 5)
+                if "summary_zh" not in data or not data["summary_zh"]:
+                    data["summary_zh"] = data["headline_zh"]
                 return data
         except json.JSONDecodeError:
             pass
@@ -326,7 +334,7 @@ def parse_llm_response(content):
     # 最終 fallback — 提取中文文字
     chinese_text = re.findall(r'[\u4e00-\u9fff\u3000-\u303f]+', content)
     if chinese_text:
-        return {"headline_zh": ''.join(chinese_text)[:150], "category": "general", "score": 5}
+        return {"headline_zh": ''.join(chinese_text)[:150], "summary_zh": ''.join(chinese_text)[:150], "category": "general", "score": 5}
     
     return None
 
@@ -379,6 +387,7 @@ def summarize_batch(items):
                 raise ValueError("LLM returned None")
             
             zh_headline = result.get("headline_zh", "")
+            zh_summary = result.get("summary_zh", zh_headline)  # 用真正摘要，冇先用 headline fallback
             ai_category = result.get("category", "general")
             score = result.get("score", 5)
             
@@ -387,10 +396,11 @@ def summarize_batch(items):
             
             # 簡繁轉換
             trad_headline = simp_to_trad(zh_headline)
+            trad_summary = simp_to_trad(zh_summary)
             
             summaries[item["link"]] = {
                 "headline_zh": trad_headline[:150],
-                "summary": trad_headline[:150],
+                "summary": trad_summary[:300],  # 用真正摘要，非複製標題
                 "category": ai_category,
                 "score": score
             }
