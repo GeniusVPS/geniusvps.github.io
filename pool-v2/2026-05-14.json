@@ -26,7 +26,9 @@
     "source": "TechCrunch",
     "source_url": "https://techcrunch.com/2026/05/13/rivian-spinoff-mind-robotics-raises-another-400m/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -40,7 +42,9 @@
     "source": "TechCrunch",
     "source_url": "https://techcrunch.com/2026/05/13/who-trusts-sam-altman/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -54,7 +58,9 @@
     "source": "TechCrunch",
     "source_url": "https://techcrunch.com/2026/05/13/origin-lab-raises-8m-to-help-video-game-companies-sell-data-to-world-model-builders/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -100,7 +106,9 @@
     "source": "The Verge",
     "source_url": "https://www.theverge.com/ai-artificial-intelligence/929692/microsoft-musk-altman-openai-trial",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -146,7 +154,9 @@
     "source": "Engadget",
     "source_url": "https://www.engadget.com/2172080/several-overwatch-heroes-are-about-to-hit-fortnite/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -160,7 +170,9 @@
     "source": "Engadget",
     "source_url": "https://www.engadget.com/2172050/elon-musk-just-cant-stop-potentially-violating-the-clean-air-act/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -174,7 +186,9 @@
     "source": "Engadget",
     "source_url": "https://www.engadget.com/2172010/that-awful-gold-trump-phone-will-reportedly-ship-this-week/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      36
+    ],
     "verified": true
   },
   {
@@ -188,7 +202,9 @@
     "source": "Wired",
     "source_url": "https://www.wired.com/story/trump-inner-circle-2028-presidential-ticket/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      37
+    ],
     "verified": true
   },
   {
@@ -218,7 +234,9 @@
     "source": "Ars Technica",
     "source_url": "https://arstechnica.com/space/2026/05/blue-origin-may-need-external-funding-to-hit-ambitious-launch-targets/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      37
+    ],
     "verified": true
   },
   {
@@ -226,13 +244,15 @@
     "date": "2026-05-14",
     "headline_zh": "Leaving GitHub for Forgejo",
     "headline_en": "",
-    "summary_zh": "Article URL: https://jorijn.com/en/blog/leaving-github-for-forgejo/\nComments URL: https://news.ycombinator.com/item?id=48121266\nPoints: 368\n# Comments",
+    "summary_zh": "Points: 368\n# Comments",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
     "source_url": "https://jorijn.com/en/blog/leaving-github-for-forgejo/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      37
+    ],
     "verified": true
   },
   {
@@ -240,13 +260,15 @@
     "date": "2026-05-14",
     "headline_zh": "Deterministic Fully-Static Whole-Binary Translation Without Heuristics",
     "headline_en": "",
-    "summary_zh": "Article URL: https://arxiv.org/abs/2605.08419\nComments URL: https://news.ycombinator.com/item?id=48117810\nPoints: 267\n# Comments: 64",
+    "summary_zh": "Points: 267\n# Comments: 64",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
     "source_url": "https://arxiv.org/abs/2605.08419",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      37
+    ],
     "verified": true
   },
   {
@@ -260,7 +282,9 @@
     "source": "MIT Technology Review",
     "source_url": "https://www.technologyreview.com/2026/05/13/1137176/the-download-drugs-in-orbit-nasa-nuclear-spacecraft/",
     "time_hkt": "01:12",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      37
+    ],
     "verified": true
   },
   {
@@ -274,7 +298,9 @@
     "source": "TechCrunch",
     "source_url": "https://techcrunch.com/2026/05/13/anthropics-cat-wu-says-that-in-the-future-ai-will-anticipate-your-needs-before-you-know-what-they-are/",
     "time_hkt": "03:46",
-    "used_in_episodes": [],
+    "used_in_episodes": [
+      37
+    ],
     "verified": true
   },
   {
@@ -744,7 +770,7 @@
     "date": "2026-05-14",
     "headline_zh": "Kickstarter is forced to ban adult content by payment processors",
     "headline_en": "",
-    "summary_zh": "Article URL: https://kotaku.com/kickstarter-is-the-latest-platform-seemingly-forced-to-ban-adult-content-by-payment-processors-2000695648\nComments URL",
+    "summary_zh": "Kickstarter is forced to ban adult content by payment processors",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -758,7 +784,7 @@
     "date": "2026-05-14",
     "headline_zh": "Setting up a free *.city.state.us locality domain (2025)",
     "headline_en": "",
-    "summary_zh": "Article URL: https://fredchan.org/blog/locality-domains-guide/\nComments URL: https://news.ycombinator.com/item?id=48122635\nPoints: 417\n# Comments: 134",
+    "summary_zh": "Points: 417\n# Comments: 134",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -842,7 +868,7 @@
     "date": "2026-05-14",
     "headline_zh": "Princeton mandates proctoring for in-person exams, upending 133 year precedent",
     "headline_en": "",
-    "summary_zh": "Article URL: https://www.dailyprincetonian.com/article/2026/05/princeton-news-adpol-proctoring-in-person-examinations-passed-faculty-133-years-precede",
+    "summary_zh": "Princeton mandates proctoring for in-person exams, upending 133 year precedent",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -856,7 +882,7 @@
     "date": "2026-05-14",
     "headline_zh": "Open Source Resistance: keep OSS alive on company time",
     "headline_en": "",
-    "summary_zh": "Article URL: https://ossresistance.com/\nComments URL: https://news.ycombinator.com/item?id=48123015\nPoints: 245\n# Comments: 78",
+    "summary_zh": "Points: 245\n# Comments: 78",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -940,7 +966,7 @@
     "date": "2026-05-14",
     "headline_zh": "Dutch suicide prevention website shares data with tech companies without consent",
     "headline_en": "",
-    "summary_zh": "Article URL: https://nltimes.nl/2026/05/13/dutch-suicide-prevention-hotline-shares-visitor-data-tech-companies\nComments URL: https://news.ycombinator.",
+    "summary_zh": "Dutch suicide prevention website shares data with tech companies without consent",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -1108,7 +1134,7 @@
     "date": "2026-05-14",
     "headline_zh": "Claude for Small Business",
     "headline_en": "",
-    "summary_zh": "Article URL: https://www.anthropic.com/news/claude-for-small-business\nComments URL: https://news.ycombinator.com/item?id=48130950\nPoints: 265\n# Commen",
+    "summary_zh": "Points: 265\n# Commen",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -1122,7 +1148,7 @@
     "date": "2026-05-14",
     "headline_zh": "Scorched Earth 2000 – Web",
     "headline_en": "",
-    "summary_zh": "Article URL: http://www.scorch2000.com/web/\nComments URL: https://news.ycombinator.com/item?id=48129694\nPoints: 265\n# Comments: 100",
+    "summary_zh": "Points: 265\n# Comments: 100",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
@@ -1332,7 +1358,7 @@
     "date": "2026-05-14",
     "headline_zh": "MacBook Neo Deep Dive: Benchmarks, Wafer Economics, and the 8GB Gamble",
     "headline_en": "",
-    "summary_zh": "Article URL: https://www.jdhodges.com/blog/macbook-neo-benchmarks-analysis/\nComments URL: https://news.ycombinator.com/item?id=48125617\nPoints: 254\n#",
+    "summary_zh": "Points: 254\n#",
     "category": "general",
     "score": 5,
     "source": "Hacker News Best",
