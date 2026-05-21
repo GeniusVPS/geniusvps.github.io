@@ -128,7 +128,7 @@ def parse_md_file(md_path):
         summary_match = re.search(r'-\s+\*\*摘要：\*\*\s+(.+?)(?:\n\n|\n-|\n---|\Z)', section, re.DOTALL)
         summary = summary_match.group(1).strip() if summary_match else headline
         
-        # 過濾掉網址行 (Article URL, Comments URL, 留言網址等)
+        # 過濾掉網址行同垃圾數據 (Article URL, Comments URL, Points, Comments等)
         summary_lines = summary.split('\n')
         cleaned_lines = []
         for line in summary_lines:
@@ -137,6 +137,9 @@ def parse_md_file(md_path):
                 continue
             # 過濾標籤行 (Article URL:, Comments URL:, 文章網址:, 留言網址:)
             if re.search(r'(Article URL|Comments URL|文章網址|留言網址)', line, re.IGNORECASE):
+                continue
+            # 過濾 Hacker News 垃圾數據 (Points:, # Comments, Score:, etc.)
+            if re.search(r'^(Points|Score|# Comments|Score:|分數|留言)', line.strip(), re.IGNORECASE):
                 continue
             cleaned_lines.append(line)
         summary = '\n'.join(cleaned_lines).strip()
