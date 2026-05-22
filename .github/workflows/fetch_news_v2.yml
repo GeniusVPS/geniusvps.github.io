@@ -2,7 +2,7 @@ name: Fetch News v2
 
 on:
   schedule:
-    # 每 3 小時執行一次 (UTC)
+    # 每 3 小時執行一次 (UTC) — 09:00, 12:00, 15:00, 18:00 HKT
     - cron: "0 */3 * * *"
   workflow_dispatch:
     # 支援手動觸發
@@ -35,11 +35,6 @@ jobs:
         run: |
           mkdir -p pool-v2 config-v2
 
-      - name: Convert old .md pool to JSON (one-time)
-        run: |
-          # 將舊版 .md 新聞轉換為 JSON 格式（保留 episode tracking）
-          python3 scripts-v2/convert_pool.py || echo "⚠️  convert_pool 失敗，繼續"
-
       - name: Run Fetch Script v2
         env:
           LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
@@ -50,8 +45,8 @@ jobs:
 
       - name: Verify JSON output
         run: |
-          # 檢查今日 JSON 檔案是否存在
-          TODAY=$(date -u -d '+8 hours' '+%Y-%m-%d')
+          # 檢查今日 JSON 檔案是否存在 (HKT)
+          TODAY=$(TZ=Asia/Hong_Kong date '+%Y-%m-%d')
           if [ -f "pool-v2/${TODAY}.json" ]; then
             echo "✅ JSON 檔案已生成: pool-v2/${TODAY}.json"
             python3 -c "
@@ -71,7 +66,7 @@ with open('pool-v2/${TODAY}.json', 'r') as f:
           git add -A
           CHANGES=$(git status --porcelain)
           if [ -n "$CHANGES" ]; then
-            git commit -m "📰 更新新聞池 v2 - $(date -u -d '+8 hours' '+%Y-%m-%d %H:%M HKT')"
+            git commit -m "📰 更新新聞池 v2 - $(TZ=Asia/Hong_Kong date '+%Y-%m-%d %H:%M HKT')"
             git push
             echo "✅ 有更新，已 push"
           else
