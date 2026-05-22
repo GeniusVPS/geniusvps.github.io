@@ -13,7 +13,7 @@ permissions:
 jobs:
   fetch:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
 
     steps:
       - name: Checkout
@@ -31,14 +31,19 @@ jobs:
         run: |
           pip install opencc
 
-      - name: Create pool-v2 directory
+      - name: Create directories
         run: |
-          mkdir -p pool-v2
+          mkdir -p pool-v2 config-v2
+
+      - name: Convert old .md pool to JSON (one-time)
+        run: |
+          # 將舊版 .md 新聞轉換為 JSON 格式（保留 episode tracking）
+          python3 scripts-v2/convert_pool.py || echo "⚠️  convert_pool 失敗，繼續"
 
       - name: Run Fetch Script v2
         env:
           LONGCAT_API_KEY: ${{ secrets.LONGCAT_API_KEY }}
-          LONGCAT_API_URL: https://api.longcat.chat/openai/v1/chat/completions
+          LONGCAT_API_URL: https://api.longcat.chat/openai/chat/completions
           LONGCAT_MODEL: LongCat-2.0-Preview
         run: |
           python3 scripts-v2/fetch_news_v2.py
@@ -49,7 +54,6 @@ jobs:
           TODAY=$(date -u -d '+8 hours' '+%Y-%m-%d')
           if [ -f "pool-v2/${TODAY}.json" ]; then
             echo "✅ JSON 檔案已生成: pool-v2/${TODAY}.json"
-            # 顯示新聞數量
             python3 -c "
 import json
 with open('pool-v2/${TODAY}.json', 'r') as f:

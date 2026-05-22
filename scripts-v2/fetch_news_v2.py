@@ -115,6 +115,24 @@ def save_json(path, data):
         json.dump(data, f, ensure_ascii=False, indent=2)
 
 
+def load_used_news():
+    """載入已使用新聞清單（不受 git pull 影響）"""
+    used_path = os.path.join(CONFIG_DIR, "used_news.json")
+    try:
+        with open(used_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("  ⚠️  used_news.json 唔存在，建立新檔案")
+        return {}
+
+
+def save_used_news(data):
+    """儲存已使用新聞清單"""
+    used_path = os.path.join(CONFIG_DIR, "used_news.json")
+    with open(used_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
 def content_hash(text):
     return hashlib.sha256(text.strip().encode("utf-8")).hexdigest()
 
@@ -434,8 +452,9 @@ def main():
     seen_urls = load_json(os.path.join(CONFIG_DIR, "seen_urls.json"))
     seen_hashes = load_json(os.path.join(CONFIG_DIR, "seen_hashes.json"))
     seen_titles = load_json(os.path.join(CONFIG_DIR, "seen_titles.json"))
+    used_news = load_used_news()
 
-    print(f"📡 來源: {len(sources)}   📋 已記錄: {len(seen_urls)} URLs")
+    print(f"📡 來源: {len(sources)}   📋 已記錄: {len(seen_urls)} URLs   🔒 已用: {len(used_news)}")
     print()
 
     now = datetime.now(HKT)
@@ -599,7 +618,12 @@ def main():
                 "verified": True
             })
 
-        # 合併同已有新聞
+        # 合併同已有新聞 — 保留 used_in_episodes 數據
+        for item in existing_json:
+            nid = item.get("id", "")
+            if nid in used_news and used_news[nid]:
+                item["used_in_episodes"] = used_news[nid]
+
         all_news = existing_json + new_json_items
 
         # 寫入 JSON
@@ -607,6 +631,15 @@ def main():
             json.dump(all_news, jf, ensure_ascii=False, indent=2)
 
         print(f"📦 已寫入 JSON: {pool_json_file} ({len(all_news)} 條新聞)")
+
+        # 同步所有新聞嘅 used_in_episodes 到 used_news.json
+        for item in all_news:
+            nid = item.get("id", "")
+            episodes = item.get("used_in_episodes", [])
+            if nid and episodes:
+                used_news[nid] = episodes
+        save_used_news(used_news)
+        print(f"🔒 已同步 used_news.json ({len(used_news)} entries)")
     else:
         print("\n📭 今日無新新聞")
 
