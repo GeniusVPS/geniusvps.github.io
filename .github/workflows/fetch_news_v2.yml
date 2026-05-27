@@ -45,18 +45,12 @@ jobs:
 
       - name: Verify JSON output
         run: |
-          # 檢查今日 JSON 檔案是否存在 (HKT)
           TODAY=$(TZ=Asia/Hong_Kong date '+%Y-%m-%d')
           if [ -f "pool-v2/${TODAY}.json" ]; then
             echo "✅ JSON 檔案已生成: pool-v2/${TODAY}.json"
-            python3 -c "
-import json
-with open('pool-v2/${TODAY}.json', 'r') as f:
-    news = json.load(f)
-    print(f'📰 今日新聞數: {len(news)} 條')
-"
+            python3 -c "import json; news=json.load(open('pool-v2/${TODAY}.json')); print(f'📰 今日新聞數: {len(news)} 條')"
           else
-            echo "⚠️  今日無新新聞，JSON 檔案未更新"
+            echo "⚠️ 今日無新新聞，JSON 檔案未更新"
           fi
 
       - name: Commit & Push Changes
