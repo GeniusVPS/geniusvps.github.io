@@ -642,5 +642,33 @@
     "time_hkt": "11:35",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260607_047",
+    "date": "2026-06-07",
+    "headline_zh": "JMGO’s N3 Ultimate projector is the new portable 4K champ",
+    "headline_en": "JMGO’s N3 Ultimate projector is the new portable 4K champ",
+    "summary_zh": "Sorry Anker: JMGO now makes my favorite flagship portable projector. The N3 Ultimate is an excellent portable 4K projector that defeats moderate ambie",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/reviews/943732/best-portable-4k-projector-review",
+    "time_hkt": "16:52",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260607_048",
+    "date": "2026-06-07",
+    "headline_zh": "New U.S. college grads now have higher unemployment than the average worker",
+    "headline_en": "New U.S. college grads now have higher unemployment than the average worker",
+    "summary_zh": "Article URL: https://www.randalolson.com/2026/06/04/recent-grad-unemployment-flip/\nComments URL: https://news.ycombinator.com/item?id=48428763\nPoints:",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.randalolson.com/2026/06/04/recent-grad-unemployment-flip/",
+    "time_hkt": "16:52",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
