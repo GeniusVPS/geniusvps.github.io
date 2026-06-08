@@ -446,5 +446,33 @@
     "time_hkt": "06:01",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260608_033",
+    "date": "2026-06-08",
+    "headline_zh": "NASA will wear high-tech Prada long johns to the Moon",
+    "headline_en": "NASA will wear high-tech Prada long johns to the Moon",
+    "summary_zh": "We've seen Axiom Space and Prada's collaboration on the Axiom Extravehicular Mobility Unit (AxEMU) spacesuit. Now the company has revealed the Liquid ",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/design/945540/nasa-axiom-space-prada-lcvg-spacesuit-moon-artemis",
+    "time_hkt": "11:41",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260608_034",
+    "date": "2026-06-08",
+    "headline_zh": "Making peace with your unlived dreams (2023)",
+    "headline_en": "Making peace with your unlived dreams (2023)",
+    "summary_zh": "Article URL: https://nik.art/making-peace-with-your-unlived-dreams/\nComments URL: https://news.ycombinator.com/item?id=48437290\nPoints: 171\n# Comments",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://nik.art/making-peace-with-your-unlived-dreams/",
+    "time_hkt": "11:41",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
