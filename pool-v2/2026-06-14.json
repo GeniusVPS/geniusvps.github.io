@@ -306,5 +306,47 @@
     "time_hkt": "03:21",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260614_023",
+    "date": "2026-06-14",
+    "headline_zh": "KPMG pulls report on AI usage due to apparent hallucinations",
+    "headline_en": "KPMG pulls report on AI usage due to apparent hallucinations",
+    "summary_zh": "Once again, AI proves to be an unreliable source of information about AI.",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
+    "time_hkt": "06:01",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260614_024",
+    "date": "2026-06-14",
+    "headline_zh": "Amazon security research reportedly led to the White House’s Anthropic Fable ban",
+    "headline_en": "Amazon security research reportedly led to the White House’s Anthropic Fable ban",
+    "summary_zh": "According to the Wall Street Journal, the export control directive that led to Anthropic cutting off access to Fable 5 and Mythos 5 was triggered in p",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/949601/amazon-anthropic-fablemythos-government-ban",
+    "time_hkt": "06:01",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260614_025",
+    "date": "2026-06-14",
+    "headline_zh": "X-Men ’97 has what Master of the Universe is missing",
+    "headline_en": "X-Men ’97 has what Master of the Universe is missing",
+    "summary_zh": "In 2026, Marvel and Mattel are both releasing projects designed to capitalize on people's love for iconic animated heroes from their childhoods. Maste",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/entertainment/947064/xmen-97-season-2-disney-plus-marvel-masters-of-the-universe-mattel",
+    "time_hkt": "06:01",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
