@@ -488,5 +488,47 @@
     "time_hkt": "11:42",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260614_036",
+    "date": "2026-06-14",
+    "headline_zh": "7 Best Coffee Makers (2026): Ratio, Fellow, Moccamaster",
+    "headline_en": "7 Best Coffee Makers (2026): Ratio, Fellow, Moccamaster",
+    "summary_zh": "The old-fashioned drip coffee maker has come a long way. These impressive machines can turn your barista into a stranger.",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/gallery/best-coffee-makers/",
+    "time_hkt": "17:29",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260614_037",
+    "date": "2026-06-14",
+    "headline_zh": "Škoda’s New EV Will Likely Be Its Most Expensive Yet",
+    "headline_en": "Škoda’s New EV Will Likely Be Its Most Expensive Yet",
+    "summary_zh": "The Škoda Peaq, which will debut this summer as the European automaker’s flagship model, seats seven and has an intriguing design. It will almost cert",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/skoda-peaq-will-likely-be-its-most-expensive-ev-yet/",
+    "time_hkt": "17:29",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260614_038",
+    "date": "2026-06-14",
+    "headline_zh": "Honda Civics and the Evil Valet",
+    "headline_en": "Honda Civics and the Evil Valet",
+    "summary_zh": "Previously: Show HN: Honda Civic Infotainment Reverse-Engineering - https://news.ycombinator.com/item?id=36052753 - May 2023 (43 comments)\n\nComments U",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://juniperspring.org/posts/honda-evil-valet/",
+    "time_hkt": "17:29",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
