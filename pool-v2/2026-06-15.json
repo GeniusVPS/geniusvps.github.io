@@ -488,5 +488,33 @@
     "time_hkt": "06:06",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260615_036",
+    "date": "2026-06-15",
+    "headline_zh": "NASA's X-59 reaches speed and altitude milestones ahead of first quiet supersonic flights",
+    "headline_en": "NASA's X-59 reaches speed and altitude milestones ahead of first quiet supersonic flights",
+    "summary_zh": "The plane will soon be ready to fly over US communities.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2193925/nasa-x-59-reaches-speed-and-altitude-milestones-ahead-of-first-quiet-supersonic-flights/",
+    "time_hkt": "11:57",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260615_037",
+    "date": "2026-06-15",
+    "headline_zh": "Introducing the OpenAI Partner Network",
+    "headline_en": "Introducing the OpenAI Partner Network",
+    "summary_zh": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+    "category": "ai",
+    "score": 5,
+    "source": "OpenAI Blog",
+    "source_url": "https://openai.com/index/introducing-openai-partner-network",
+    "time_hkt": "11:57",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
