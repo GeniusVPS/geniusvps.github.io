@@ -838,5 +838,19 @@
     "time_hkt": "11:24",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260620_061",
+    "date": "2026-06-20",
+    "headline_zh": "SwitchBot’s Standing Circulator Fan is worth fighting for",
+    "headline_en": "SwitchBot’s Standing Circulator Fan is worth fighting for",
+    "summary_zh": "I can't remember the last time I got excited about a fan. Normally, I just buy whatever Vornado or Dreo model fits my budget, but that was before I st",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/tech/952855/switchbot-standing-circulator-fan-review",
+    "time_hkt": "16:51",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
