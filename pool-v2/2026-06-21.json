@@ -502,5 +502,47 @@
     "time_hkt": "11:53",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260621_037",
+    "date": "2026-06-21",
+    "headline_zh": "A Critical Deadline Is Approaching for Windows and Linux Security",
+    "headline_en": "A Critical Deadline Is Approaching for Windows and Linux Security",
+    "summary_zh": "The cryptographic keys that secure your computer's boot sequence will start to expire on June 24. Here's what that means for you.",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/a-critical-deadline-is-approaching-for-windows-and-linux-security/",
+    "time_hkt": "17:45",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260621_038",
+    "date": "2026-06-21",
+    "headline_zh": "Renting a sewing machine from the library",
+    "headline_en": "Renting a sewing machine from the library",
+    "summary_zh": "Article URL: https://www.bbc.com/future/article/20260618-the-weird-and-wonderful-libraries-of-finland\nComments URL: https://news.ycombinator.com/item?",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.bbc.com/future/article/20260618-the-weird-and-wonderful-libraries-of-finland",
+    "time_hkt": "17:45",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260621_039",
+    "date": "2026-06-21",
+    "headline_zh": "Linux eliminates the strncpy API after six years of work, 360 patches",
+    "headline_en": "Linux eliminates the strncpy API after six years of work, 360 patches",
+    "summary_zh": "https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/lin...\n\nComments URL: https://news.ycombinator.com/item?id=48612943\nPoints: 196\n# Comments: 1",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.phoronix.com/news/Linux-7.2-Drops-strncpy",
+    "time_hkt": "17:45",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
