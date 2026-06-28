@@ -558,5 +558,33 @@
     "time_hkt": "11:31",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260628_041",
+    "date": "2026-06-28",
+    "headline_zh": "Indian payments chief thinks AI will be heavily involved in next era of digital payment growth",
+    "headline_en": "Indian payments chief thinks AI will be heavily involved in next era of digital payment growth",
+    "summary_zh": "Dilip Asbe said that newer UPI apps could be more competitive with a viable commercial model",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/06/27/indian-payments-chief-thinks-ai-will-be-heavily-involved-in-next-era-of-digital-payment-growth/",
+    "time_hkt": "16:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260628_042",
+    "date": "2026-06-28",
+    "headline_zh": "TMD’s keyless bike lock is a $280 solution to a $60 problem",
+    "headline_en": "TMD’s keyless bike lock is a $280 solution to a $60 problem",
+    "summary_zh": "I've seen lots of so-called \"smart\" bike locks over the years, but none so far could justify the added cost. A newcomer that got its start securing AT",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/tech/957603/tmd-smart-keyless-bike-lock-review",
+    "time_hkt": "16:47",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
