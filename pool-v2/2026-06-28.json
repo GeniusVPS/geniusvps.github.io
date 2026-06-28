@@ -502,5 +502,61 @@
     "time_hkt": "06:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260628_037",
+    "date": "2026-06-28",
+    "headline_zh": "'Careless People' author claims Meta surveilled her for 12mos to enforce silence",
+    "headline_en": "'Careless People' author claims Meta surveilled her for 12mos to enforce silence",
+    "summary_zh": "https://archive.ph/LqnaQ\n\nComments URL: https://news.ycombinator.com/item?id=48701822\nPoints: 172\n# Comments: 73",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://fortune.com/2026/06/26/meta-wynn-williams-surveillance-gag-order-lawsuit-2026/",
+    "time_hkt": "11:31",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260628_038",
+    "date": "2026-06-28",
+    "headline_zh": "IP Crawl: Living atlas of open webcams discovered on the public internet",
+    "headline_en": "IP Crawl: Living atlas of open webcams discovered on the public internet",
+    "summary_zh": "Article URL: https://ipcrawl.com/\nComments URL: https://news.ycombinator.com/item?id=48700834\nPoints: 250\n# Comments: 128",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://ipcrawl.com/",
+    "time_hkt": "11:31",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260628_039",
+    "date": "2026-06-28",
+    "headline_zh": "Suspicious Discontinuities (2020)",
+    "headline_en": "Suspicious Discontinuities (2020)",
+    "summary_zh": "Article URL: https://danluu.com/discontinuities/\nComments URL: https://news.ycombinator.com/item?id=48698151\nPoints: 215\n# Comments: 63",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://danluu.com/discontinuities/",
+    "time_hkt": "11:31",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260628_040",
+    "date": "2026-06-28",
+    "headline_zh": "Tech firms are blaming AI for mega device and console price rises",
+    "headline_en": "Tech firms are blaming AI for mega device and console price rises",
+    "summary_zh": "Xbox consoles, Nintendo's new Switch 2 and Valve's Steam Deck are just some of the gadgets seeing price hikes in recent months.",
+    "category": "general",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cd95k584pzqo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "11:31",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
