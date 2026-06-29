@@ -446,5 +446,61 @@
     "time_hkt": "05:59",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260629_033",
+    "date": "2026-06-29",
+    "headline_zh": "Librepods: AirPods liberated",
+    "headline_en": "Librepods: AirPods liberated",
+    "summary_zh": "Article URL: https://github.com/librepods-org/librepods\nComments URL: https://news.ycombinator.com/item?id=48710232\nPoints: 293\n# Comments: 89",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/librepods-org/librepods",
+    "time_hkt": "11:36",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260629_034",
+    "date": "2026-06-29",
+    "headline_zh": "GLM 5.2 beats Claude in our benchmarks",
+    "headline_en": "GLM 5.2 beats Claude in our benchmarks",
+    "summary_zh": "Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/\nComments URL: https://news.ycombinator.",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/",
+    "time_hkt": "11:36",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260629_035",
+    "date": "2026-06-29",
+    "headline_zh": "Professor denounces mass AI fraud on an exam at Brown",
+    "headline_en": "Professor denounces mass AI fraud on an exam at Brown",
+    "summary_zh": "Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html\nComments URL: https://new",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html",
+    "time_hkt": "11:36",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260629_036",
+    "date": "2026-06-29",
+    "headline_zh": "HP Inc. launches Frontier strategic partnership with OpenAI",
+    "headline_en": "HP Inc. launches Frontier strategic partnership with OpenAI",
+    "summary_zh": "HP Inc. scales its OpenAI Frontier partnership to deploy AI across customer experiences, software development, and enterprise operations.",
+    "category": "ai",
+    "score": 5,
+    "source": "OpenAI Blog",
+    "source_url": "https://openai.com/index/hp-frontier-partnership",
+    "time_hkt": "11:36",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
