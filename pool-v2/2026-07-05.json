@@ -264,5 +264,61 @@
     "time_hkt": "03:06",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260705_020",
+    "date": "2026-07-05",
+    "headline_zh": "New Google commercial imagines a Declaration of Independence written with help from AI",
+    "headline_en": "New Google commercial imagines a Declaration of Independence written with help from AI",
+    "summary_zh": "Two hundred and fifty years after the signing of the Declaration of Independence, a new commercial asks: What if the Founding Fathers had access to Go",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/07/04/new-google-commercial-imagines-a-declaration-of-independence-written-with-help-from-ai/",
+    "time_hkt": "05:55",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260705_021",
+    "date": "2026-07-05",
+    "headline_zh": "Leaking YouTube creators' private videos",
+    "headline_en": "Leaking YouTube creators' private videos",
+    "summary_zh": "Article URL: https://javoriuski.com/post/youtube\nComments URL: https://news.ycombinator.com/item?id=48786781\nPoints: 364\n# Comments: 182",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://javoriuski.com/post/youtube",
+    "time_hkt": "05:55",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260705_022",
+    "date": "2026-07-05",
+    "headline_zh": "Potential session/cache leakage between workspace instances or consumer accounts",
+    "headline_en": "Potential session/cache leakage between workspace instances or consumer accounts",
+    "summary_zh": "Article URL: https://github.com/anthropics/claude-code/issues/74066\nComments URL: https://news.ycombinator.com/item?id=48785485\nPoints: 246\n# Comments",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/anthropics/claude-code/issues/74066",
+    "time_hkt": "05:55",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260705_023",
+    "date": "2026-07-05",
+    "headline_zh": "What Gemini app upgrades you get with Google AI Plus & AI Pro",
+    "headline_en": "What Gemini app upgrades you get with Google AI Plus & AI Pro",
+    "summary_zh": "While the free tier of the Gemini app allows you to be quite productive, subscribing to Google AI Plus or AI Pro unlocks a lot more.",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/07/04/gemini-app-free-plus-pro-features/",
+    "time_hkt": "05:55",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
