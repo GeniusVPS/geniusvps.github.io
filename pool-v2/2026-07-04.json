@@ -698,5 +698,19 @@
     "time_hkt": "10:36",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260704_051",
+    "date": "2026-07-04",
+    "headline_zh": "60% Fable cost cut by converting code to images and having the model OCR it",
+    "headline_en": "60% Fable cost cut by converting code to images and having the model OCR it",
+    "summary_zh": "Article URL: https://github.com/teamchong/pxpipe\nComments URL: https://news.ycombinator.com/item?id=48776464\nPoints: 251\n# Comments: 88",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/teamchong/pxpipe",
+    "time_hkt": "14:16",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
