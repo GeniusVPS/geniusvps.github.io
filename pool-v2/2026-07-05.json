@@ -320,5 +320,33 @@
     "time_hkt": "05:55",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260705_024",
+    "date": "2026-07-05",
+    "headline_zh": "US government body paid $1M to hackers who never locked a single file",
+    "headline_en": "US government body paid $1M to hackers who never locked a single file",
+    "summary_zh": "A US government entity paid around $1m to stop stolen files from being published, according to a case study by researcher Rakesh Krishnan for Ransom-I",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/kairos-data-extortion-million-payment",
+    "time_hkt": "10:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260705_025",
+    "date": "2026-07-05",
+    "headline_zh": "India’s CG Semi starts commercial chip production at $870M Gujarat plant",
+    "headline_en": "India’s CG Semi starts commercial chip production at $870M Gujarat plant",
+    "summary_zh": "Prime Minister Narendra Modi has inaugurated commercial production at CG Semi’s chip assembly and testing plant in Sanand, Gujarat. The facility will ",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/india-cg-semi-chip-production-gujarat",
+    "time_hkt": "10:47",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
