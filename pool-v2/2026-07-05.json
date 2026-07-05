@@ -348,5 +348,47 @@
     "time_hkt": "10:47",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260705_026",
+    "date": "2026-07-05",
+    "headline_zh": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
+    "headline_en": "GPT-5.5 Codex reasoning-token clustering may be leading to degraded performance",
+    "summary_zh": "Article URL: https://github.com/openai/codex/issues/30364\nComments URL: https://news.ycombinator.com/item?id=48789428\nPoints: 225\n# Comments: 78",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/openai/codex/issues/30364",
+    "time_hkt": "14:38",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260705_027",
+    "date": "2026-07-05",
+    "headline_zh": "Command and Conquer Generals natively ported to macOS, iPhone, iPad using Fable",
+    "headline_en": "Command and Conquer Generals natively ported to macOS, iPhone, iPad using Fable",
+    "summary_zh": "Article URL: https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main\nComments URL: https://news.ycombinator.com/item?id=48788283\nPoints: 482\n# ",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/ammaarreshi/Generals-Mac-iOS-iPad/tree/main",
+    "time_hkt": "14:38",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260705_028",
+    "date": "2026-07-05",
+    "headline_zh": "Google Books (or similar) all book scans – $200k bounty (2025)",
+    "headline_en": "Google Books (or similar) all book scans – $200k bounty (2025)",
+    "summary_zh": "Article URL: https://software.annas-archive.gl/AnnaArchivist/annas-archive/-/work_items/234\nComments URL: https://news.ycombinator.com/item?id=4878683",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://software.annas-archive.gl/AnnaArchivist/annas-archive/-/work_items/234",
+    "time_hkt": "14:38",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
