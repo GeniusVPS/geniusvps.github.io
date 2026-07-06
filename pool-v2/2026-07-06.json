@@ -474,5 +474,61 @@
     "time_hkt": "05:58",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260706_035",
+    "date": "2026-07-06",
+    "headline_zh": "Some of the nation’s rich are letting AI teach their kids",
+    "headline_en": "Some of the nation’s rich are letting AI teach their kids",
+    "summary_zh": "Most Americans don't trust AI. It's proven that it doesn't know what safe toppings for pizza are. People don't even want to listen to AI music. But no",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/961505/wealthy-ai-schools-alpha-forge-prep",
+    "time_hkt": "10:53",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260706_036",
+    "date": "2026-07-06",
+    "headline_zh": "OpenPrinter",
+    "headline_en": "OpenPrinter",
+    "summary_zh": "Article URL: https://www.opentools.studio/\nComments URL: https://news.ycombinator.com/item?id=48797916\nPoints: 482\n# Comments: 120",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.opentools.studio/",
+    "time_hkt": "10:53",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260706_037",
+    "date": "2026-07-06",
+    "headline_zh": "The future of Flipper Zero development",
+    "headline_en": "The future of Flipper Zero development",
+    "summary_zh": "Article URL: https://blog.flipper.net/future-of-flipper-zero-development/\nComments URL: https://news.ycombinator.com/item?id=48796552\nPoints: 238\n# Co",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://blog.flipper.net/future-of-flipper-zero-development/",
+    "time_hkt": "10:53",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260706_038",
+    "date": "2026-07-06",
+    "headline_zh": "Starring the Computer",
+    "headline_en": "Starring the Computer",
+    "summary_zh": "Article URL: https://www.starringthecomputer.com/computers.html\nComments URL: https://news.ycombinator.com/item?id=48796093\nPoints: 173\n# Comments: 42",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.starringthecomputer.com/computers.html",
+    "time_hkt": "10:53",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
