@@ -992,5 +992,47 @@
     "time_hkt": "10:47",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260707_072",
+    "date": "2026-07-07",
+    "headline_zh": "xAI is now officially known as SpaceXAI",
+    "headline_en": "xAI is now officially known as SpaceXAI",
+    "summary_zh": "The xAI account on X has announced its official rebranding to SpaceXAI, five months after it merged with SpaceX.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2209300/xai-now-officially-spacexai/",
+    "time_hkt": "14:43",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260707_073",
+    "date": "2026-07-07",
+    "headline_zh": "Fable turned reMarkable into Tom Riddle's diary from Harry Potter",
+    "headline_en": "Fable turned reMarkable into Tom Riddle's diary from Harry Potter",
+    "summary_zh": "Article URL: https://github.com/MaximeRivest/Riddle\nComments URL: https://news.ycombinator.com/item?id=48811591\nPoints: 333\n# Comments: 184",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/MaximeRivest/Riddle",
+    "time_hkt": "14:43",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260707_074",
+    "date": "2026-07-07",
+    "headline_zh": "GLM 5.2 and the coming AI margin collapse",
+    "headline_en": "GLM 5.2 and the coming AI margin collapse",
+    "summary_zh": "Article URL: https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/\nComments URL: https://news.ycombinator.com/item?id=48809",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://martinalderson.com/posts/the-upcoming-ai-margin-collapse-part-1-glm-5-2/",
+    "time_hkt": "14:43",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
