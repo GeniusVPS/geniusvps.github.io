@@ -1328,5 +1328,19 @@
     "time_hkt": "13:37",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260711_096",
+    "date": "2026-07-11",
+    "headline_zh": "Are you filthy enough for a $700 portable shower?",
+    "headline_en": "Are you filthy enough for a $700 portable shower?",
+    "summary_zh": "Hot showers, like electricity, are a luxury that's easy to take for granted. That all changes after a few nights camping at a music festival, a week t",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/reviews/963814/joolca-hottap-portable-shower-review",
+    "time_hkt": "15:50",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
