@@ -334,5 +334,47 @@
     "time_hkt": "16:11",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260712_025",
+    "date": "2026-07-12",
+    "headline_zh": "Scientists’ Side Hustle? Using AI and Quantum Computing to Generate New Peptides",
+    "headline_en": "Scientists’ Side Hustle? Using AI and Quantum Computing to Generate New Peptides",
+    "summary_zh": "Researchers cobbled together funding and time to show how quantum computing could aid in the development of drugs to help underserved populations and ",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/scientists-using-ai-and-quantum-computing-to-generate-new-peptides/",
+    "time_hkt": "18:24",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260712_026",
+    "date": "2026-07-12",
+    "headline_zh": "Best External Hard Drives (2026): SSD to Store Data, Video, and More",
+    "headline_en": "Best External Hard Drives (2026): SSD to Store Data, Video, and More",
+    "summary_zh": "Need an ultrafast drive for video editing or a rugged option to back up your photos in the field? We’ve got a solution for every situation.",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/best-portable-external-storage-drives/",
+    "time_hkt": "18:24",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260712_027",
+    "date": "2026-07-12",
+    "headline_zh": "The 10 Best Pet Cameras of 2026: Furbo, Petcube, and Enabot",
+    "headline_en": "The 10 Best Pet Cameras of 2026: Furbo, Petcube, and Enabot",
+    "summary_zh": "Whether you’re near or far, keep an eye on your fur baby with our favorite pet cameras.",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/gallery/best-pet-cameras/",
+    "time_hkt": "18:24",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
