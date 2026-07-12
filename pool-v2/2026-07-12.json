@@ -292,5 +292,19 @@
     "time_hkt": "10:27",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260712_022",
+    "date": "2026-07-12",
+    "headline_zh": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+    "headline_en": "Nvidia, CoreWeave, and Nebius: Inside the Circular Financing of the GPU Boom",
+    "summary_zh": "Article URL: https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom\nComments URL: https://news.ycombinator.com/item?id=4887",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://io-fund.com/ai-stocks/nvidia-coreweave-nebius-circular-financing-gpu-boom",
+    "time_hkt": "13:54",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
