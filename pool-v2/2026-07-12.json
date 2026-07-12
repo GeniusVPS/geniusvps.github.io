@@ -306,5 +306,33 @@
     "time_hkt": "13:54",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260712_023",
+    "date": "2026-07-12",
+    "headline_zh": "What xAI's Grok Build CLI Actually Sends to xAI",
+    "headline_en": "What xAI's Grok Build CLI Actually Sends to xAI",
+    "summary_zh": "Article URL: https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547\nComments URL: https://news.ycombinator.com/item?id=48877371\nPoints: 254",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://gist.github.com/cereblab/dc9a40bc26120f4540e4e09b75ffb547",
+    "time_hkt": "16:11",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260712_024",
+    "date": "2026-07-12",
+    "headline_zh": "Mesh LLM: distributed AI computing on iroh",
+    "headline_en": "Mesh LLM: distributed AI computing on iroh",
+    "summary_zh": "Article URL: https://www.iroh.computer/blog/mesh-llm\nComments URL: https://news.ycombinator.com/item?id=48876505\nPoints: 208\n# Comments: 48",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.iroh.computer/blog/mesh-llm",
+    "time_hkt": "16:11",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
