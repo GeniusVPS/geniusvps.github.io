@@ -348,5 +348,19 @@
     "time_hkt": "05:44",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260713_026",
+    "date": "2026-07-13",
+    "headline_zh": "10 years of Pokémon Go and the millions still trying to catch 'em all",
+    "headline_en": "10 years of Pokémon Go and the millions still trying to catch 'em all",
+    "summary_zh": "Michael Steranka, vice president at the mobile game's owner Scopely, says it has always been about bringing people together.",
+    "category": "general",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cevlwk4nrm7o?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "10:29",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
