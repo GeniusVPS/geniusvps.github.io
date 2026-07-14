@@ -1272,5 +1272,47 @@
     "time_hkt": "13:26",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260714_092",
+    "date": "2026-07-14",
+    "headline_zh": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+    "headline_en": "Japan develops a method to recover up to 90% of lithium from used EV batteries",
+    "summary_zh": "Article URL: https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/\nComments URL: https://news.ycombinator.com/it",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://tech.supercarblondie.com/japan-recovers-up-to-90-of-lithium-from-used-ev-batteries/",
+    "time_hkt": "15:57",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260714_093",
+    "date": "2026-07-14",
+    "headline_zh": "Pentagon pauses the cyber audit rule that was pushing small suppliers out",
+    "headline_en": "Pentagon pauses the cyber audit rule that was pushing small suppliers out",
+    "summary_zh": "The figure that seems to have finished the programme off is not a cost. It is a ratio: more than 100,000 companies in the American defence supply chai",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/pentagon-pauses-cmmc-cyber-audit-rule",
+    "time_hkt": "15:57",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260714_094",
+    "date": "2026-07-14",
+    "headline_zh": "Pentagon Suspends CMMC Phase 2 as It Rethinks Contractor Cybersecurity Rules",
+    "headline_en": "Pentagon Suspends CMMC Phase 2 as It Rethinks Contractor Cybersecurity Rules",
+    "summary_zh": "A new CMMC review and reform task force will conduct a comprehensive review of the program.\nThe post Pentagon Suspends CMMC Phase 2 as It Rethinks Con",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/pentagon-suspends-cmmc-phase-2-as-it-rethinks-contractor-cybersecurity-rules/",
+    "time_hkt": "15:57",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
