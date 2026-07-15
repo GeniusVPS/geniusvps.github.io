@@ -1230,5 +1230,61 @@
     "time_hkt": "13:27",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260715_089",
+    "date": "2026-07-15",
+    "headline_zh": "Starlink’s V5 dish is now available — here’s how it compares",
+    "headline_en": "Starlink’s V5 dish is now available — here’s how it compares",
+    "summary_zh": "SpaceX's latest residential dish - the Starlink V5 - is now available in \"select areas.\" It's notably smaller and lighter than the V4 dish with improv",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/science/965824/starlink-v5-vs-v4-dish-comparison",
+    "time_hkt": "16:02",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260715_090",
+    "date": "2026-07-15",
+    "headline_zh": "Jurassic Park computers in excruciating detail",
+    "headline_en": "Jurassic Park computers in excruciating detail",
+    "summary_zh": "Article URL: https://fabiensanglard.net/jurrasic_park_computers/index.html\nComments URL: https://news.ycombinator.com/item?id=48915709\nPoints: 330\n# C",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://fabiensanglard.net/jurrasic_park_computers/index.html",
+    "time_hkt": "16:02",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260715_091",
+    "date": "2026-07-15",
+    "headline_zh": "Vancouver PD website features Quick Escape button that wipes itself from history",
+    "headline_en": "Vancouver PD website features Quick Escape button that wipes itself from history",
+    "summary_zh": "Article URL: https://vpd.ca/\nComments URL: https://news.ycombinator.com/item?id=48914644\nPoints: 241\n# Comments: 95",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://vpd.ca/",
+    "time_hkt": "16:02",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260715_092",
+    "date": "2026-07-15",
+    "headline_zh": "Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates",
+    "headline_en": "Critical Vulnerabilities Patched With Fresh Chrome 150, Firefox 152 Updates",
+    "summary_zh": "Public exploit code targeting the Firefox flaws exists, but no in-the-wild exploitation has been observed.\nThe post Critical Vulnerabilities Patched W",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/critical-vulnerabilities-patched-with-fresh-chrome-150-firefox-152-updates/",
+    "time_hkt": "16:02",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
