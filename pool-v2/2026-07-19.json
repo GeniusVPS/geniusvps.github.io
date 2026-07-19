@@ -334,5 +334,47 @@
     "time_hkt": "10:25",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260719_025",
+    "date": "2026-07-19",
+    "headline_zh": "Transcribe.cpp",
+    "headline_en": "Transcribe.cpp",
+    "summary_zh": "Article URL: https://workshop.cjpais.com/projects/transcribe-cpp\nComments URL: https://news.ycombinator.com/item?id=48963879\nPoints: 422\n# Comments: 7",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://workshop.cjpais.com/projects/transcribe-cpp",
+    "time_hkt": "16:10",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260719_026",
+    "date": "2026-07-19",
+    "headline_zh": "Goodbye, and Thanks for All the Bikesheds",
+    "headline_en": "Goodbye, and Thanks for All the Bikesheds",
+    "summary_zh": "Article URL: https://queue.acm.org/detail.cfm?id=3818307\nComments URL: https://news.ycombinator.com/item?id=48960155\nPoints: 206\n# Comments: 207",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://queue.acm.org/detail.cfm?id=3818307",
+    "time_hkt": "16:10",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260719_027",
+    "date": "2026-07-19",
+    "headline_zh": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
+    "headline_en": "Setting up your spare Mac for Claude Code to control, a step-by-step guide",
+    "summary_zh": "Article URL: https://ykdojo.github.io/claude-controls-mac/\nComments URL: https://news.ycombinator.com/item?id=48959392\nPoints: 222\n# Comments: 152",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://ykdojo.github.io/claude-controls-mac/",
+    "time_hkt": "16:10",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
