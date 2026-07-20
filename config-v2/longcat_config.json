@@ -1,5 +1,5 @@
 {
   "longcat_api_key": "ak_2ai4LP6AR8yr5nP7vl6BW2Ue22y1T",
   "longcat_api_url": "https://api.longcat.chat/openai/chat/completions",
-  "longcat_model": "LongCat-2.0-Preview"
+  "longcat_model": "LongCat-2.0"
 }
