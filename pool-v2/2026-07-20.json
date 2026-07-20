@@ -334,5 +334,33 @@
     "time_hkt": "10:40",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260720_025",
+    "date": "2026-07-20",
+    "headline_zh": "Claude Fable produced a counterexample to the Jacobian Conjecture",
+    "headline_en": "Claude Fable produced a counterexample to the Jacobian Conjecture",
+    "summary_zh": "Article URL: https://xcancel.com/__alpoge__/status/2079028340955197566\nComments URL: https://news.ycombinator.com/item?id=48973869\nPoints: 229\n# Comme",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://xcancel.com/__alpoge__/status/2079028340955197566",
+    "time_hkt": "14:14",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260720_026",
+    "date": "2026-07-20",
+    "headline_zh": "WP2Shell WordPress Vulnerabilities Exploited in the Wild",
+    "headline_en": "WP2Shell WordPress Vulnerabilities Exploited in the Wild",
+    "summary_zh": "Exploitation of the new WordPress vulnerabilities tracked as CVE-2026-60137 and CVE-2026-63030 started soon after disclosure.\nThe post WP2Shell WordPr",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/wp2shell-wordpress-vulnerabilities-exploited-in-the-wild/",
+    "time_hkt": "14:14",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
