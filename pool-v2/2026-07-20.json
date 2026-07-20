@@ -278,5 +278,61 @@
     "time_hkt": "05:48",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260720_021",
+    "date": "2026-07-20",
+    "headline_zh": "The Kodak EC35 is a pocketable, beginner-friendly 35mm film camera",
+    "headline_en": "The Kodak EC35 is a pocketable, beginner-friendly 35mm film camera",
+    "summary_zh": "The $35 camera comes in seven colors and has a slide cover.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2218273/kodak-ec35-pocketable-beginner-friendly-35mm-film-camera/",
+    "time_hkt": "10:40",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260720_022",
+    "date": "2026-07-20",
+    "headline_zh": "India's first privately-developed rocket reaches orbit on dramatic debut launch",
+    "headline_en": "India's first privately-developed rocket reaches orbit on dramatic debut launch",
+    "summary_zh": "\"On the first attempt, reaching orbit, I never thought it was possible.\"",
+    "category": "general",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/space/2026/07/indias-first-privately-developed-rocket-reaches-orbit-on-dramatic-debut-launch/",
+    "time_hkt": "10:40",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260720_023",
+    "date": "2026-07-20",
+    "headline_zh": "The Last MPEG-4 Visual Patent Has Expired",
+    "headline_en": "The Last MPEG-4 Visual Patent Has Expired",
+    "summary_zh": "Article URL: https://www.phoronix.com/news/Last-MPEG-4-Patent-Expired\nComments URL: https://news.ycombinator.com/item?id=48969635\nPoints: 183\n# Commen",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.phoronix.com/news/Last-MPEG-4-Patent-Expired",
+    "time_hkt": "10:40",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260720_024",
+    "date": "2026-07-20",
+    "headline_zh": "Moonshot AI suspends new subscriptions due to Kimi K3 demand",
+    "headline_en": "Moonshot AI suspends new subscriptions due to Kimi K3 demand",
+    "summary_zh": "Article URL: https://twitter.com/kimi_moonshot/status/2078855608565207130\nComments URL: https://news.ycombinator.com/item?id=48969291\nPoints: 228\n# Co",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://twitter.com/kimi_moonshot/status/2078855608565207130",
+    "time_hkt": "10:40",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
