@@ -1398,5 +1398,61 @@
     "time_hkt": "13:46",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260722_101",
+    "date": "2026-07-22",
+    "headline_zh": "Synthesia’s AI training platform is moving beyond videos into live coaching",
+    "headline_en": "Synthesia’s AI training platform is moving beyond videos into live coaching",
+    "summary_zh": "Synthesia launched AI Roleplay Sessions, an interactive enterprise training platform where employees practice workplace conversations with AI avatars ",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/07/22/synthesias-ai-training-platform-is-moving-beyond-videos-into-live-coaching/",
+    "time_hkt": "16:23",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260722_102",
+    "date": "2026-07-22",
+    "headline_zh": "Judge approves $1.5B Anthropic settlement for pirated books used to train Claude",
+    "headline_en": "Judge approves $1.5B Anthropic settlement for pirated books used to train Claude",
+    "summary_zh": "Article URL: https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63\nComments URL: https://ne",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://apnews.com/article/ai-anthropic-copyright-settlement-claude-books-bartz-74b140444023898aeba8579b6e9f0d63",
+    "time_hkt": "16:23",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260722_103",
+    "date": "2026-07-22",
+    "headline_zh": "OpenAI Says Its AI Models Broke Loose and Hacked Hugging Face",
+    "headline_en": "OpenAI Says Its AI Models Broke Loose and Hacked Hugging Face",
+    "summary_zh": "The admission comes days after Hugging Face disclosed an attack powered by autonomous AI agents. \nThe post OpenAI Says Its AI Models Broke Loose and H",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/openai-says-its-ai-models-broke-loose-and-hacked-hugging-face/",
+    "time_hkt": "16:23",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260722_104",
+    "date": "2026-07-22",
+    "headline_zh": "Today’s Android app deals and freebies: Old Man’s Journey, Roundguard, ELOH, more",
+    "headline_en": "Today’s Android app deals and freebies: Old Man’s Journey, Roundguard, ELOH, more",
+    "summary_zh": "Your afternoon lineup of the best Android game and app deals is now ready to roll, including titles like Old Man’s Journey, Roundguard, ELOH, 1945 Sky",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5toys.com/2026/07/21/todays-android-app-deals-free-old-journey-roundguard/",
+    "time_hkt": "16:23",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
