@@ -30,63 +30,11 @@ except ImportError:
 CONFIG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config")
 POOL_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "pool")
 
-# LongCat API 設定 — 支援多種 config 格式 + 環境變數
-LONGCAT_CONFIG_PATH = os.path.join(CONFIG_DIR, "longcat_config.json")
-# 亦嘗試 techcanto 主 config 目錄
-TECHCANTO_CONFIG_PATH = os.path.expanduser("~/.hermes/techcanto/config/longcat_config.json")
-
-def load_longcat_config():
-    # 優先讀環境變數（GitHub Actions 注入）
-    env_key = os.environ.get("LONGCAT_API_KEY", "")
-    env_url = os.environ.get("LONGCAT_API_URL", "")
-    env_model = os.environ.get("LONGCAT_MODEL", "")
-    
-    # 嘗試讀 config 檔案
-    config = {}
-    for cfg_path in [LONGCAT_CONFIG_PATH, TECHCANTO_CONFIG_PATH]:
-        try:
-            with open(cfg_path, "r", encoding="utf-8") as f:
-                config = json.load(f)
-                print(f"  ✅ 讀到 config: {cfg_path}")
-                break
-        except (FileNotFoundError, json.JSONDecodeError):
-            continue
-    
-    # 支援多種欄位名格式
-    api_key = env_key or config.get("longcat_api_key", "") or config.get("api_key", "")
-    base_url = env_url or config.get("longcat_api_url", "") or config.get("base_url", "")
-    model = env_model or config.get("longcat_model", "") or config.get("model", "")
-    
-    # 如果 base_url 唔係完整 endpoint URL，補上 path
-    if base_url and "/v1/chat/completions" not in base_url:
-        # 檢查係 siliconflow 定 longcat.chat
-        if "siliconflow" in base_url:
-            api_key_url = f"{base_url}/v1/chat/completions"
-        else:
-            api_key_url = f"{base_url}/openai/v1/chat/completions"
-    else:
-        api_key_url = base_url or "https://api.longcat.chat/openai/v1/chat/completions"
-    
-    if api_key:
-        print(f"  ✅ LongCat API key 已載入 ({api_key[:8]}...)")
-    else:
-        print(f"  ⚠️  LongCat API key 未設定，翻譯將用 fallback")
-    
-    return {
-        "longcat_api_key": api_key,
-        "longcat_api_url": api_key_url,
-        "longcat_model": model or "LongCat-Flash-Lite"
-    }
-
-LONGCAT_CONFIG = load_longcat_config()
-LONGCAT_API_URL = LONGCAT_CONFIG["longcat_api_url"]
-LONGCAT_MODEL = LONGCAT_CONFIG["longcat_model"]
-LONGCAT_API_KEY = LONGCAT_CONFIG["longcat_api_key"]
-
-# 本地 LM Studio API (fallback)
-LOCAL_LLM_API = "http://localhost:1234/v1/chat/completions"
-LOCAL_LLM_MODEL = "nvidia/nemotron-3-nano-omni"
-LOCAL_LLM_KEY = "lm-studio"
+# 本地 Ollama API 設定 — 取代 LongCat
+# 用 Ollama 原生 /api/chat 端點（比 /v1/ 穩定）
+OLLAMA_BASE = "http://localhost:11434"
+OLLAMA_CHAT = OLLAMA_BASE + "/api/chat"
+LOCAL_LLM_MODEL = "qwen2.5:14b"  # 非 reasoning 模型，中文/粵語能力強
 
 SIMILARITY_THRESHOLD = 0.85
 MAX_PER_FEED = 5       # 每來源最多 5 條
@@ -176,74 +124,62 @@ def clean_html(text):
     return re.sub(r"<[^>]+>", "", text).strip()
 
 
-def summarize_one(text, use_longcat=True):
-    """翻譯單條新聞成中文
+def summarize_one(text, use_local=True):
+    """翻譯單條新聞成粵語
     Args:
         text: 要翻譯的英文文本
-        use_longcat: 是否優先使用 LongCat API (default: True)
+        use_local: 是否優先使用本地 Ollama (default: True)
     """
-    prompt = f"Translate the following English text to Traditional Chinese. Only output the translation, nothing else:\n\n{text}"
+    prompt = f"""Translate the following English text to Traditional Chinese.
+Use Chinese characters only. Keep it concise and natural.
+Only output the translation, nothing else.
+
+Examples:
+"Apple announces new AI chip" → "蘋果宣佈推出新AI晶片"
+"Google releases updated search algorithm" → "谷歌發佈更新版搜尋演算法"
+
+Translate this:
+{text}"""
+    last_error = None
     
-    # 優先使用 LongCat API
-    if use_longcat and LONGCAT_API_KEY:
+    # 使用本地 Ollama
+    if use_local:
         try:
             payload = json.dumps({
-                "model": LONGCAT_MODEL,
+                "model": LOCAL_LLM_MODEL,
                 "messages": [{"role": "user", "content": prompt}],
-                "max_tokens": 200,
-                "temperature": 0.5
+                "options": {
+                    "num_predict": 500,
+                    "temperature": 0.3
+                }
             }).encode("utf-8")
             
             req = HttpRequest(
-                LONGCAT_API_URL,
+                OLLAMA_CHAT,
                 data=payload,
                 headers={
-                    "Content-Type": "application/json",
-                    "Authorization": f"Bearer {LONGCAT_API_KEY}"
+                    "Content-Type": "application/json"
                 },
                 method="POST"
             )
             
-            with urlopen(req, timeout=30) as resp:
-                result = json.loads(resp.read().decode("utf-8"))
-                return result["choices"][0]["message"]["content"].strip()
+            with urlopen(req, timeout=120) as resp:
+                # Ollama /api/chat 返回 streaming，讀第一個 chunk
+                content = ""
+                for line in resp:
+                    chunk = json.loads(line)
+                    if "message" in chunk and chunk["message"].get("content"):
+                        content += chunk["message"]["content"]
+                    if chunk.get("done"):
+                        break
+                content = content.strip()
+                if content:
+                    return content
         except Exception as e:
-            print(f"  ⚠️  LongCat API 失敗 ({type(e).__name__})，用本地 fallback")
+            last_error = e
+            print(f"  ⚠️  本地 Ollama 失敗 ({type(e).__name__})")
     
-    # Fallback 到本地 LM Studio
-    try:
-        payload = json.dumps({
-            "model": LOCAL_LLM_MODEL,
-            "messages": [{"role": "user", "content": prompt}],
-            "max_tokens": 500,  # Increased for reasoning models that use tokens for thinking
-            "temperature": 0.5
-        }).encode("utf-8")
-        
-        req = HttpRequest(
-            LOCAL_LLM_API,
-            data=payload,
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {LOCAL_LLM_KEY}"
-            },
-            method="POST"
-        )
-        
-        with urlopen(req, timeout=60) as resp:  # Increased timeout for reasoning models
-            result = json.loads(resp.read().decode("utf-8"))
-            content = result["choices"][0]["message"]["content"].strip()
-            # Handle reasoning models that may put output in reasoning_content
-            if not content:
-                reasoning = result["choices"][0]["message"].get("reasoning_content", "")
-                if reasoning:
-                    # Extract Chinese text from reasoning as fallback
-                    import re
-                    chinese_text = re.findall(r'[\u4e00-\u9fff]+', reasoning)
-                    if chinese_text:
-                        content = ''.join(chinese_text)[:200]
-            return content
-    except Exception as e:
-        raise RuntimeError(f"Both LongCat and local LLM failed: {e}")
+    raise RuntimeError(f"Local LLM failed: {last_error}")
 
 
 def is_spam_article(title, desc, source):
