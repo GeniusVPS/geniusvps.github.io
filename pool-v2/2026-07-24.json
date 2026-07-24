@@ -1370,5 +1370,33 @@
     "time_hkt": "13:47",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260724_099",
+    "date": "2026-07-24",
+    "headline_zh": "Google is expanding access to its Gemini Spark agentic AI assistant",
+    "headline_en": "Google is expanding access to its Gemini Spark agentic AI assistant",
+    "summary_zh": "Gemini Spark is now available to more users.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2222303/google-expanding-access-gemini-spark/",
+    "time_hkt": "16:21",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260724_100",
+    "date": "2026-07-24",
+    "headline_zh": "Data Breach Confirmed After Australian Energy Giant Origin Is Hacked",
+    "headline_en": "Data Breach Confirmed After Australian Energy Giant Origin Is Hacked",
+    "summary_zh": "A hacker claims to have stolen the information of 2 million Origin Energy customers and is threatening to leak it. \nThe post Data Breach Confirmed Aft",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/data-breach-confirmed-after-australian-energy-giant-origin-is-hacked/",
+    "time_hkt": "16:21",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
