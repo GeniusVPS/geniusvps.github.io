@@ -1230,5 +1230,19 @@
     "time_hkt": "13:40",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260725_089",
+    "date": "2026-07-25",
+    "headline_zh": "Forget expensive sleepbuds. Buy this pillow instead",
+    "headline_en": "Forget expensive sleepbuds. Buy this pillow instead",
+    "summary_zh": "Tech companies love to sell us expensive gadgets to solve all of life's little problems. Sleepbuds sold by the likes of Anker and Ozlo are a good exam",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/tech/970473/forget-expensive-sleepbuds-buy-this-pillow-instead",
+    "time_hkt": "16:01",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
