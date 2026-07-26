@@ -460,5 +460,61 @@
     "time_hkt": "05:52",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260726_034",
+    "date": "2026-07-26",
+    "headline_zh": "SDCC teaser gives us our first good look at Blade Runner 2099",
+    "headline_en": "SDCC teaser gives us our first good look at Blade Runner 2099",
+    "summary_zh": "Also: Forging the One Ring in Rings of Power S3 teaser; new Lanterns trailer; Spaceballs: The New One panel.",
+    "category": "general",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/culture/2026/07/sdcc-teaser-gives-us-our-first-good-look-at-blade-runner-2099/",
+    "time_hkt": "10:29",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260726_035",
+    "date": "2026-07-26",
+    "headline_zh": "Did They Ghost You?",
+    "headline_en": "Did They Ghost You?",
+    "summary_zh": "Article URL: https://didtheyghostyou.com/\nComments URL: https://news.ycombinator.com/item?id=49051120\nPoints: 294\n# Comments: 127",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://didtheyghostyou.com/",
+    "time_hkt": "10:29",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260726_036",
+    "date": "2026-07-26",
+    "headline_zh": "The growing vigilante movement to knock out Flock surveillance cameras",
+    "headline_en": "The growing vigilante movement to knock out Flock surveillance cameras",
+    "summary_zh": "Article URL: https://www.theguardian.com/us-news/ng-interactive/2026/jul/25/flock-surveillance-cameras\nComments URL: https://news.ycombinator.com/item",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.theguardian.com/us-news/ng-interactive/2026/jul/25/flock-surveillance-cameras",
+    "time_hkt": "10:29",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260726_037",
+    "date": "2026-07-26",
+    "headline_zh": "The Dark Night of Mathematics",
+    "headline_en": "The Dark Night of Mathematics",
+    "summary_zh": "Article URL: https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics\nComments URL: https://news.ycombinator.com/item?id=49048681\nPoints: ",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://kirwinhampshire.substack.com/p/the-dark-night-of-mathematics",
+    "time_hkt": "10:29",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
