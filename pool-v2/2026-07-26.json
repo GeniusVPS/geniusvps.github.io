@@ -516,5 +516,47 @@
     "time_hkt": "10:29",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260726_038",
+    "date": "2026-07-26",
+    "headline_zh": "JetZero",
+    "headline_en": "JetZero",
+    "summary_zh": "Article URL: https://www.jetzero.aero\nComments URL: https://news.ycombinator.com/item?id=49054224\nPoints: 183\n# Comments: 143",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.jetzero.aero",
+    "time_hkt": "16:32",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260726_039",
+    "date": "2026-07-26",
+    "headline_zh": "Turn And Face The Strange",
+    "headline_en": "Turn And Face The Strange",
+    "summary_zh": "Article URL: https://fly.io/blog/kurt-scott-money-sprites/\nComments URL: https://news.ycombinator.com/item?id=49051369\nPoints: 192\n# Comments: 127",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://fly.io/blog/kurt-scott-money-sprites/",
+    "time_hkt": "16:32",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260726_040",
+    "date": "2026-07-26",
+    "headline_zh": "The new rules of context engineering for Claude 5 generation models",
+    "headline_en": "The new rules of context engineering for Claude 5 generation models",
+    "summary_zh": "Article URL: https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models\nComments URL: https://news.ycombinator.com/it",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://claude.com/blog/the-new-rules-of-context-engineering-for-claude-5-generation-models",
+    "time_hkt": "16:32",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
