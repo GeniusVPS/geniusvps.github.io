@@ -334,5 +334,61 @@
     "time_hkt": "05:56",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260727_025",
+    "date": "2026-07-27",
+    "headline_zh": "Are brain waves the next unlock for physical AI?",
+    "headline_en": "Are brain waves the next unlock for physical AI?",
+    "summary_zh": "Forget YouTube videos—frontier physical AI models need multiple camera angles, dense annotation, and soon, brain wave readings.",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/07/26/are-brain-waves-the-next-unlock-for-physical-ai/",
+    "time_hkt": "10:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260727_026",
+    "date": "2026-07-27",
+    "headline_zh": "First teaser for Apple TV's Neuromancer debuts at SDCC",
+    "headline_en": "First teaser for Apple TV's Neuromancer debuts at SDCC",
+    "summary_zh": "Plus Mike Flanagan's Carrie teaser, trailers for Dark Matter S2 and Matchbox the Movie, and Marvel news.",
+    "category": "general",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/culture/2026/07/first-teaser-for-apple-tvs-neuromancer-debuts-at-sdcc/",
+    "time_hkt": "10:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260727_027",
+    "date": "2026-07-27",
+    "headline_zh": "The Strongest El Niño Ever",
+    "headline_en": "The Strongest El Niño Ever",
+    "summary_zh": "Article URL: https://www.theclimatebrink.com/p/the-strongest-el-nino-ever\nComments URL: https://news.ycombinator.com/item?id=49060978\nPoints: 215\n# Co",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.theclimatebrink.com/p/the-strongest-el-nino-ever",
+    "time_hkt": "10:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260727_028",
+    "date": "2026-07-27",
+    "headline_zh": "Decker, a platform that builds on the legacy of Hypercard and classic macOS",
+    "headline_en": "Decker, a platform that builds on the legacy of Hypercard and classic macOS",
+    "summary_zh": "Article URL: https://beyondloom.com/decker/\nComments URL: https://news.ycombinator.com/item?id=49060856\nPoints: 222\n# Comments: 54",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://beyondloom.com/decker/",
+    "time_hkt": "10:37",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
