@@ -1090,5 +1090,33 @@
     "time_hkt": "13:52",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260801_079",
+    "date": "2026-08-01",
+    "headline_zh": "Run Kimi K3 using 29 GB of RAM at 0.50 tok/s",
+    "headline_en": "Run Kimi K3 using 29 GB of RAM at 0.50 tok/s",
+    "summary_zh": "Article URL: https://github.com/sqliteai/waste\nComments URL: https://news.ycombinator.com/item?id=49123386\nPoints: 226\n# Comments: 92",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/sqliteai/waste",
+    "time_hkt": "16:14",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260801_080",
+    "date": "2026-08-01",
+    "headline_zh": "Ten advances in mathematics and theoretical computer science",
+    "headline_en": "Ten advances in mathematics and theoretical computer science",
+    "summary_zh": "OpenAI shares new results on long-standing open problems in mathematics and theoretical computer science, including advances in geometry, cryptography",
+    "category": "ai",
+    "score": 5,
+    "source": "OpenAI Blog",
+    "source_url": "https://openai.com/index/ten-advances-in-mathematics",
+    "time_hkt": "16:14",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
