@@ -292,5 +292,61 @@
     "time_hkt": "05:51",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260802_022",
+    "date": "2026-08-02",
+    "headline_zh": "Diátaxis",
+    "headline_en": "Diátaxis",
+    "summary_zh": "Article URL: https://diataxis.fr/\nComments URL: https://news.ycombinator.com/item?id=49138188\nPoints: 193\n# Comments: 29",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://diataxis.fr/",
+    "time_hkt": "10:28",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260802_023",
+    "date": "2026-08-02",
+    "headline_zh": "The Silicon Valley Founder Meat Grinder",
+    "headline_en": "The Silicon Valley Founder Meat Grinder",
+    "summary_zh": "Article URL: https://zaksa.zip/blog/silicon-valley-founder-meat-grinder/\nComments URL: https://news.ycombinator.com/item?id=49138045\nPoints: 202\n# Com",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://zaksa.zip/blog/silicon-valley-founder-meat-grinder/",
+    "time_hkt": "10:28",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260802_024",
+    "date": "2026-08-02",
+    "headline_zh": "How Google helped destroy adoption of RSS feeds (2023)",
+    "headline_en": "How Google helped destroy adoption of RSS feeds (2023)",
+    "summary_zh": "Article URL: https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds\nComments URL: https://news.ycombinator.com/item?id=49136821\nPoin",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://openrss.org/blog/how-google-helped-destroy-adoption-of-rss-feeds",
+    "time_hkt": "10:28",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260802_025",
+    "date": "2026-08-02",
+    "headline_zh": "NetBSD 11.0",
+    "headline_en": "NetBSD 11.0",
+    "summary_zh": "Article URL: https://blog.netbsd.org/tnf/entry/netbsd_11_0_released\nComments URL: https://news.ycombinator.com/item?id=49136736\nPoints: 218\n# Comments",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://blog.netbsd.org/tnf/entry/netbsd_11_0_released",
+    "time_hkt": "10:28",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
