@@ -348,5 +348,33 @@
     "time_hkt": "10:28",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260802_026",
+    "date": "2026-08-02",
+    "headline_zh": "AI financial advice is surprisingly good, especially if you ask right questions",
+    "headline_en": "AI financial advice is surprisingly good, especially if you ask right questions",
+    "summary_zh": "Article URL: https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions\nComments URL: h",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://mitsloan.mit.edu/ideas-made-to-matter/ai-financial-advice-surprisingly-good-especially-if-you-ask-right-questions",
+    "time_hkt": "13:53",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260802_027",
+    "date": "2026-08-02",
+    "headline_zh": "Seedance 2.5",
+    "headline_en": "Seedance 2.5",
+    "summary_zh": "Article URL: https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5\nComments URL: https://news.ycombinator",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+    "time_hkt": "13:53",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
