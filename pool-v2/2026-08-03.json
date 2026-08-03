@@ -222,5 +222,33 @@
     "time_hkt": "05:52",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260803_017",
+    "date": "2026-08-03",
+    "headline_zh": "Rachika Nayar’s Heaven Come Crashing is an instrumental epic of desperate longing",
+    "headline_en": "Rachika Nayar’s Heaven Come Crashing is an instrumental epic of desperate longing",
+    "summary_zh": "Two minutes and thirty seconds into the title track of Rachika Nayar's Heaven Come Crashing, an absolutely massive drum and bass beat drops. As a fan ",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/entertainment/974271/rachika-nayars-heaven-come-crashing-music-review",
+    "time_hkt": "10:30",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260803_018",
+    "date": "2026-08-03",
+    "headline_zh": "Fender’s CEO seems to think your bandmates are just analog AI",
+    "headline_en": "Fender’s CEO seems to think your bandmates are just analog AI",
+    "summary_zh": "Fender CEO Edward \"Bud\" Cole gave an interview to T3 in May celebrating the 75th anniversary of the Telecaster with comments on AI and music that init",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/974265/fender-ceo-bud-cole-ai-music",
+    "time_hkt": "10:30",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
