@@ -250,5 +250,61 @@
     "time_hkt": "10:30",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260803_019",
+    "date": "2026-08-03",
+    "headline_zh": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+    "headline_en": "Qwen3.8-Max: A New Bar for Coding and Cowork",
+    "summary_zh": "Article URL: https://qwen.ai/blog?id=qwen3.8\nComments URL: https://news.ycombinator.com/item?id=49150470\nPoints: 307\n# Comments: 113",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://qwen.ai/blog?id=qwen3.8",
+    "time_hkt": "14:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260803_020",
+    "date": "2026-08-03",
+    "headline_zh": "EU Age Verification Project Mandates Hardware-Bound Attestation",
+    "headline_en": "EU Age Verification Project Mandates Hardware-Bound Attestation",
+    "summary_zh": "Article URL: https://linuxiac.com/eu-age-verification-project-mandates-hardware-bound-attestation/\nComments URL: https://news.ycombinator.com/item?id=",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://linuxiac.com/eu-age-verification-project-mandates-hardware-bound-attestation/",
+    "time_hkt": "14:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260803_021",
+    "date": "2026-08-03",
+    "headline_zh": "'Crush this lady': how eBay harassment campaign led to $56M payout",
+    "headline_en": "'Crush this lady': how eBay harassment campaign led to $56M payout",
+    "summary_zh": "Article URL: https://www.ft.com/content/06ec1b03-d4af-40cf-b12a-4ba5a410f6d2\nComments URL: https://news.ycombinator.com/item?id=49147435\nPoints: 218\n#",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.ft.com/content/06ec1b03-d4af-40cf-b12a-4ba5a410f6d2",
+    "time_hkt": "14:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260803_022",
+    "date": "2026-08-03",
+    "headline_zh": "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM",
+    "headline_en": "Show HN: Kakehashi – Experimental userspace to run macOS binaries on Linux ARM",
+    "summary_zh": "Article URL: https://github.com/wie-project/kakehashi\nComments URL: https://news.ycombinator.com/item?id=49145937\nPoints: 202\n# Comments: 45",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/wie-project/kakehashi",
+    "time_hkt": "14:18",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
