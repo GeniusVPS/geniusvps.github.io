@@ -1160,5 +1160,61 @@
     "time_hkt": "13:43",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260804_084",
+    "date": "2026-08-04",
+    "headline_zh": "SoftBank’s debt-fuelled AI bet faces its reckoning at earnings",
+    "headline_en": "SoftBank’s debt-fuelled AI bet faces its reckoning at earnings",
+    "summary_zh": "SoftBank’s AI bet meets its accountants this week. When the Japanese group reports earnings, the headline profit will look healthy, but the real story",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/softbank-ai-funding-reckoning-earnings",
+    "time_hkt": "16:31",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260804_085",
+    "date": "2026-08-04",
+    "headline_zh": "Telegram vanishes from the App Store, then says it is back",
+    "headline_en": "Telegram vanishes from the App Store, then says it is back",
+    "summary_zh": "Telegram briefly vanished from Apple’s App Store. The messaging app disappeared from the iOS store for many users around the world on Monday, and by T",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/telegram-app-store-removed-restored",
+    "time_hkt": "16:31",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260804_086",
+    "date": "2026-08-04",
+    "headline_zh": "Apple asks a court to freeze OpenAI out of its trade secrets",
+    "headline_en": "Apple asks a court to freeze OpenAI out of its trade secrets",
+    "summary_zh": "Apple has asked a court to put OpenAI on a short leash. In a filing this week, the iPhone maker sought a preliminary injunction that would bar OpenAI ",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/apple-openai-preliminary-injunction-trade-secrets",
+    "time_hkt": "16:31",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260804_087",
+    "date": "2026-08-04",
+    "headline_zh": "US finalises voluntary tests for AI models’ hacking powers",
+    "headline_en": "US finalises voluntary tests for AI models’ hacking powers",
+    "summary_zh": "The White House has finalised a voluntary framework for testing whether America’s most advanced AI models can be used to hack. A White House official ",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/us-finalises-voluntary-tests-for-ai-models-hacking-powers",
+    "time_hkt": "16:31",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
