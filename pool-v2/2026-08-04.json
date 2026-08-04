@@ -1104,5 +1104,61 @@
     "time_hkt": "10:10",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260804_080",
+    "date": "2026-08-04",
+    "headline_zh": "The studio behind Pokémon struggles to find its voice in Beast of Reincarnation",
+    "headline_en": "The studio behind Pokémon struggles to find its voice in Beast of Reincarnation",
+    "summary_zh": "You have to imagine that the team at Game Freak is bursting with ideas. The studio puts out new mainline Pok&#233;mon adventures with a machinelike pr",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/entertainment/974505/beast-of-reincarnation-review-ps5-xbox",
+    "time_hkt": "13:43",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260804_081",
+    "date": "2026-08-04",
+    "headline_zh": "Lovehoney Coupon Offers: Toys, Lingerie, and Gift Set Discounts",
+    "headline_en": "Lovehoney Coupon Offers: Toys, Lingerie, and Gift Set Discounts",
+    "summary_zh": "Save on Lovehoney, including bestselling toys, lingerie, and popular gift sets for date nights, self-care, and couples’ play.",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/lovehoney-discount-code/",
+    "time_hkt": "13:43",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260804_082",
+    "date": "2026-08-04",
+    "headline_zh": "Apple is getting this wrong",
+    "headline_en": "Apple is getting this wrong",
+    "summary_zh": "OpenAI addresses Apple’s baseless lawsuit, corrects claims about its employees, and shares messages documenting what happened.",
+    "category": "ai",
+    "score": 5,
+    "source": "OpenAI Blog",
+    "source_url": "https://openai.com/index/apple-is-getting-this-wrong",
+    "time_hkt": "13:43",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260804_083",
+    "date": "2026-08-04",
+    "headline_zh": "Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers",
+    "headline_en": "Microsoft Bug Bounty Program: $20 Million Paid to 500 Researchers",
+    "summary_zh": "The biggest single reward paid out by Microsoft between July 1, 2025, and June 30, 2026, was $200,000.\nThe post Microsoft Bug Bounty Program: $20 Mill",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/microsoft-bug-bounty-program-20-million-paid-to-500-researchers/",
+    "time_hkt": "13:43",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
