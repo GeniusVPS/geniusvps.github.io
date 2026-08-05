@@ -30,11 +30,10 @@ except ImportError:
 CONFIG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config")
 POOL_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "pool")
 
-# 本地 Ollama API 設定 — 取代 LongCat
-# 用 Ollama 原生 /api/chat 端點（比 /v1/ 穩定）
-OLLAMA_BASE = "http://localhost:11434"
-OLLAMA_CHAT = OLLAMA_BASE + "/api/chat"
-LOCAL_LLM_MODEL = "qwen2.5:14b"  # 非 reasoning 模型，中文/粵語能力強
+# 本地 llama-server API 設定 — OpenAI-compatible endpoint (non-reasoning)
+LLAMA_BASE = "http://localhost:8081"
+LLAMA_CHAT = LLAMA_BASE + "/v1/chat/completions"
+LOCAL_LLM_MODEL = "/Users/user/models/Qwen3-14B-Q4_K_M.gguf"  # Qwen3 14B 非推理模型
 
 SIMILARITY_THRESHOLD = 0.85
 MAX_PER_FEED = 5       # 每來源最多 5 條
@@ -130,32 +129,24 @@ def summarize_one(text, use_local=True):
         text: 要翻譯的英文文本
         use_local: 是否優先使用本地 Ollama (default: True)
     """
-    prompt = f"""Translate the following English text to Traditional Chinese.
-Use Chinese characters only. Keep it concise and natural.
-Only output the translation, nothing else.
-
-Examples:
-"Apple announces new AI chip" → "蘋果宣佈推出新AI晶片"
-"Google releases updated search algorithm" → "谷歌發佈更新版搜尋演算法"
-
-Translate this:
-{text}"""
+    prompt_user = f"Translate to Traditional Chinese (keep it concise):\n{text}"
     last_error = None
     
-    # 使用本地 Ollama
+    # 使用本地 llama-server (OpenAI-compatible)
     if use_local:
         try:
             payload = json.dumps({
                 "model": LOCAL_LLM_MODEL,
-                "messages": [{"role": "user", "content": prompt}],
-                "options": {
-                    "num_predict": 500,
-                    "temperature": 0.3
-                }
+                "messages": [
+                    {"role": "system", "content": "You are a translator. Translate to Traditional Chinese (繁體中文). Output ONLY the translation, nothing else."},
+                    {"role": "user", "content": prompt_user}
+                ],
+                "temperature": 0.3,
+                "max_tokens": 500
             }).encode("utf-8")
             
             req = HttpRequest(
-                OLLAMA_CHAT,
+                LLAMA_CHAT,
                 data=payload,
                 headers={
                     "Content-Type": "application/json"
@@ -164,20 +155,14 @@ Translate this:
             )
             
             with urlopen(req, timeout=120) as resp:
-                # Ollama /api/chat 返回 streaming，讀第一個 chunk
-                content = ""
-                for line in resp:
-                    chunk = json.loads(line)
-                    if "message" in chunk and chunk["message"].get("content"):
-                        content += chunk["message"]["content"]
-                    if chunk.get("done"):
-                        break
-                content = content.strip()
+                # OpenAI-compatible endpoint 返回 JSON
+                result = json.loads(resp.read())
+                content = result["choices"][0]["message"]["content"].strip()
                 if content:
                     return content
         except Exception as e:
             last_error = e
-            print(f"  ⚠️  本地 Ollama 失敗 ({type(e).__name__})")
+            print(f"  ⚠️  本地 llama-server 失敗 ({type(e).__name__})")
     
     raise RuntimeError(f"Local LLM failed: {last_error}")
 
