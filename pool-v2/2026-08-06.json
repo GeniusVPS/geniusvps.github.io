@@ -1286,5 +1286,33 @@
     "time_hkt": "10:13",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260806_093",
+    "date": "2026-08-06",
+    "headline_zh": "The $299 Viture Pro 2 are the company's lightest and most comfortable smartglasses yet",
+    "headline_en": "The $299 Viture Pro 2 are the company's lightest and most comfortable smartglasses yet",
+    "summary_zh": "Viture is releasing a more compact Mobile Dock Mini for just $99 alongside its new $299 smartglasses.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2231156/virtue-pro-2-are-the-companys-lightest-and-most-comfortable-smartglasses-yet/",
+    "time_hkt": "13:45",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260806_094",
+    "date": "2026-08-06",
+    "headline_zh": "Cashing in on SpaceX: 'Every chance I get, I'll sell a little more'",
+    "headline_en": "Cashing in on SpaceX: 'Every chance I get, I'll sell a little more'",
+    "summary_zh": "Andre Lavoie joined SpaceX in 2009 as an engineer, now he's looking to cash in his shares in the company.",
+    "category": "general",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cm2g0j3y339o?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "13:45",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
