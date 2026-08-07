@@ -740,5 +740,19 @@
     "time_hkt": "12:51",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260807_054",
+    "date": "2026-08-07",
+    "headline_zh": "Court orders Meta to pay an additional $567 million in New Mexico child safety case",
+    "headline_en": "Court orders Meta to pay an additional $567 million in New Mexico child safety case",
+    "summary_zh": "A judge has ruled that Meta is a public nuisance and has to pay fine that will go towards funding state programs.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2232202/meta-additional-567-million-fine-new-mexico-child-safety-case/",
+    "time_hkt": "15:09",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
