@@ -684,5 +684,33 @@
     "time_hkt": "09:18",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260808_050",
+    "date": "2026-08-08",
+    "headline_zh": "The Nixpkgs core team has disbanded",
+    "headline_en": "The Nixpkgs core team has disbanded",
+    "summary_zh": "Article URL: https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413\nComments URL: https://news.ycombinator.com/item?id=49217993\nPoint",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://discourse.nixos.org/t/the-nixpkgs-core-team-has-disbanded/79413",
+    "time_hkt": "14:44",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260808_051",
+    "date": "2026-08-08",
+    "headline_zh": "Managing AI Coding Costs at Scale",
+    "headline_en": "Managing AI Coding Costs at Scale",
+    "summary_zh": "Article URL: https://www.databricks.com/blog/managing-ai-coding-costs-scale\nComments URL: https://news.ycombinator.com/item?id=49214468\nPoints: 206\n# ",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.databricks.com/blog/managing-ai-coding-costs-scale",
+    "time_hkt": "14:44",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
