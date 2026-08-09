@@ -250,5 +250,19 @@
     "time_hkt": "05:26",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260809_019",
+    "date": "2026-08-09",
+    "headline_zh": "Amazon Is Creating the Biggest Pollution Source in the Country",
+    "headline_en": "Amazon Is Creating the Biggest Pollution Source in the Country",
+    "summary_zh": "Article URL: https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country\nComments URL: https://news.ycombinator.com",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://newrepublic.com/post/214111/amazon-data-center-biggest-pollution-source-entire-country",
+    "time_hkt": "09:23",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
