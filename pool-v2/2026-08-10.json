@@ -222,5 +222,33 @@
     "time_hkt": "09:25",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260810_017",
+    "date": "2026-08-10",
+    "headline_zh": "Ask HN: What are you working on? (August 2026)",
+    "headline_en": "Ask HN: What are you working on? (August 2026)",
+    "summary_zh": "What are you working on?  What have you been curious about lately?\n\nComments URL: https://news.ycombinator.com/item?id=49233423\nPoints: 199\n# Comments",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://news.ycombinator.com/item?id=49233423",
+    "time_hkt": "12:26",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260810_018",
+    "date": "2026-08-10",
+    "headline_zh": "Taxi drivers rarely die of Alzheimer's",
+    "headline_en": "Taxi drivers rarely die of Alzheimer's",
+    "summary_zh": "Article URL: https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://theconversation.com/taxi-drivers-rarely-die-of-alzheimers-how-complex-mental-maps-and-spatial-reasoning-protect-your-brain-286650",
+    "time_hkt": "12:26",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
