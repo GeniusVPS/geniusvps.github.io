@@ -250,5 +250,47 @@
     "time_hkt": "12:26",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260810_019",
+    "date": "2026-08-10",
+    "headline_zh": "Space Agencies Are Trying to Keep Astronauts From Losing Their Sight",
+    "headline_en": "Space Agencies Are Trying to Keep Astronauts From Losing Their Sight",
+    "summary_zh": "A device currently being used to help octogenarians do self-administered eye exams could be part of future space missions to monitor astronauts’ ocula",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/space-agencies-trying-stop-astronauts-losing-sight/",
+    "time_hkt": "15:25",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260810_020",
+    "date": "2026-08-10",
+    "headline_zh": "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People",
+    "headline_en": "Critical Flaws Discovered in Belgian eID Software Used by 2 Million People",
+    "summary_zh": "The vulnerabilities affected software used by eight of Belgium’s ten largest banks and over 60 government agencies.\nThe post Critical Flaws Discovered",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/critical-flaws-discovered-in-belgian-eid-software-used-by-2-million-people/",
+    "time_hkt": "15:25",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260810_021",
+    "date": "2026-08-10",
+    "headline_zh": "Tech leaders say AI means less work - their staff say they work up to 90 hours a week",
+    "headline_en": "Tech leaders say AI means less work - their staff say they work up to 90 hours a week",
+    "summary_zh": "Tech companies are not modelling their own claims of the technology giving people more free time.",
+    "category": "general",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cvgx4yd1gl2o?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "15:25",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
