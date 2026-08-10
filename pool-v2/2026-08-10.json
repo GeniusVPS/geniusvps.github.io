@@ -180,5 +180,47 @@
     "time_hkt": "05:27",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260810_014",
+    "date": "2026-08-10",
+    "headline_zh": "How I use LLMs to learn complex topics",
+    "headline_en": "How I use LLMs to learn complex topics",
+    "summary_zh": "Article URL: https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/\nComments URL: https://news.ycombinator.com/item?id=49234675\nPoi",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://laurentiugabriel.github.io/blog/articles/how-i-use-llms-to-learn/",
+    "time_hkt": "09:25",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260810_015",
+    "date": "2026-08-10",
+    "headline_zh": "Analyzing data from Silicon Valley ventures and founders prosecuted for fraud",
+    "headline_en": "Analyzing data from Silicon Valley ventures and founders prosecuted for fraud",
+    "summary_zh": "Article URL: https://pubsonline.informs.org/doi/full/10.1287/orsc.2024.19981\nComments URL: https://news.ycombinator.com/item?id=49232318\nPoints: 185\n#",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://pubsonline.informs.org/doi/full/10.1287/orsc.2024.19981",
+    "time_hkt": "09:25",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260810_016",
+    "date": "2026-08-10",
+    "headline_zh": "Tom Stanton's supersonic trebuchet breaks sound barrier with gravity alone",
+    "headline_en": "Tom Stanton's supersonic trebuchet breaks sound barrier with gravity alone",
+    "summary_zh": "Article URL: https://www.techeblog.com/tom-stanton-supersonic-trebuchet/\nComments URL: https://news.ycombinator.com/item?id=49232110\nPoints: 218\n# Com",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.techeblog.com/tom-stanton-supersonic-trebuchet/",
+    "time_hkt": "09:25",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
