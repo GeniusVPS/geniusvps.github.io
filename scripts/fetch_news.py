@@ -30,10 +30,10 @@ except ImportError:
 CONFIG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config")
 POOL_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "pool")
 
-# 本地 llama-server API 設定 — OpenAI-compatible endpoint (non-reasoning)
-LLAMA_BASE = "http://localhost:8081"
+# 本地 llama-server API 設定 — qwen3.6-27b reasoning model (port 8080)
+LLAMA_BASE = "http://127.0.0.1:8080"
 LLAMA_CHAT = LLAMA_BASE + "/v1/chat/completions"
-LOCAL_LLM_MODEL = "/Users/user/models/Qwen3-14B-Q4_K_M.gguf"  # Qwen3 14B 非推理模型
+LOCAL_LLM_MODEL = "qwen3.6-27b-q4_k_m"  # Qwen3.6 27B reasoning model
 
 SIMILARITY_THRESHOLD = 0.85
 MAX_PER_FEED = 5       # 每來源最多 5 條
@@ -142,7 +142,7 @@ def summarize_one(text, use_local=True):
                     {"role": "user", "content": prompt_user}
                 ],
                 "temperature": 0.3,
-                "max_tokens": 500
+                "max_tokens": 4096
             }).encode("utf-8")
             
             req = HttpRequest(
@@ -154,7 +154,7 @@ def summarize_one(text, use_local=True):
                 method="POST"
             )
             
-            with urlopen(req, timeout=120) as resp:
+            with urlopen(req, timeout=300) as resp:
                 # OpenAI-compatible endpoint 返回 JSON
                 result = json.loads(resp.read())
                 content = result["choices"][0]["message"]["content"].strip()
