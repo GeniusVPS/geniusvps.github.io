@@ -992,5 +992,47 @@
     "time_hkt": "12:16",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260811_072",
+    "date": "2026-08-11",
+    "headline_zh": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
+    "headline_en": "H3-metal – Native MiniMax-H3 inference for Apple Silicon",
+    "summary_zh": "Article URL: https://github.com/antirez/h3.c\nComments URL: https://news.ycombinator.com/item?id=49252179\nPoints: 194\n# Comments: 24",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/antirez/h3.c",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260811_073",
+    "date": "2026-08-11",
+    "headline_zh": "Learning more about Claude's mathematical capabilities",
+    "headline_en": "Learning more about Claude's mathematical capabilities",
+    "summary_zh": "Article URL: https://www.anthropic.com/research/riemann-zeta\nComments URL: https://news.ycombinator.com/item?id=49247070\nPoints: 180\n# Comments: 122",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.anthropic.com/research/riemann-zeta",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260811_074",
+    "date": "2026-08-11",
+    "headline_zh": "Mozilla Issues New Firefox GPG Key Following Exposure",
+    "headline_en": "Mozilla Issues New Firefox GPG Key Following Exposure",
+    "summary_zh": "The previous GPG signing subkey was inadvertently added to a GitHub repository and Mozilla decided to revoke it.\nThe post Mozilla Issues New Firefox G",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/mozilla-issues-new-firefox-gpg-key-following-exposure/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
