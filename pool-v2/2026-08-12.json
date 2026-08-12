@@ -1062,5 +1062,47 @@
     "time_hkt": "12:44",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260812_077",
+    "date": "2026-08-12",
+    "headline_zh": "Sonos Ace Ultra over-ear headphones show up in FCC filing",
+    "headline_en": "Sonos Ace Ultra over-ear headphones show up in FCC filing",
+    "summary_zh": "Sonos could launch a new pair of headphones called the &#34;Ace Ultra&#34; at its September event.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2235171/sonos-ace-ultra-over-ear-headphones-fcc-filing/",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260812_078",
+    "date": "2026-08-12",
+    "headline_zh": "Grok Bot",
+    "headline_en": "Grok Bot",
+    "summary_zh": "Article URL: https://x.ai/bot\nComments URL: https://news.ycombinator.com/item?id=49261514\nPoints: 244\n# Comments: 198",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://x.ai/bot",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260812_079",
+    "date": "2026-08-12",
+    "headline_zh": "Cisco Patches Firewall Zero-Day Exploited for DoS Attacks",
+    "headline_en": "Cisco Patches Firewall Zero-Day Exploited for DoS Attacks",
+    "summary_zh": "CVE-2026-20349 can be exploited remotely without authentication against Secure Firewall ASA and FTD devices.\nThe post Cisco Patches Firewall Zero-Day ",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/cisco-patches-firewall-zero-day-exploited-for-dos-attacks/",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
