@@ -1286,5 +1286,19 @@
     "time_hkt": "12:48",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260813_093",
+    "date": "2026-08-13",
+    "headline_zh": "Amazon is using Twitch to train generative AI",
+    "headline_en": "Amazon is using Twitch to train generative AI",
+    "summary_zh": "The streaming platform's users criticised the move to allow the use of channel content for AI training.",
+    "category": "general",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/videos/cwyq22g0ylxo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "15:21",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
