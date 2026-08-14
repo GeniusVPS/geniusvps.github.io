@@ -43,34 +43,10 @@
       "category": "general"
     },
     {
-      "name": "ASCII.jp",
-      "url": "https://ascii.jp/rss/",
-      "language": "ja",
-      "category": "general"
-    },
-    {
-      "name": "AI News (Japan)",
-      "url": "https://ainews.net/feed/",
-      "language": "ja",
-      "category": "ai"
-    },
-    {
       "name": "Hacker News Best",
       "url": "https://hnrss.org/best",
       "language": "en",
       "category": "general"
-    },
-    {
-      "name": "MIT Technology Review",
-      "url": "https://www.technologyreview.com/feed/",
-      "language": "en",
-      "category": "general"
-    },
-    {
-      "name": "VentureBeat",
-      "url": "https://venturebeat.com/feed",
-      "language": "en",
-      "category": "ai"
     }
   ]
 }

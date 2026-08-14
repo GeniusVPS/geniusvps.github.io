@@ -16,6 +16,8 @@ from urllib.request import urlopen, Request, Request as HttpRequest
 from urllib.error import URLError
 from concurrent.futures import ThreadPoolExecutor, as_completed, TimeoutError as FuturesTimeout
 
+import requests
+
 # 簡繁轉換實例（可選，無 opencc 時 fallback 到簡單替換）
 try:
     from opencc import OpenCC as _OpenCC
@@ -40,7 +42,7 @@ MAX_PER_FEED = 5       # 每來源最多 5 條
 MAX_TOTAL = 20        # 總數上限
 RSS_TIMEOUT = 10      # 每個 RSS 超時秒數
 SUMMARY_BATCH_SIZE = 3  # 每批摘要數量（減低以配合 CPU 推理速度）
-LLM_TIMEOUT = 180       # LLM 摘要超時秒數（27B 模型喺 CPU 上需要時間）
+LLM_TIMEOUT = 60        # LLM 摘要超時秒數（縮短避免卡死）
 
 HKT = timezone(timedelta(hours=8))
 
@@ -82,9 +84,9 @@ def is_duplicate(title, url, desc_hash, seen_urls, seen_hashes, seen_titles):
 
 def fetch_rss(url, timeout=RSS_TIMEOUT):
     try:
-        req = Request(url, headers={"User-Agent": "TechCanto-NewsPool/1.0"})
-        with urlopen(req, timeout=timeout) as resp:
-            return resp.read()
+        resp = requests.get(url, timeout=timeout, headers={"User-Agent": "TechCanto-NewsPool/1.0"})
+        resp.raise_for_status()
+        return resp.content
     except Exception as e:
         print(f"  ⚠️  RSS failed ({timeout}s timeout): {url[:50]}... -> {type(e).__name__}")
         return None
@@ -142,7 +144,7 @@ def summarize_one(text, use_local=True):
                     {"role": "user", "content": prompt_user}
                 ],
                 "temperature": 0.3,
-                "max_tokens": 4096
+                "max_tokens": 500
             }).encode("utf-8")
             
             req = HttpRequest(
@@ -154,7 +156,7 @@ def summarize_one(text, use_local=True):
                 method="POST"
             )
             
-            with urlopen(req, timeout=120) as resp:
+            with urlopen(req, timeout=LLM_TIMEOUT) as resp:
                 # OpenAI-compatible endpoint 返回 JSON
                 result = json.loads(resp.read())
                 msg = result["choices"][0]["message"]
