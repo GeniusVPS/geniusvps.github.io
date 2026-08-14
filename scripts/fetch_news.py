@@ -154,12 +154,16 @@ def summarize_one(text, use_local=True):
                 method="POST"
             )
             
-            with urlopen(req, timeout=300) as resp:
+            with urlopen(req, timeout=120) as resp:
                 # OpenAI-compatible endpoint 返回 JSON
                 result = json.loads(resp.read())
-                content = result["choices"][0]["message"]["content"].strip()
+                msg = result["choices"][0]["message"]
+                content = msg.get("content", "").strip()
+                # qwen3.6 reasoning model: content 可能為空，試 reasoning_content
+                if not content:
+                    content = msg.get("reasoning_content", "").strip()
                 if content:
-                    return content
+                    return content[:500]  # 截斷防止過長
         except Exception as e:
             last_error = e
             print(f"  ⚠️  本地 llama-server 失敗 ({type(e).__name__})")

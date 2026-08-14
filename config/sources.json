@@ -68,7 +68,7 @@
     },
     {
       "name": "VentureBeat",
-      "url": "https://venturebeat.com/feed/",
+      "url": "https://venturebeat.com/feed",
       "language": "en",
       "category": "ai"
     }
