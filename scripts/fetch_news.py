@@ -140,7 +140,7 @@ def summarize_one(text, use_local=True):
             payload = json.dumps({
                 "model": LOCAL_LLM_MODEL,
                 "messages": [
-                    {"role": "system", "content": "You are a translator. Translate to Traditional Chinese (繁體中文). Output ONLY the translation, nothing else."},
+                    {"role": "system", "content": "You are a translator. Translate to Traditional Chinese (繁體中文). Output ONLY the translation text, nothing else. No explanations, no thinking process, no bullet points, no numbered lists."},
                     {"role": "user", "content": prompt_user}
                 ],
                 "temperature": 0.3,
@@ -165,7 +165,15 @@ def summarize_one(text, use_local=True):
                 if not content:
                     content = msg.get("reasoning_content", "").strip()
                 if content:
-                    return content[:500]  # 截斷防止過長
+                    # Strip reasoning/thinking patterns that leak into content
+                    content = re.sub(r"Here['']?s?\s*a\s+thinking\s+process:.*?", "", content, flags=re.DOTALL | re.IGNORECASE)
+                    content = re.sub(r"^\d+\.\s*\*\*?\w+.*?", "", content, flags=re.MULTILINE)
+                    content = re.sub(r"\n{3,}", "\n\n", content)
+                    # If after stripping we have very little, just take the last paragraph
+                    cleaned = content.strip()
+                    if len(cleaned) < len(content) * 0.5 and "\n\n" in cleaned:
+                        cleaned = cleaned.split("\n\n")[-1].strip()
+                    return (cleaned or content)[:500]  # 截斷防止過長
         except Exception as e:
             last_error = e
             print(f"  ⚠️  本地 llama-server 失敗 ({type(e).__name__})")
