@@ -768,5 +768,19 @@
     "time_hkt": "14:32",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260815_056",
+    "date": "2026-08-15",
+    "headline_zh": "Amazon Can Use Your Twitch Content to Train Its AI—Unless You Opt Out",
+    "headline_en": "Amazon Can Use Your Twitch Content to Train Its AI—Unless You Opt Out",
+    "summary_zh": "When Twitch announced that streamers could opt out, thousands of users questioned why their content was being used to train AI models in the first pla",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/amazon-uses-your-twitch-content-to-train-its-ai-how-to-opt-out/",
+    "time_hkt": "17:21",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
