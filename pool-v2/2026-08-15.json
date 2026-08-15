@@ -754,5 +754,19 @@
     "time_hkt": "11:34",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260815_055",
+    "date": "2026-08-15",
+    "headline_zh": "AI by Hand",
+    "headline_en": "AI by Hand",
+    "summary_zh": "Article URL: https://www.byhand.ai/\nComments URL: https://news.ycombinator.com/item?id=49300568\nPoints: 261\n# Comments: 20",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.byhand.ai/",
+    "time_hkt": "14:32",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
