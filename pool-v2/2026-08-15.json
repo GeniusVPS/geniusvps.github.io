@@ -726,5 +726,33 @@
     "time_hkt": "09:02",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260815_053",
+    "date": "2026-08-15",
+    "headline_zh": "Going Dark, and the era of law enforcement hacking",
+    "headline_en": "Going Dark, and the era of law enforcement hacking",
+    "summary_zh": "Article URL: https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/\nComments URL: https://news.ycombinator.com/item?id=49",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://blog.cryptographyengineering.com/2026/08/14/everything-is-about-to-go-dark/",
+    "time_hkt": "11:34",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260815_054",
+    "date": "2026-08-15",
+    "headline_zh": "RustDesk now supports true unattended remote access on Wayland",
+    "headline_en": "RustDesk now supports true unattended remote access on Wayland",
+    "summary_zh": "Article URL: https://rustdesk.com/blog/unattended-remote-access-wayland/\nComments URL: https://news.ycombinator.com/item?id=49300759\nPoints: 234\n# Com",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://rustdesk.com/blog/unattended-remote-access-wayland/",
+    "time_hkt": "11:34",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
