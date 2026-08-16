@@ -446,5 +446,47 @@
     "time_hkt": "09:05",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260816_033",
+    "date": "2026-08-16",
+    "headline_zh": "Polaroid’s tiny instant camera is $72 and includes a free pack of film",
+    "headline_en": "Polaroid’s tiny instant camera is $72 and includes a free pack of film",
+    "summary_zh": "Smartphone cameras are convenient, but they lack the charm of analog instant cameras. If you’re trying to relive the nostalgia of waiting for an insta",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/gadgets/980448/polaroid-go-second-generation-film-pack-bundle-deal-sale",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260816_034",
+    "date": "2026-08-16",
+    "headline_zh": "A spectre is haunting Unicode",
+    "headline_en": "A spectre is haunting Unicode",
+    "summary_zh": "Article URL: https://www.dampfkraft.com/ghost-characters.html\nComments URL: https://news.ycombinator.com/item?id=49310926\nPoints: 185\n# Comments: 64",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.dampfkraft.com/ghost-characters.html",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260816_035",
+    "date": "2026-08-16",
+    "headline_zh": "Pixel 11 ads show a mysterious screen-equipped tracker that’s not Pixel Watch 5 or Fitbit Air [Gallery]",
+    "headline_en": "Pixel 11 ads show a mysterious screen-equipped tracker that’s not Pixel Watch 5 or Fitbit Air [Gallery]",
+    "summary_zh": "Google might have another fitness tracker in the works, as a pair of new ads online show off a mysterious little pebble that’s neither a Fitbit Air no",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/15/google-pixel-11-ad-unknown-fitbit-tracker/",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
