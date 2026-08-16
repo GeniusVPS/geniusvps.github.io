@@ -502,5 +502,61 @@
     "time_hkt": "14:33",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260816_037",
+    "date": "2026-08-16",
+    "headline_zh": "How Samsung's Galaxy Watch 8 measures your antioxidant levels",
+    "headline_en": "How Samsung's Galaxy Watch 8 measures your antioxidant levels",
+    "summary_zh": "Samsung&#39;s newest party trick could actually help you improve your diet, and therefore your overall health.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2236219/how-samsung-galaxy-watch-series8-measures-antioxidant-levels/",
+    "time_hkt": "17:23",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260816_038",
+    "date": "2026-08-16",
+    "headline_zh": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+    "headline_en": "Super El Niño Keeps Growing as New Forecasts Reach Record Territory Ahead Winter",
+    "summary_zh": "Article URL: https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-uni",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.severe-weather.eu/long-range-2/super-el-nino-growth-accelerating-to-record-strength-fall-winter-2026-2027-forecast-impact-united-states-canada-europe-fa/",
+    "time_hkt": "17:23",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260816_039",
+    "date": "2026-08-16",
+    "headline_zh": "Mastercard took down payments across Australia with a scheduled update",
+    "headline_en": "Mastercard took down payments across Australia with a scheduled update",
+    "summary_zh": "Mastercard transactions were declined across Australia on Saturday afternoon after what the company describes as a scheduled system update, with more ",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/mastercard-australia-outage-scheduled-update-cash",
+    "time_hkt": "17:23",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260816_040",
+    "date": "2026-08-16",
+    "headline_zh": "Qwen is the world’s most downloaded open model, by a smaller margin than Alibaba says",
+    "headline_en": "Qwen is the world’s most downloaded open model, by a smaller margin than Alibaba says",
+    "summary_zh": "Alibaba says its Qwen models have passed 3 billion downloads, making them the most used open-weight family in the world. The Hugging Face report publi",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/alibaba-qwen-downloads-hugging-face-open-models",
+    "time_hkt": "17:23",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
