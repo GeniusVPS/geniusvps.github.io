@@ -418,5 +418,47 @@
     "time_hkt": "09:03",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260817_031",
+    "date": "2026-08-17",
+    "headline_zh": "Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing",
+    "headline_en": "Anthropic's 'Watermark' Text Adulteration in Claude Is a Perversion of Writing",
+    "summary_zh": "Article URL: https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing\nComments URL: https://news",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://daringfireball.net/2026/08/anthropics_watermark_text_adulteration_in_claude_is_a_perversion_of_writing",
+    "time_hkt": "11:46",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260817_032",
+    "date": "2026-08-17",
+    "headline_zh": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
+    "headline_en": "Nvidia dramatically reduces amount of OpenAI infra financing it may guarantee",
+    "summary_zh": "Article URL: https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/\nComments URL: https:",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.reuters.com/business/nvidia-scales-back-250-billion-openai-data-center-guarantee-wsj-reports-2026-08-14/",
+    "time_hkt": "11:46",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260817_033",
+    "date": "2026-08-17",
+    "headline_zh": "Final UI for Googlebook ‘Desktop Camera’ app revealed [Gallery]",
+    "headline_en": "Final UI for Googlebook ‘Desktop Camera’ app revealed [Gallery]",
+    "summary_zh": "Ahead of the Googlebook launch this fall, we now have a full look at the Desktop Camera application.",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/16/googlebooks-desktop-camera/",
+    "time_hkt": "11:46",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
