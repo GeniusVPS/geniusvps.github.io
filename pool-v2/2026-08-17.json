@@ -460,5 +460,61 @@
     "time_hkt": "11:46",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260817_034",
+    "date": "2026-08-17",
+    "headline_zh": "Another woman joins lawsuit accusing Grok of generating CSAM",
+    "headline_en": "Another woman joins lawsuit accusing Grok of generating CSAM",
+    "summary_zh": "A fourth party is pursuing legal action against xAI, alleging that Grok was used to create CSAM based on her childhood photos.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2237875/another-woman-joins-lawsuit-accusing-grok-of-generating-csam/",
+    "time_hkt": "14:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260817_035",
+    "date": "2026-08-17",
+    "headline_zh": "The Life and Death of Direct File [pdf]",
+    "headline_en": "The Life and Death of Direct File [pdf]",
+    "summary_zh": "Article URL: https://www.ischool.berkeley.edu/sites/default/files/vinton_report_5.pdf\nComments URL: https://news.ycombinator.com/item?id=49325185\nPoin",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.ischool.berkeley.edu/sites/default/files/vinton_report_5.pdf",
+    "time_hkt": "14:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260817_036",
+    "date": "2026-08-17",
+    "headline_zh": "The federal keyword lists that canceled billions in research funding",
+    "headline_en": "The federal keyword lists that canceled billions in research funding",
+    "summary_zh": "Article URL: https://www.highereddive.com/news/inside-the-federal-keyword-lists-that-canceled-billions-in-research-funding/826203/\nComments URL: https",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.highereddive.com/news/inside-the-federal-keyword-lists-that-canceled-billions-in-research-funding/826203/",
+    "time_hkt": "14:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260817_037",
+    "date": "2026-08-17",
+    "headline_zh": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+    "headline_en": "Qwen 3.8 27B is excellent, but it defaults to overthinking things",
+    "summary_zh": "Article URL: https://simonwillison.net/2026/Aug/16/qwen-38-27b/\nComments URL: https://news.ycombinator.com/item?id=49324985\nPoints: 265\n# Comments: 11",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://simonwillison.net/2026/Aug/16/qwen-38-27b/",
+    "time_hkt": "14:47",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
