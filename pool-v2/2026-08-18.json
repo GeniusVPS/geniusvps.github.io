@@ -1020,5 +1020,61 @@
     "time_hkt": "11:40",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260818_074",
+    "date": "2026-08-18",
+    "headline_zh": "Theban tomb reveals how Egyptian burial trends evolved in time",
+    "headline_en": "Theban tomb reveals how Egyptian burial trends evolved in time",
+    "summary_zh": "Practices shifted from individuals buried in coffins to reusing sites for later mummy interments.",
+    "category": "general",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/science/2026/08/theban-tomb-reveals-how-egyptian-burial-trends-evolved-in-time/",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260818_075",
+    "date": "2026-08-18",
+    "headline_zh": "Quake Shareware, a CD-ROM just a little too full",
+    "headline_en": "Quake Shareware, a CD-ROM just a little too full",
+    "summary_zh": "Article URL: https://fabiensanglard.net/quake_shareware_cd/index.html\nComments URL: https://news.ycombinator.com/item?id=49338328\nPoints: 262\n# Commen",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://fabiensanglard.net/quake_shareware_cd/index.html",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260818_076",
+    "date": "2026-08-18",
+    "headline_zh": "GPT-5.6 Sol Pricing Cut by 50%",
+    "headline_en": "GPT-5.6 Sol Pricing Cut by 50%",
+    "summary_zh": "Article URL: https://openrouter.ai/openai/gpt-5.6-sol\nComments URL: https://news.ycombinator.com/item?id=49337602\nPoints: 312\n# Comments: 160",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://openrouter.ai/openai/gpt-5.6-sol",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260818_077",
+    "date": "2026-08-18",
+    "headline_zh": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
+    "headline_en": "Israel creates fake think tank in likely attempt to dupe AI chatbots",
+    "summary_zh": "Article URL: https://responsiblestatecraft.org/israel-influence-chatgpt/\nComments URL: https://news.ycombinator.com/item?id=49337392\nPoints: 318\n# Com",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://responsiblestatecraft.org/israel-influence-chatgpt/",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
