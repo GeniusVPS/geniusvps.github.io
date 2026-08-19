@@ -1090,5 +1090,47 @@
     "time_hkt": "11:42",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260819_079",
+    "date": "2026-08-19",
+    "headline_zh": "Warren Spector, founding father of immersive sims, has retired from game development",
+    "headline_en": "Warren Spector, founding father of immersive sims, has retired from game development",
+    "summary_zh": "The creator of Deus Ex is retiring.",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2239713/warren-spector-founding-father-of-immersive-sims-retired-game-development/",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260819_080",
+    "date": "2026-08-19",
+    "headline_zh": "Sticky wage norms and the real wage cost of unexpected inflation",
+    "headline_en": "Sticky wage norms and the real wage cost of unexpected inflation",
+    "summary_zh": "Article URL: https://bfi.uchicago.edu/wp-content/uploads/2026/08/BFI_WP_2026-108-1.pdf\nComments URL: https://news.ycombinator.com/item?id=49355142\nPoi",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://bfi.uchicago.edu/wp-content/uploads/2026/08/BFI_WP_2026-108-1.pdf",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260819_081",
+    "date": "2026-08-19",
+    "headline_zh": "How does IKEA come up with names for its products?",
+    "headline_en": "How does IKEA come up with names for its products?",
+    "summary_zh": "Article URL: https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html\nComments URL: https://news.ycomb",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.ikea.com/se/en/customer-service/knowledge/articles/6f564c4d-2ccc-46de-b643-545a3948dc79.html",
+    "time_hkt": "14:37",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
