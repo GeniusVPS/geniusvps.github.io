@@ -1076,5 +1076,33 @@
     "time_hkt": "11:42",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260820_078",
+    "date": "2026-08-20",
+    "headline_zh": "Velatir raises €5m to sell European companies control over their own AI",
+    "headline_en": "Velatir raises €5m to sell European companies control over their own AI",
+    "summary_zh": "Velatir, an Odense startup that sells companies a way to see and control the AI their employees are already using, has raised €5m in seed funding six ",
+    "category": "general",
+    "score": 5,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/velatir-5m-seed-european-ai-control",
+    "time_hkt": "14:39",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260820_079",
+    "date": "2026-08-20",
+    "headline_zh": "Gboard starts rolling out new ‘Emoji size’ setting",
+    "headline_en": "Gboard starts rolling out new ‘Emoji size’ setting",
+    "summary_zh": "As the Pixel 11 series gets Rambler and Google’s new 3D emoji, Gboard is rolling out a new “Emoji size” setting to beta users.",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/19/gboard-emoji-size-setting/",
+    "time_hkt": "14:39",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
