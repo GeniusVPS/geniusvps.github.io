@@ -936,5 +936,19 @@
     "time_hkt": "11:38",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260822_068",
+    "date": "2026-08-22",
+    "headline_zh": "There's no reason for software to be slow anymore",
+    "headline_en": "There's no reason for software to be slow anymore",
+    "summary_zh": "Article URL: https://danluu.com/perf-opt/\nComments URL: https://news.ycombinator.com/item?id=49395628\nPoints: 283\n# Comments: 204",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://danluu.com/perf-opt/",
+    "time_hkt": "14:33",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
