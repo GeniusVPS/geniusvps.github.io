@@ -950,5 +950,33 @@
     "time_hkt": "14:33",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260822_069",
+    "date": "2026-08-22",
+    "headline_zh": "NASA Cancels Its Rescue Mission for the Aging Swift Telescope",
+    "headline_en": "NASA Cancels Its Rescue Mission for the Aging Swift Telescope",
+    "summary_zh": "The LINK probe was supposed to use robotic arms to capture Swift and lift it into a safe orbit. Problems with its control system forced NASA to call o",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/nasa-cancels-its-rescue-mission-for-the-aging-swift-telescope/",
+    "time_hkt": "17:22",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260822_070",
+    "date": "2026-08-22",
+    "headline_zh": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight",
+    "headline_en": "Banking Trojans Manic, Grandoreiro, ToxicPanda 2.0 in the Spotlight",
+    "summary_zh": "The spyware-equipped Manic, a persistent Grandoreiro campaign in Latin America and Europe, and an expanded ToxicPanda 2.0 malware.\nThe post Banking Tr",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/banking-trojans-manic-grandoreiro-toxicpanda-2-0-in-the-spotlight/",
+    "time_hkt": "17:22",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
