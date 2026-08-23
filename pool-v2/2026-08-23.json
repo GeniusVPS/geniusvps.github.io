@@ -460,5 +460,47 @@
     "time_hkt": "09:06",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260823_034",
+    "date": "2026-08-23",
+    "headline_zh": "Two years after launch, Walmart’s Flipkart is closing in on India’s quick-commerce leaders",
+    "headline_en": "Two years after launch, Walmart’s Flipkart is closing in on India’s quick-commerce leaders",
+    "summary_zh": "Flipkart's quick-commerce venture is delivering 1.1 million to 1.2 million orders a day, nearly triple its November volume.",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/08/22/two-years-after-launch-walmarts-flipkart-is-closing-in-on-indias-quick-commerce-leaders/",
+    "time_hkt": "11:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260823_035",
+    "date": "2026-08-23",
+    "headline_zh": "Why your local LLM feels dumber than it is",
+    "headline_en": "Why your local LLM feels dumber than it is",
+    "summary_zh": "Article URL: https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917\nComments URL: https://news.ycombinator.com/item?id=4940",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://forum.level1techs.com/t/why-your-local-llm-feels-dumber-than-it-is/253917",
+    "time_hkt": "11:47",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260823_036",
+    "date": "2026-08-23",
+    "headline_zh": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+    "headline_en": "Anthropic appears to be A/B testing reduced effort levels in Claude Code",
+    "summary_zh": "Article URL: https://twitter.com/argofowl/status/2091150597374537729\nComments URL: https://news.ycombinator.com/item?id=49401549\nPoints: 171\n# Comment",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://twitter.com/argofowl/status/2091150597374537729",
+    "time_hkt": "11:47",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
