@@ -838,5 +838,61 @@
     "time_hkt": "09:03",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260825_061",
+    "date": "2026-08-25",
+    "headline_zh": "India’s Airbound bags $37M to take on trucks with rocket-like drones",
+    "headline_en": "India’s Airbound bags $37M to take on trucks with rocket-like drones",
+    "summary_zh": "Airbound's ultra-lightweight approach to drone delivery has attracted backing from Greenoaks, DoorDash, and Silicon Valley investor Lachy Groom.",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/08/24/indias-airbound-bags-37m-to-take-on-trucks-with-rocket-like-drones/",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260825_062",
+    "date": "2026-08-25",
+    "headline_zh": "iCloud+ Hide My Email addresses will remain on icloud.com",
+    "headline_en": "iCloud+ Hide My Email addresses will remain on icloud.com",
+    "summary_zh": "Article URL: https://developer.apple.com/news/?id=1ptvdtcm\nComments URL: https://news.ycombinator.com/item?id=49426564\nPoints: 257\n# Comments: 59",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://developer.apple.com/news/?id=1ptvdtcm",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260825_063",
+    "date": "2026-08-25",
+    "headline_zh": "The Pixel 11 Pro’s flashlight is a little bit worse because of ‘HiLight’ [Gallery]",
+    "headline_en": "The Pixel 11 Pro’s flashlight is a little bit worse because of ‘HiLight’ [Gallery]",
+    "summary_zh": "“HiLight” on the Pixel 11 Pro doesn’t provide much utility, but making matters worse, it also worsens a common use case of every other phone’s rear LE",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/24/the-pixel-11-pros-flashlight-is-a-little-bit-worse-because-of-hilight-gallery/",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260825_064",
+    "date": "2026-08-25",
+    "headline_zh": "Gemini on Pixel 11 Pro testing ‘Device help’ tool",
+    "headline_en": "Gemini on Pixel 11 Pro testing ‘Device help’ tool",
+    "summary_zh": "On the Pixel 11 Pro, we’re seeing a new “Device help” tool for the Gemini app that provides personalized and conversational assistance with your phone",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/24/pixel-11-pro-gemini-device-help/",
+    "time_hkt": "11:44",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
