@@ -1118,5 +1118,61 @@
     "time_hkt": "11:50",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260826_081",
+    "date": "2026-08-26",
+    "headline_zh": "CISA Warns of Exploited Gitea Vulnerability",
+    "headline_en": "CISA Warns of Exploited Gitea Vulnerability",
+    "summary_zh": "CVE-2026-60004 is a remote code execution vulnerability patched by Gitea developers in late July with the release of version 1.27.1.\nThe post CISA War",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/cisa-warns-of-exploited-gitea-vulnerability/",
+    "time_hkt": "14:41",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260826_082",
+    "date": "2026-08-26",
+    "headline_zh": "The Fitbit Air would be S-tier if anyone made a band half as decent as Whoop’s",
+    "headline_en": "The Fitbit Air would be S-tier if anyone made a band half as decent as Whoop’s",
+    "summary_zh": "The Fitbit Air is being touted as a fantastic fitness tracker, but I don’t think its worth has quite yet been proven. Google-made and third-party band",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/25/fitbit-air-would-be-s-tier-good-bands-existed/",
+    "time_hkt": "14:41",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260826_083",
+    "date": "2026-08-26",
+    "headline_zh": "Pixel 11’s ‘Rambler’ voice-to-text is a game-changer, but it should copy this feature [Video]",
+    "headline_en": "Pixel 11’s ‘Rambler’ voice-to-text is a game-changer, but it should copy this feature [Video]",
+    "summary_zh": "If there’s one part of using the Pixel 11 that I’ve really come to enjoy, it’s Gboard’s new voice-to-text tool, “Rambler.” But there is one big flaw, ",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/25/google-pixel-11-rambler-feature-upgrade-idea/",
+    "time_hkt": "14:41",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260826_084",
+    "date": "2026-08-26",
+    "headline_zh": "This new Android & iPhone tracker hides in your bike or golf clubs with 3-year battery life [Gallery]",
+    "headline_en": "This new Android & iPhone tracker hides in your bike or golf clubs with 3-year battery life [Gallery]",
+    "summary_zh": "Pebblebee has launched “LÔC8,” a unique new Android Find Hub / Apple Find My tracker that’s designed to hide within your bike handles, golf clubs, and",
+    "category": "general",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/08/25/pebblebee-loc8-android-iphone-bike-tracker/",
+    "time_hkt": "14:41",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
