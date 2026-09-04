@@ -1230,5 +1230,33 @@
     "time_hkt": "11:37",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260904_089",
+    "date": "2026-09-04",
+    "headline_zh": "由「狗果」變「愛尚果」：印度 avocado 熱潮",
+    "headline_en": "From 'dog fruit' to darling: India's avocado boom",
+    "summary_zh": "最近印度對 avocado 的需求大增，當地果農希望抓住這個市場。avocado 在印度原本只是個怪異的稱呼，但現在已經成為流行食品，甚至被稱為「愛尚果」。這個趨勢不但改變了當地的消費模式，也帶動了相關產業的發展。",
+    "category": "general",
+    "score": 7,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/clyjzpgv29do?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "14:39",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260904_090",
+    "date": "2026-09-04",
+    "headline_zh": "AI出餐單嘅問題：食慾唔喺嘅菜单",
+    "headline_en": "The sameness problem behind those unappetizing AI-generated menus",
+    "summary_zh": "AI出餐單嘅問題：食慾唔喺嘅菜单",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+    "time_hkt": "14:39",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
