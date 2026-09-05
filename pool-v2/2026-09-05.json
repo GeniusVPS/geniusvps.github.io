@@ -824,5 +824,19 @@
     "time_hkt": "09:02",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260905_060",
+    "date": "2026-09-05",
+    "headline_zh": "GPT-6 Astra：新一代超聰明軟件",
+    "headline_en": "GPT-6 Astra: A new generation of intelligence",
+    "summary_zh": "呢條新聞講緊一項新科技，名叫做 GPT-6 Astra，係一款超聰明嘅軟件，可以幫緊人用電腦、寫程式、搞 cybersecurity 以至科學研究。呢款軟件係最新嘅技術，功能超強，代表科技界又嚟一場大變革。呢條新聞對科技界影響大，因為會影響好多用家嘅日常嘅科技生活。",
+    "category": "ai",
+    "score": 8,
+    "source": "OpenAI Blog",
+    "source_url": "https://openai.com/index/gpt-6-astra",
+    "time_hkt": "12:06",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
