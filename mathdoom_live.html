@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>MathDoom 3D 課堂答題賽 — 多人直播版</title>
+    <style>
+        * { touch-action: none; user-select: none; box-sizing: border-box; }
+        body { margin: 0; overflow: hidden; font-family: 'Courier New', Courier, monospace; background: #000; }
+        #canvas-container { width: 100vw; height: 100vh; }
+        
+        #crosshair {
+            position: absolute; top: 50%; left: 50%;
+            width: 12px; height: 12px; transform: translate(-50%, -50%);
+            pointer-events: none; z-index: 10;
+        }
+        #crosshair::before, #crosshair::after {
+            content: ''; position: absolute; background: rgba(255, 255, 255, 0.8);
+        }
+        #crosshair::before { top: 5px; left: 0; width: 12px; height: 2px; }
+        #crosshair::after { top: 0; left: 5px; width: 2px; height: 12px; }
+
+        #ui-bar {
+            position: absolute; top: 15px; left: 15px; right: 15px;
+            color: #55ff55; font-size: 18px; font-weight: bold;
+            display: flex; justify-content: space-between; text-shadow: 2px 2px 0px #000;
+            z-index: 10; pointer-events: none;
+        }
+
+        #mobile-door-btn {
+            position: absolute; bottom: 30px; right: 30px;
+            width: 80px; height: 80px; background: #ffcc00; color: #000;
+            border: 3px solid #fff; border-radius: 50%; font-size: 16px; font-weight: bold;
+            display: none; justify-content: center; align-items: center; text-align: center;
+            z-index: 100; box-shadow: 0 0 20px #ffcc00; cursor: pointer;
+        }
+
+        #interact-prompt {
+            position: absolute; top: 20%; left: 50%; transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.85); color: #ffff55; padding: 10px 20px;
+            border: 2px solid #ffff55; border-radius: 8px; font-size: 18px; font-weight: bold;
+            display: none; text-align: center; z-index: 50; box-shadow: 0 0 15px #ffff55;
+        }
+        #elevator-banner {
+            position: absolute; top: 12%; left: 50%; transform: translateX(-50%);
+            background: rgba(0,0,0,0.8); color: #55ff55; padding: 8px 18px;
+            border: 2px solid #55ff55; border-radius: 8px; font-size: 20px; font-weight: bold;
+            display: none; text-align: center; z-index: 60; box-shadow: 0 0 15px #55ff55;
+        }
+
+        #start-overlay {
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.85); display: flex; flex-direction: column;
+            justify-content: center; align-items: center; z-index: 200; color: white;
+        }
+        #level-overlay {
+            position: absolute; top: 0; left: 0; width: 100vw; height: 100vh;
+            background: rgba(0,0,0,0.88); display: none; flex-direction: column;
+            justify-content: center; align-items: center; z-index: 210; color: white;
+            text-align: center;
+        }
+        #level-overlay h2 { font-size: 34px; color: #55ff55; text-shadow: 2px 2px 0 #000; }
+        #level-btn {
+            font-size: 20px; padding: 14px 30px; background: #55ff55; color: #000;
+            border: none; font-weight: bold; cursor: pointer; border-radius: 6px;
+            box-shadow: 0 0 15px #55ff55; margin-top: 20px;
+        }
+        #start-btn {
+            font-size: 22px; padding: 15px 30px; background: #55ff55; color: #000;
+            border: none; font-weight: bold; cursor: pointer; border-radius: 6px;
+            box-shadow: 0 0 15px #55ff55; margin-top: 20px;
+        }
+
+        #quiz-modal {
+            display: none; position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%); background: rgba(20,20,20,0.95);
+            border: 3px solid #ff5555; padding: 20px; text-align: center; color: white;
+            width: 85%; max-width: 320px; z-index: 300; box-shadow: 0 0 15px #000;
+        }
+        #quiz-modal input { font-size: 24px; width: 110px; text-align: center; margin: 15px 0; padding: 5px; color: #000; font-weight: bold; }
+        #quiz-modal button { font-size: 18px; padding: 8px 20px; background: #ff5555; color: white; border: none; font-weight: bold; cursor: pointer; }
+
+        #joystick-base {
+            position: absolute; bottom: 30px; left: 30px;
+            width: 100px; height: 100px; background: rgba(255,255,255,0.15);
+            border: 2px solid rgba(255,255,255,0.3); border-radius: 50%; display: none; z-index: 10;
+        }
+        #joystick-stick {
+            position: absolute; top: 30px; left: 30px;
+            width: 40px; height: 40px; background: rgba(85, 255, 85, 0.7);
+            border-radius: 50%; pointer-events: none;
+        }
+
+        /* ============ 多人直播 UI（start overlay / 提早交卷 / 大螢幕） ============ */
+        #game-ui { position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; }
+        #start-overlay { overflow-y: auto; padding: 14px 10px; }
+        .screen-mode #game-ui { display: none !important; }
+        #screen-ui { position: fixed; inset: 0; background: #0a0a1a; color: #fff;
+            font-family: 'Courier New', Courier, monospace; display: none; flex-direction: column;
+            z-index: 500; overflow: hidden; }
+        .screen-mode #screen-ui { display: flex; }
+
+        #lobby-form { display: flex; flex-direction: column; align-items: center; margin-top: 6px; }
+        .lobby-label { font-size: 16px; color: #9f9; margin-top: 10px; }
+        .lobby-input { font-size: 22px; padding: 6px 10px; text-align: center; width: 190px;
+            border: 2px solid #55ff55; border-radius: 6px; background: #000; color: #fff;
+            text-transform: uppercase; outline: none; }
+        #conn-status { margin-top: 12px; font-size: 15px; color: #ffd; min-height: 20px;
+            text-align: center; max-width: 340px; }
+        #retry-btn { display: none; margin-top: 10px; font-size: 16px; padding: 10px 18px;
+            background: #ffa500; color: #000; border: none; font-weight: bold; cursor: pointer;
+            border-radius: 6px; }
+        #offline-btn { display: none; margin-top: 10px; font-size: 16px; padding: 10px 18px;
+            background: #444; color: #fff; border: none; font-weight: bold; cursor: pointer;
+            border-radius: 6px; }
+        #early-submit-btn { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%);
+            background: #ff4444; color: #fff; border: 2px solid #fff; border-radius: 24px;
+            padding: 10px 24px; font-size: 17px; display: none; z-index: 150; cursor: pointer;
+            font-weight: bold; box-shadow: 0 0 14px #ff4444; }
+
+        /* ---- 大螢幕版面（投影 / 電視用，特大字、深色） ---- */
+        .screen-header { display: flex; align-items: center; gap: 24px; padding: 18px 28px;
+            border-bottom: 3px solid #2a2a5a; flex-wrap: wrap; }
+        .screen-title { font-size: 38px; margin: 0; color: #ffd54a; text-shadow: 0 0 18px rgba(255,213,74,0.5); }
+        .screen-room { font-size: 32px; background: #0c1e33; padding: 6px 20px; border: 3px solid #55ff55;
+            border-radius: 12px; color: #55ff55; letter-spacing: 2px; font-weight: bold; }
+        .screen-online { font-size: 26px; color: #88ddff; font-weight: bold; }
+        .screen-status { font-size: 20px; color: #aaa; }
+        #new-round-btn { margin-left: auto; font-size: 20px; padding: 12px 22px; background: #ff5555;
+            color: #fff; border: none; border-radius: 10px; cursor: pointer; font-weight: bold;
+            box-shadow: 0 0 12px rgba(255,85,85,0.6); }
+        .screen-main { display: flex; flex: 1; gap: 22px; padding: 22px; min-height: 0; }
+        .screen-col { background: #12122a; border: 2px solid #2a2a5a; border-radius: 14px;
+            padding: 16px; overflow: auto; }
+        .qr-col { width: 360px; flex: none; text-align: center; }
+        .qr-col img { width: 320px; height: 320px; background: #fff; padding: 8px; border-radius: 10px; }
+        .qr-warn { color: #ffb36b; font-size: 20px; margin-top: 10px; line-height: 1.45; text-align: left; }
+        .qr-hint { color: #9f9; font-size: 15px; margin-top: 10px; word-break: break-all; }
+        .board-col { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+        .feed-col { width: 430px; flex: none; display: flex; flex-direction: column; }
+        #screen-ui h2 { font-size: 30px; margin: 0 0 12px; color: #88aaff; }
+        .board-wrap { overflow-y: auto; flex: 1; }
+        .b-row { display: flex; align-items: center; gap: 14px; padding: 10px 14px; border-radius: 10px;
+            margin-bottom: 8px; font-size: 30px; background: #1b1b3a; }
+        .b-row.rank-1 { background: linear-gradient(90deg, #3a2f00, #241d00); color: #ffd700;
+            box-shadow: 0 0 16px rgba(255,215,0,0.35); }
+        .b-row.rank-2 { background: #2a2a36; color: #d6d6d6; }
+        .b-row.rank-3 { background: #382720; color: #e0a06b; }
+        .b-rank { width: 64px; font-size: 38px; font-weight: bold; }
+        .b-nick { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .b-score { font-size: 44px; font-weight: bold; color: #55ff55; }
+        .b-detail { font-size: 18px; color: #99aacc; white-space: nowrap; }
+        .empty-board { color: #889; font-size: 30px; padding: 46px 10px; text-align: center; line-height: 1.6; }
+        .feed-wrap { overflow-y: auto; flex: 1; }
+        .f-row { padding: 8px 12px; border-left: 4px solid #55ff55; background: #151530; margin-bottom: 6px;
+            border-radius: 0 8px 8px 0; font-size: 23px; animation: feedIn 0.35s ease-out; }
+        .f-row.dim { opacity: 0.5; }
+        .f-empty { color: #668; font-size: 22px; padding: 20px 6px; }
+        @keyframes feedIn { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: none; } }
+    </style>
+</head>
+<body>
+<script>
+/* 多人直播：mode 偵測一定要喺第一個 script（body 開頭）行，
+   screen 模式即刻加 class → CSS 隱藏遊戲 UI；後面嘅 three.js game script 都唔會啟動。 */
+(function () {
+    var p = new URLSearchParams(location.search);
+    var isScreen = (p.get('mode') === 'screen') || p.has('screen'); /* ?mode=screen 或 ?screen */
+    window.URL_PARAMS = p;
+    window.URL_ROOM = (p.get('room') || '').trim().toUpperCase();
+    window.URL_NICK = (p.get('nick') || '').trim();
+    window.IS_SCREEN = !!isScreen;
+    if (isScreen) document.body.classList.add('screen-mode');
+})();
+</script>
+
+
+    <div id="game-ui">
+
+    <div id="start-overlay">
+        <h1>⚔️ MathDoom 3D 課堂挑戰 ⚔️</h1>
+        <p>1. 走近怪獸進行答題（答啱數學題先殺到怪獸）</p>
+        <p>2. 打倒怪獸後，走近門口點擊「按我開門」進入下個房間；每層尾有 BOSS</p>
+        <p>3. 完場自動上傳分數去大螢幕排行榜（多人房）</p>
+        <div id="lobby-form">
+            <label class="lobby-label" for="nick-input">🧑 暱稱（留空會自動生成）</label>
+            <input class="lobby-input" id="nick-input" placeholder="玩家A7K2" maxlength="12" autocomplete="off">
+            <label class="lobby-label" for="room-input">🔢 房號（大螢幕顯示嘅 4 位房號）</label>
+            <input class="lobby-input" id="room-input" placeholder="例如 K7P2" maxlength="4" autocomplete="off">
+            <div id="conn-status">💡 撳「開始遊戲」連線大螢幕</div>
+            <button id="start-btn" onclick="startMulti()">🎮 開始遊戲 / START</button>
+            <button id="retry-btn" onclick="retryConnect()">🔄 重試連線</button>
+            <button id="offline-btn" onclick="offlineStart()">🚪 唔連喇，照玩（離線）</button>
+        </div>
+    </div>
+
+    <div id="level-overlay">
+        <h2 id="level-msg"></h2>
+        <button id="level-btn" onclick="continueToNextFloor()">進入下一層</button>
+    </div>
+
+    <div id="canvas-container"></div>
+    <div id="crosshair"></div>
+
+    <div id="ui-bar">
+        <div>F<span id="floor-val">1</span>/3 | 房間: <span id="room-val">1</span>/6</div>
+        <div>⏱️ <span id="timer-val">00:00</span></div>
+        <div>K <span id="kills-val">0</span> | 分 <span id="score-val">0</span></div>
+    </div>
+    
+    <div id="interact-prompt">🚪 已靠近門口！請點擊右下角按鈕開門</div>
+    <div id="elevator-banner">⬆️ 前往上一層…</div>
+    <div id="mobile-door-btn" onclick="triggerDoorOpen()">按我<br>開門</div>
+    <button id="early-submit-btn" onclick="confirmEarlySubmit()">🛑 提早交卷</button>
+
+    <div id="quiz-modal">
+        <h3 id="quiz-title" style="color:#ff5555; margin:0;">怪獸擋路！</h3>
+        <div id="quiz-q" style="font-size: 28px; font-weight: bold; margin: 10px 0;">7 x 8 = ?</div>
+        <input type="number" id="quiz-ans" inputmode="numeric">
+        <br>
+        <button onclick="submitAnswer()">攻擊 / Attack</button>
+    </div>
+
+    <div id="joystick-base">
+        <div id="joystick-stick"></div>
+    </div>
+
+    </div><!-- /#game-ui -->
+
+    <!-- ========== 大螢幕模式 UI（?mode=screen 先至顯示，body 加咗 .screen-mode） ========== -->
+    <div id="screen-ui">
+        <div class="screen-header">
+            <h1 class="screen-title">⚔️ MathDoom 3D 排行榜 ⚔️</h1>
+            <div class="screen-room" id="screen-room">房號：----</div>
+            <div class="screen-online" id="screen-online">👥 0 人</div>
+            <div class="screen-status" id="screen-status">🟡 準備廣播…</div>
+            <button id="new-round-btn" onclick="hostNewRound()">🔄 新一輪（清榜）</button>
+        </div>
+        <div class="screen-main">
+            <div class="screen-col qr-col">
+                <img id="screen-qr" alt="QR code" width="320" height="320">
+                <div id="screen-qr-warn" class="qr-warn" style="display:none">⚠️ 你係用檔案直接開 — QR 冇用；請用網上版 URL 開，或者直接口頭講房號俾學生入</div>
+                <div class="qr-hint" id="screen-join-hint"></div>
+            </div>
+            <div class="screen-col board-col">
+                <h2>🏆 Top 排行榜</h2>
+                <div class="board-wrap" id="screen-board"></div>
+            </div>
+            <div class="screen-col feed-col">
+                <h2>📡 即時動態</h2>
+                <div class="feed-wrap" id="screen-feed"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+        if (!window.IS_SCREEN) { // 多人直播：大螢幕模式完全唔啟動任何 3D
+        const scene = new THREE.Scene();
+        scene.fog = new THREE.FogExp2(0x111111, 0.02);
+
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 1000);
+        camera.rotation.order = 'YXZ';
+
+        const renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
+
+        const light = new THREE.PointLight(0xffffff, 1.2, 30);
+        camera.add(light);
+        scene.add(camera);
+
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+        scene.add(ambientLight);
+
+        function createProceduralBrickTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 64; canvas.height = 64;
+            const ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#111'; ctx.fillRect(0, 0, 64, 64);
+            ctx.fillStyle = '#4a2e35';
+            const rows = 4, cols = 2, rh = 64 / rows, cw = 64 / cols;
+            for (let r = 0; r < rows; r++) {
+                const offset = (r % 2 === 0) ? 0 : cw / 2;
+                for (let c = -1; c < cols + 1; c++) {
+                    ctx.fillRect(c * cw + offset + 2, r * rh + 2, cw - 4, rh - 4);
+                }
+            }
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.magFilter = THREE.NearestFilter;
+            texture.wrapS = THREE.RepeatWrapping;
+            texture.wrapT = THREE.RepeatWrapping;
+            return texture;
+        }
+
+        const wallTexture = createProceduralBrickTexture();
+        let walls = [];
+        let doors = [];
+
+        function buildWall(x, z, w, d) {
+            const tex = wallTexture.clone();
+            tex.repeat.set(Math.max(w, d) / 2, 1);
+            tex.needsUpdate = true;
+            const mat = new THREE.MeshLambertMaterial({ map: tex });
+            const wall = new THREE.Mesh(new THREE.BoxGeometry(w, 4, d), mat);
+            wall.position.set(x, 2, z);
+            scene.add(wall);
+            walls.push(new THREE.Box3().setFromObject(wall));
+        }
+
+        function createDoorTexture() {
+            const canvas = document.createElement('canvas');
+            canvas.width = 256; canvas.height = 512;
+            const ctx = canvas.getContext('2d');
+            // 木門底色
+            ctx.fillStyle = '#6b3f23'; ctx.fillRect(0, 0, 256, 512);
+            // 木紋
+            ctx.strokeStyle = 'rgba(0,0,0,0.18)';
+            for (let i = 0; i < 9; i++) {
+                ctx.beginPath();
+                ctx.moveTo(16 + i * 28, 0);
+                ctx.bezierCurveTo(8 + i * 28, 170, 32 + i * 28, 342, 20 + i * 28, 512);
+                ctx.stroke();
+            }
+            // 上下門板
+            ctx.fillStyle = '#7d4d29';
+            ctx.fillRect(34, 58, 188, 150);
+            ctx.fillRect(34, 304, 188, 150);
+            ctx.strokeStyle = '#3a2112'; ctx.lineWidth = 7;
+            ctx.strokeRect(34, 58, 188, 150);
+            ctx.strokeRect(34, 304, 188, 150);
+            // 門縫
+            ctx.strokeStyle = 'rgba(0,0,0,0.35)'; ctx.lineWidth = 3;
+            ctx.strokeRect(8, 8, 240, 496);
+            // 門柄（金色圓柄）
+            ctx.fillStyle = '#d4af37';
+            ctx.beginPath(); ctx.arc(192, 256, 13, 0, Math.PI * 2); ctx.fill();
+            ctx.strokeStyle = '#a5852c'; ctx.lineWidth = 4;
+            ctx.beginPath(); ctx.arc(192, 256, 17, 0, Math.PI * 2); ctx.stroke();
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.magFilter = THREE.NearestFilter;
+            return texture;
+        }
+
+        function createDoor(x, z, w, d, id) {
+            const doorTex = createDoorTexture();
+            doorTex.repeat.set(1, 1);
+            const mat = new THREE.MeshStandardMaterial({ 
+                map: doorTex, roughness: 0.55, metalness: 0.1, transparent: true
+            });
+            const doorMesh = new THREE.Mesh(new THREE.BoxGeometry(w, 4, d), mat);
+            doorMesh.position.set(x, 2, z);
+            scene.add(doorMesh);
+
+            doors.push({
+                id: id, mesh: doorMesh, mat: mat,
+                box: new THREE.Box3().setFromObject(doorMesh),
+                pos: new THREE.Vector3(x, 2, z),
+                isUnlocked: false,
+                isOpen: false,
+                isOpening: false
+            });
+        }
+
+        function buildObstacle(x, z, w, d) {
+            const mat = new THREE.MeshLambertMaterial({ color: 0x777777 });
+            const box = new THREE.Mesh(new THREE.BoxGeometry(w, 2.4, d), mat);
+            box.position.set(x, 1.2, z);
+            scene.add(box);
+            walls.push(new THREE.Box3().setFromObject(box));
+        }
+
+        const floor = new THREE.Mesh(new THREE.PlaneGeometry(80, 80), new THREE.MeshBasicMaterial({ color: 0x181818 }));
+        floor.rotation.x = -Math.PI / 2;
+        scene.add(floor);
+
+        const roomCenters = [
+            { id: 1, x: -14, z: 14 }, { id: 2, x: 0,   z: 14 }, { id: 3, x: 14,  z: 14 },
+            { id: 4, x: 14,  z: -2 }, { id: 5, x: 0,   z: -2 }, { id: 6, x: -14, z: -2 }
+        ];
+
+        function initMap() {
+            // 外牆
+            buildWall(0, 22, 44, 1); buildWall(0, -10, 44, 1);
+            buildWall(-22, 6, 1, 32); buildWall(22, 6, 1, 32);
+
+            // 隔牆（中間精確留出門洞，避免牆門重疊）
+            // Room 1 -> 2 (X = -7)
+            buildWall(-7, 19, 1, 6); buildWall(-7, 9, 1, 6); createDoor(-7, 14, 1, 4, 1);
+            
+            // Room 2 -> 3 (X = 7)
+            buildWall(7, 19, 1, 6); buildWall(7, 9, 1, 6); createDoor(7, 14, 1, 4, 2);
+            
+            // Room 3 -> 4 (Z = 6)
+            buildWall(19, 6, 6, 1); buildWall(9, 6, 6, 1); createDoor(14, 6, 4, 1, 3);
+            
+            // 補返上下排之間嘅隔牆（之前漏咗，令 Room 1<->6、2<->5 打通）
+            // Room 1 <-> 6 (X = -21.5 至 -6.5)
+            buildWall(-14, 6, 15, 1);
+            // Room 2 <-> 5 (X = -6.5 至 6.5)
+            buildWall(0, 6, 13, 1);
+            
+            // Room 4 -> 5 (X = 7)
+            buildWall(7, 3, 1, 6); buildWall(7, -7, 1, 6); createDoor(7, -2, 1, 4, 4);
+            
+            // Room 5 -> 6 (X = -7)
+            buildWall(-7, 3, 1, 6); buildWall(-7, -7, 1, 6); createDoor(-7, -2, 1, 4, 5);
+
+            // 障礙物（每房 2 個，避開門位同房中心，等玩家有嘢可以擋怪獸）
+            // Room 1
+            buildObstacle(-17, 12, 2, 2); buildObstacle(-11, 17, 2, 2.5);
+            // Room 2
+            buildObstacle(-3, 11, 2, 2); buildObstacle(3, 17, 2.5, 2);
+            // Room 3
+            buildObstacle(11, 17, 2, 2); buildObstacle(18, 11, 2, 2.5);
+            // Room 4
+            buildObstacle(11, -5, 2, 2); buildObstacle(18, 1, 2.5, 2);
+            // Room 5
+            buildObstacle(-3, -5, 2, 2); buildObstacle(3, 1, 2, 2.5);
+            // Room 6
+            buildObstacle(-17, -5, 2, 2); buildObstacle(-11, 1, 2, 2);
+        }
+        initMap();
+
+        let currentFloor = 1, currentRoomIndex = 0;
+        let currentAns = 0, currentMonster = null;
+        let startTime = Date.now(), isPaused = true;
+        let activeDoorToOpen = null;
+
+        // 玩家初始起點設定在 Room 1 角落，避免一開始就碰到怪獸
+        camera.position.set(-18, 1.6, 18);
+
+        const keys = {};
+
+        window.addEventListener('keydown', (e) => {
+            keys[e.code] = true;
+            if (e.code === 'KeyE') triggerDoorOpen();
+            if (e.code === 'Enter' && document.getElementById('quiz-modal').style.display === 'block') submitAnswer();
+        });
+
+        window.addEventListener('keyup', (e) => { keys[e.code] = false; });
+
+        const container = document.getElementById('canvas-container');
+
+        function startGame() {
+            document.getElementById('start-overlay').style.display = 'none';
+            isPaused = false;
+            startTime = Date.now();
+            // === 多人直播：回合開始時間 / 分數重置 / 10 分鐘自動交卷 timer ===
+            startTimeMs = Date.now();
+            myKills = 0; myFloor = 1;
+            document.getElementById('kills-val').innerText = '0';
+            updateScoreUI();
+            if (!isTouchDevice) document.getElementById('early-submit-btn').style.display = 'block';
+            startRoundTimer();
+            if (!isTouchDevice) container.requestPointerLock();
+        }
+
+        container.addEventListener('click', () => {
+            if (!isPaused && !isTouchDevice && document.pointerLockElement !== container) {
+                container.requestPointerLock();
+            }
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (document.pointerLockElement === container && !isPaused) {
+                const sensitivity = 0.0025;
+                camera.rotation.y -= e.movementX * sensitivity;
+                camera.rotation.x -= e.movementY * sensitivity;
+                camera.rotation.x = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, camera.rotation.x));
+            }
+        });
+
+        let isTouchDevice = 'ontouchend' in document;
+        let moveX = 0, moveZ = 0;
+
+        if (isTouchDevice) {
+            document.getElementById('joystick-base').style.display = 'block';
+            const base = document.getElementById('joystick-base');
+            const stick = document.getElementById('joystick-stick');
+            let joyTouchId = null, lookTouchId = null, lastTouchX = 0, lastTouchY = 0;
+
+            base.addEventListener('touchstart', e => {
+                const touch = e.changedTouches[0];
+                joyTouchId = touch.identifier;
+                updateJoystick(touch);
+            });
+
+            window.addEventListener('touchmove', e => {
+                for (let touch of e.changedTouches) {
+                    if (touch.identifier === joyTouchId) {
+                        updateJoystick(touch);
+                    } else if (touch.identifier === lookTouchId && !isPaused) {
+                        const deltaX = touch.clientX - lastTouchX;
+                        const deltaY = touch.clientY - lastTouchY;
+                        camera.rotation.y -= deltaX * 0.005;
+                        camera.rotation.x -= deltaY * 0.005;
+                        camera.rotation.x = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, camera.rotation.x));
+                        lastTouchX = touch.clientX; lastTouchY = touch.clientY;
+                    }
+                }
+            });
+
+            window.addEventListener('touchend', e => {
+                for (let touch of e.changedTouches) {
+                    if (touch.identifier === joyTouchId) {
+                        joyTouchId = null; moveX = 0; moveZ = 0;
+                        stick.style.transform = `translate(0px, 0px)`;
+                    } else if (touch.identifier === lookTouchId) {
+                        lookTouchId = null;
+                    }
+                }
+            });
+
+            window.addEventListener('touchstart', e => {
+                for (let touch of e.changedTouches) {
+                    if (touch.clientX > window.innerWidth / 2 && lookTouchId === null) {
+                        lookTouchId = touch.identifier;
+                        lastTouchX = touch.clientX; lastTouchY = touch.clientY;
+                    }
+                }
+            });
+
+            function updateJoystick(touch) {
+                const rect = base.getBoundingClientRect();
+                const dx = touch.clientX - (rect.left + rect.width / 2);
+                const dy = touch.clientY - (rect.top + rect.height / 2);
+                const dist = Math.min(Math.hypot(dx, dy), 40);
+                const angle = Math.atan2(dy, dx);
+                stick.style.transform = `translate(${Math.cos(angle)*dist}px, ${Math.sin(angle)*dist}px)`;
+                moveX = (Math.cos(angle)*dist) / 40; 
+                moveZ = (Math.sin(angle)*dist) / 40;
+            }
+        }
+
+        function createEmojiTexture(emojiStr) {
+            const canvas = document.createElement('canvas');
+            canvas.width = 128; canvas.height = 128;
+            const ctx = canvas.getContext('2d');
+            ctx.font = '90px sans-serif'; ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+            ctx.fillText(emojiStr, 64, 64);
+            const texture = new THREE.CanvasTexture(canvas);
+            texture.magFilter = THREE.NearestFilter;
+            return texture;
+        }
+
+        let monsters = [];
+        function spawnRoomMonster(roomIdx) {
+            const isBoss = (roomIdx === 5);
+            const normalEmojis = ['👾', '👹', '👻', '👽', '💀'];
+            const bossEmojis = ['🐉', '👿', '🤖'];
+            const emoji = isBoss ? bossEmojis[Math.floor(Math.random() * bossEmojis.length)] : normalEmojis[Math.floor(Math.random() * normalEmojis.length)];
+
+            const mat = new THREE.SpriteMaterial({ map: createEmojiTexture(emoji), transparent: true });
+            const m = new THREE.Sprite(mat);
+            const size = isBoss ? 2.5 : 1.5;
+            m.scale.set(size, size, 1);
+            
+            const center = roomCenters[roomIdx];
+            // 怪獸生成在房間中央
+            m.position.set(center.x, isBoss ? 1.4 : 1.0, center.z);
+            m.userData = { isBoss, roomIndex: roomIdx, vx: (Math.random() - 0.5) * 0.03, vz: (Math.random() - 0.5) * 0.03 };
+            
+            scene.add(m);
+            monsters.push(m);
+        }
+
+        spawnRoomMonster(0);
+
+        // 電梯（BOSS 房用）：打贏大佬後啟動，行入去升上下一層
+        const elevator = {
+            active: false, rising: false, risen: 0,
+            pos: new THREE.Vector3(-19, 0, -2),
+            platform: null, shaft: null
+        };
+        function buildElevator() {
+            const shaftMat = new THREE.MeshLambertMaterial({ color: 0x444466, transparent: true, opacity: 0.45 });
+            elevator.shaft = new THREE.Mesh(new THREE.BoxGeometry(3, 5.5, 3), shaftMat);
+            elevator.shaft.position.set(elevator.pos.x, 2.75, elevator.pos.z);
+            scene.add(elevator.shaft);
+            const platMat = new THREE.MeshLambertMaterial({ color: 0x888899 });
+            elevator.platform = new THREE.Mesh(new THREE.BoxGeometry(1.8, 0.25, 1.8), platMat);
+            elevator.platform.position.set(elevator.pos.x, 0.125, elevator.pos.z);
+            scene.add(elevator.platform);
+        }
+        buildElevator();
+
+        function generateMathQuestion() {
+            let n1 = Math.floor(Math.random() * 9) + 2;
+            let n2 = Math.floor(Math.random() * 9) + 2;
+            if (currentFloor === 1) { currentAns = n1 + n2; return `${n1} + ${n2} = ?`; }
+            if (currentFloor === 2) { currentAns = n1 * n2; return `${n1} × ${n2} = ?`; }
+            currentAns = (n1 + n2) * 2; return `(${n1} + ${n2}) × 2 = ?`;
+        }
+
+        function triggerQuiz(m) {
+            isPaused = true;
+            currentMonster = m;
+            if (document.pointerLockElement) document.exitPointerLock();
+            document.getElementById('quiz-title').innerText = m.userData.isBoss ? "🔥 樓層 BOSS 🔥" : "怪獸擋路！";
+            document.getElementById('quiz-q').innerText = generateMathQuestion();
+            document.getElementById('quiz-ans').value = '';
+            document.getElementById('quiz-modal').style.display = 'block';
+            setTimeout(() => document.getElementById('quiz-ans').focus(), 100);
+        }
+
+        function submitAnswer() {
+            const ans = parseInt(document.getElementById('quiz-ans').value);
+            if (ans === currentAns) {
+                // === 多人直播：答啱一隻怪獸 +1 kill，即時更新分數 UI ===
+                myKills++;
+                updateScoreUI();
+                document.getElementById('quiz-modal').style.display = 'none';
+                isPaused = false;
+                if (!isTouchDevice) container.requestPointerLock();
+                
+                scene.remove(currentMonster);
+                monsters = monsters.filter(item => item !== currentMonster);
+
+                if (currentRoomIndex < 5) {
+                    const doorToUnlock = doors[currentRoomIndex];
+                    if (doorToUnlock) doorToUnlock.isUnlocked = true;
+                } else {
+                    // BOSS 打贏 → 電梯過關（唔係即刻切層）
+                    if (currentFloor < 3) {
+                        // 啟動電梯，俾玩家行入去
+                        elevator.active = true;
+                    } else {
+                        // 最後一層：直接通關畫面
+                        document.getElementById('level-msg').innerText = `🏆 恭喜通關全遊戲！總用時：${document.getElementById('timer-val').innerText}`;
+                        document.getElementById('level-btn').innerText = '完成';
+                        document.getElementById('level-overlay').style.display = 'flex';
+                        isPaused = true;
+                        // === 多人直播：撳「完成」→ finishGame(true) 上傳通關分數 ===
+                        document.getElementById('level-btn').onclick = function () { finishGame(true); };
+                    }
+                }
+            } else {
+                alert("答錯了！再試一次！");
+            }
+        }
+
+        function triggerDoorOpen() {
+            if (activeDoorToOpen && activeDoorToOpen.isUnlocked && !activeDoorToOpen.isOpen && !activeDoorToOpen.isOpening) {                activeDoorToOpen.isOpening = true;
+                document.getElementById('mobile-door-btn').style.display = 'none';
+                document.getElementById('interact-prompt').style.display = 'none';
+                
+                currentRoomIndex++;
+                document.getElementById('room-val').innerText = currentRoomIndex + 1;
+                spawnRoomMonster(currentRoomIndex);
+            }
+        }
+
+        function continueToNextFloor() {
+            document.getElementById('level-overlay').style.display = 'none';
+            if (document.getElementById('level-btn').innerText !== '完成') {
+                isPaused = false;
+                if (!isTouchDevice) container.requestPointerLock();
+            }
+            // 「完成」按鈕 = 通關，保持暫停，唔再重新開始
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (!isPaused) {
+                const speed = 0.08;
+                const playerRadius = 0.3;
+
+                doors.forEach(d => {
+                    if (d.isOpening && !d.isOpen) {
+                        // 開門效果：木門淡出消失
+                        d.mat.opacity = Math.max(d.mat.opacity - 0.09, 0);
+                        if (d.mat.opacity <= 0) {
+                            d.mesh.visible = false;
+                            d.isOpen = true; d.isOpening = false;
+                        }
+                    }
+                });
+
+                let inputX = moveX, inputZ = moveZ;
+                if (!isTouchDevice) {
+                    if (keys['KeyW'] || keys['ArrowUp']) inputZ = -1;
+                    if (keys['KeyS'] || keys['ArrowDown']) inputZ = 1;
+                    if (keys['KeyA'] || keys['ArrowLeft']) inputX = -1;
+                    if (keys['KeyD'] || keys['ArrowRight']) inputX = 1;
+                }
+
+                const forward = new THREE.Vector3(0, 0, -1).applyAxisAngle(new THREE.Vector3(0, 1, 0), camera.rotation.y);
+                const right = new THREE.Vector3(1, 0, 0).applyAxisAngle(new THREE.Vector3(0, 1, 0), camera.rotation.y);
+
+                const moveDir = new THREE.Vector3()
+                    .addScaledVector(forward, -inputZ * speed)
+                    .addScaledVector(right, inputX * speed);
+
+                const targetX = camera.position.x + moveDir.x;
+                const targetZ = camera.position.z + moveDir.z;
+
+                let canMoveX = true, canMoveZ = true;
+
+                // 牆壁碰撞檢測
+                for (let wallBox of walls) {
+                    if (targetX + playerRadius > wallBox.min.x && targetX - playerRadius < wallBox.max.x &&
+                        camera.position.z + playerRadius > wallBox.min.z && camera.position.z - playerRadius < wallBox.max.z) canMoveX = false;
+                    if (camera.position.x + playerRadius > wallBox.min.x && camera.position.x - playerRadius < wallBox.max.x &&
+                        targetZ + playerRadius > wallBox.min.z && targetZ - playerRadius < wallBox.max.z) canMoveZ = false;
+                }
+
+                // 門碰撞檢測（開門後允許通行）
+                for (let door of doors) {
+                    if (!door.isOpen) {
+                        const doorBox = door.box;
+                        if (targetX + playerRadius > doorBox.min.x && targetX - playerRadius < doorBox.max.x &&
+                            camera.position.z + playerRadius > doorBox.min.z && camera.position.z - playerRadius < doorBox.max.z) canMoveX = false;
+                        if (camera.position.x + playerRadius > doorBox.min.x && camera.position.x - playerRadius < doorBox.max.x &&
+                            targetZ + playerRadius > doorBox.min.z && targetZ - playerRadius < doorBox.max.z) canMoveZ = false;
+                    }
+                }
+
+                if (canMoveX) camera.position.x = targetX;
+                if (canMoveZ) camera.position.z = targetZ;
+                camera.position.y = 1.6;
+
+                // 檢測是否靠近開門按鈕
+                let nearDoor = false;
+                doors.forEach(d => {
+                    if (d.isUnlocked && !d.isOpen && camera.position.distanceTo(d.pos) < 3.2) {
+                        nearDoor = true;
+                        activeDoorToOpen = d;
+                    }
+                });
+
+                const mobileBtn = document.getElementById('mobile-door-btn');
+                const prompt = document.getElementById('interact-prompt');
+                if (elevator.active && !elevator.rising) {
+                    // BOSS 已死：提示行入電梯
+                    mobileBtn.style.display = 'none';
+                    prompt.style.display = 'block';
+                    prompt.innerText = '🚪 電梯已到達！行入去上樓';
+                    activeDoorToOpen = null;
+                } else if (nearDoor) {
+                    mobileBtn.style.display = 'flex';
+                    prompt.style.display = 'block';
+                    prompt.innerText = '🚪 已靠近門口！請點擊右下角按鈕開門';
+                } else {
+                    mobileBtn.style.display = 'none';
+                    prompt.style.display = 'none';
+                    activeDoorToOpen = null;
+                }
+
+                // 行入電梯 → 開始上升過關
+                if (elevator.active && !elevator.rising) {
+                    const d2 = Math.hypot(camera.position.x - elevator.pos.x, camera.position.z - elevator.pos.z);
+                    if (d2 < 2.0) {
+                        elevator.rising = true;
+                        isPaused = true;
+                        prompt.style.display = 'none';
+                        document.getElementById('elevator-banner').style.display = 'block';
+                        document.getElementById('elevator-banner').innerText = `⬆️ 前往第 ${currentFloor + 1} 層…`;
+                    }
+                }
+
+                // 怪獸移動與觸發感應
+                monsters.forEach(m => {
+                    const distToPlayer = camera.position.distanceTo(m.position);
+                    let nextX, nextZ;
+                    let hitX = false, hitZ = false;
+                    const mRadius = 0.4;
+
+                    if (distToPlayer < 10 && distToPlayer > 1.8) {
+                        // 攻擊行為：玩家喺 10 米內，怪獸追住玩家（BOSS 追快啲）
+                        const chaseSpeed = m.userData.isBoss ? 0.075 : 0.05;
+                        const dirX = (camera.position.x - m.position.x) / Math.max(distToPlayer, 0.01);
+                        const dirZ = (camera.position.z - m.position.z) / Math.max(distToPlayer, 0.01);
+                        nextX = m.position.x + dirX * chaseSpeed;
+                        nextZ = m.position.z + dirZ * chaseSpeed;
+                    } else {
+                        // 平時隨機遊蕩
+                        nextX = m.position.x + m.userData.vx;
+                        nextZ = m.position.z + m.userData.vz;
+                    }
+
+                    for (let wallBox of walls) {
+                        if (nextX + mRadius > wallBox.min.x && nextX - mRadius < wallBox.max.x &&
+                            m.position.z + mRadius > wallBox.min.z && m.position.z - mRadius < wallBox.max.z) hitX = true;
+                        if (m.position.x + mRadius > wallBox.min.x && m.position.x - mRadius < wallBox.max.x &&
+                            nextZ + mRadius > wallBox.min.z && nextZ - mRadius < wallBox.max.z) hitZ = true;
+                    }
+
+                    // 怪獸都唔可以穿過未開嘅門（修：之前會走去第二間房）
+                    for (let door of doors) {
+                        if (!door.isOpen) {
+                            const doorBox = door.box;
+                            if (nextX + mRadius > doorBox.min.x && nextX - mRadius < doorBox.max.x &&
+                                m.position.z + mRadius > doorBox.min.z && m.position.z - mRadius < doorBox.max.z) hitX = true;
+                            if (m.position.x + mRadius > doorBox.min.x && m.position.x - mRadius < doorBox.max.x &&
+                                nextZ + mRadius > doorBox.min.z && nextZ - mRadius < doorBox.max.z) hitZ = true;
+                        }
+                    }
+
+                    if (!hitX) m.position.x = nextX; else m.userData.vx *= -1;
+                    if (!hitZ) m.position.z = nextZ; else m.userData.vz *= -1;
+
+                    // 追到玩家（1.8 米內）→ 出題「攻擊」（呢段本身喺 !isPaused 入面，modal 開緊唔會重複觸發）
+                    if (camera.position.distanceTo(m.position) < 1.8) {
+                        triggerQuiz(m);
+                    }
+                });
+
+                const sec = Math.floor((Date.now() - startTime) / 1000);
+                const min = String(Math.floor(sec / 60)).padStart(2, '0');
+                const s = String(sec % 60).padStart(2, '0');
+                document.getElementById('timer-val').innerText = `${min}:${s}`;
+            }
+
+            // 電梯上升動畫（唔受暫停影響）
+            if (elevator.rising) {
+                elevator.risen += 0.055;
+                elevator.platform.position.y = 0.125 + elevator.risen;
+                camera.position.y = 1.6 + elevator.risen;
+                if (elevator.risen >= 5.5) {
+                    // 到達上層：切層過關
+                    elevator.rising = false; elevator.active = false;
+                    elevator.risen = 0;
+                    elevator.platform.position.y = 0.125;
+                    document.getElementById('elevator-banner').style.display = 'none';
+                    currentFloor++; currentRoomIndex = 0;
+                    // === 多人直播：同步「到達樓層」去分數 UI ===
+                    myFloor = currentFloor; updateScoreUI();
+                    document.getElementById('floor-val').innerText = currentFloor;
+                    document.getElementById('room-val').innerText = 1;
+                    doors.forEach(d => {
+                        d.isOpen = false; d.isOpening = false; d.isUnlocked = false;
+
+                        d.mesh.visible = true; d.mat.opacity = 1;
+
+                        d.mesh.position.copy(d.pos); d.box.setFromObject(d.mesh);
+                    });
+                    camera.position.set(-18, 1.6, 18);
+                    spawnRoomMonster(0);
+                    document.getElementById('level-msg').innerText = `🚀 已到達第 ${currentFloor} 層！準備好未？`;
+                    document.getElementById('level-btn').innerText = '開始冒險';
+                    document.getElementById('level-overlay').style.display = 'flex';
+                    isPaused = true;
+                }
+            }
+
+            renderer.render(scene, camera);
+        }
+        animate();
+
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+        } // end if (!window.IS_SCREEN)
+    </script>
+
+    <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+
+<script>
+// =====================================================================
+//  MathDoom Live —— 多人直播層（PeerJS 雲端 DataConnection）
+//  流程：
+//    Screen（?mode=screen）: new Peer('mathdoom-live-'+房號) 做 host，
+//      收 join / score，計分、排榜、廣播 feed/board，並顯示 QR 俾學生入。
+//    Player（預設）        : new Peer() 自動 id → connect 去 host id，
+//      conn.on('open') 先 startGame()；完場 finishGame(complete)
+//      向 host 上傳 {t:'score'}，收到任何回覆或 3 秒後顯示「已上傳」。
+// =====================================================================
+
+// ---------- 共用工具（player + screen 都用） ----------
+var NET_ALPHABET = 'ABCDEFGHJKLMNPQRSTUVWXYZ123456789'; // 房號唔用 0 / O / I
+function randFromChars(n) {
+    var s = '';
+    for (var i = 0; i < n; i++) s += NET_ALPHABET[Math.floor(Math.random() * NET_ALPHABET.length)];
+    return s;
+}
+function randomRoom() { return randFromChars(4); }
+function randomNick() { return '玩家' + randFromChars(4); }
+function hostPeerId(room) { return 'mathdoom-live-' + room; }
+function el(id) { return document.getElementById(id); }
+function escHtml(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+}
+function fmtClock(sec) {
+    sec = Math.max(0, Math.floor(sec || 0));
+    return String(Math.floor(sec / 60)).padStart(2, '0') + ':' + String(sec % 60).padStart(2, '0');
+}
+
+// ---------- 玩家模式共用狀態（game script 入面都會讀寫） ----------
+var myNick = '', myRoom = '';
+var myKills = 0, myFloor = 1, startTimeMs = 0;
+var finished = false, connecting = false, connFailed = false;
+var peer = null, conn = null, connected = false;
+var pendingScore = null, scoreSent = false, uploadSettled = false;
+var uploadTimer = null, roundTimer = null, attemptTimer = null;
+var ROUND_SECONDS = 600; // 10 分鐘一輪，時間到自動交卷
+
+function setConnStatus(text, color) {
+    var s = el('conn-status');
+    if (s) { s.innerText = text; s.style.color = color || '#ffd'; }
+}
+function setStartBusy(busy) {
+    var b = el('start-btn');
+    if (!b) return;
+    b.disabled = busy;
+    b.style.opacity = busy ? '0.55' : '1';
+}
+function updateScoreUI() {
+    var k = myKills || 0;
+    var sc = k * 100 + (myFloor || 1) * 500;
+    var kv = el('kills-val'); if (kv) kv.innerText = k;
+    var sv = el('score-val'); if (sv) sv.innerText = sc;
+}
+function startRoundTimer() {
+    if (roundTimer) clearInterval(roundTimer);
+    roundTimer = setInterval(function () {
+        if (finished) { clearInterval(roundTimer); roundTimer = null; return; }
+        var elapsed = Math.floor((Date.now() - startTimeMs) / 1000);
+        if (elapsed > ROUND_SECONDS) finishGame(false); // 時間到自動交卷
+    }, 1000);
+}
+
+// ---------- 玩家：開始畫面 ----------
+function initPlayerLobby() {
+    var ni = el('nick-input'), ri = el('room-input');
+    if (window.URL_NICK) ni.value = window.URL_NICK; // 預填 ?nick=
+    if (window.URL_ROOM) ri.value = window.URL_ROOM; // 預填 ?room=
+    setConnStatus('💡 撳「開始遊戲」連線大螢幕（房號喺大螢幕度）', '#ffd');
+    if ('ontouchend' in document) { var eb = el('early-submit-btn'); if (eb) eb.style.display = 'none'; }
+}
+
+function startMulti() {
+    if (connecting || finished) return;
+    var ni = el('nick-input'), ri = el('room-input');
+    myNick = (ni.value || '').trim() || randomNick(); // 留空 → 「玩家」+4 位隨機
+    ni.value = myNick;
+    myRoom = (ri.value || '').trim().toUpperCase().replace(/[^A-Z0-9]/g, '');
+    if (!/^[A-Z0-9]{4}$/.test(myRoom)) {
+        setConnStatus('❌ 房號要是 4 位字母數字（例如 K7P2）', '#f88');
+        return;
+    }
+    connecting = true; connFailed = false;
+    el('retry-btn').style.display = 'none';
+    el('offline-btn').style.display = 'none';
+    setStartBusy(true);
+    setConnStatus('⏳ 連線大螢幕…（房號 ' + myRoom + '）', '#ffd');
+    attemptConnect(function () {           // conn open 先至開始遊戲
+        connecting = false; setStartBusy(false);
+        startGame();
+    }, function () {                       // 連唔到都唔阻開始（可離線照玩）
+        connecting = false; connFailed = true; setStartBusy(false);
+        setConnStatus('❌ 搵唔到大螢幕（房號啱唔啱？）', '#f88');
+        el('retry-btn').style.display = 'inline-block';
+        el('offline-btn').style.display = 'inline-block';
+    }, true);
+}
+function retryConnect() {
+    if (connecting || finished) return;
+    connecting = true;
+    el('retry-btn').style.display = 'none';
+    el('offline-btn').style.display = 'none';
+    setStartBusy(true);
+    setConnStatus('⏳ 重新連線大螢幕…', '#ffd');
+    attemptConnect(function () {
+        connecting = false;
+        startGame();
+    }, function () {
+        connecting = false; connFailed = true; setStartBusy(false);
+        setConnStatus('❌ 仍然搵唔到大螢幕（房號啱唔啱？）', '#f88');
+        el('retry-btn').style.display = 'inline-block';
+        el('offline-btn').style.display = 'inline-block';
+    }, true);
+}
+function offlineStart() {
+    if (finished) return;
+    connFailed = true;
+    el('retry-btn').style.display = 'none';
+    el('offline-btn').style.display = 'none';
+    startGame();
+}
+function confirmEarlySubmit() {
+    if (finished) return;
+    if (window.confirm('🛑 提早交卷？答咗嘅分會即刻上傳去排行榜！')) finishGame(false);
+}
+
+// ---------- 玩家：開 Peer + 連 host ----------
+function attemptConnect(onOpen, onFail, sendJoin) {
+    if (attemptTimer) clearTimeout(attemptTimer);
+    if (peer && !peer.destroyed) { try { peer.destroy(); } catch (e) {} }
+    peer = null; conn = null; connected = false;
+    var settled = false;
+    function settle(ok, why) {
+        if (settled) return;
+        settled = true;
+        if (attemptTimer) { clearTimeout(attemptTimer); attemptTimer = null; }
+        if (ok) onOpen(); else onFail(why || 'unknown');
+    }
+    try { peer = new Peer(); } // 玩家用自動 id
+    catch (e) { settle(false, 'init'); return; }
+    peer.on('open', function () {
+        var c = peer.connect(hostPeerId(myRoom), { reliable: true });
+        conn = c;
+        bindPlayerConn(c, sendJoin, function () { settle(true); }, function () { settle(false, 'unavailable'); });
+        attemptTimer = setTimeout(function () { if (!connected) settle(false, 'timeout'); }, 6000);
+    });
+    peer.on('error', function (err) {
+        var t = err && err.type;
+        if (t === 'peer-unavailable') settle(false, 'unavailable');
+        else if (t === 'network' || t === 'server-error' || t === 'socket-error' || t === 'socket-closed' || t === 'browser-incompatible') settle(false, 'net');
+    });
+}
+function bindPlayerConn(c, sendJoin, onOpened, onOpenFail) {
+    var opened = false;
+    c.on('open', function () {
+        opened = true; connected = true; connFailed = false;
+        if (sendJoin) { try { c.send({ t: 'join', nick: myNick }); } catch (e) {} }
+        onOpened();
+    });
+    c.on('data', function () {
+        // host 有覆（ack / board / feed 任何一種）＝ 當收到確認
+        if (pendingScore && scoreSent) onUploadAck();
+    });
+    c.on('close', function () { if (opened) connected = false; else onOpenFail(); });
+    c.on('error', function () { if (!opened) onOpenFail(); });
+}
+
+// ---------- 玩家：完場上傳 ----------
+function finishGame(complete) {
+    if (finished) return;          // 撳多下都唔會重複上傳
+    finished = true;
+    if (roundTimer) { clearInterval(roundTimer); roundTimer = null; }
+    var eb = el('early-submit-btn'); if (eb) eb.style.display = 'none';
+    var sec = Math.max(0, Math.floor((Date.now() - startTimeMs) / 1000));
+    var score = myKills * 100 + myFloor * 500 + (complete ? Math.max(0, 300 - sec) : 0);
+    pendingScore = { score: score, complete: !!complete, seconds: sec };
+    scoreSent = false; uploadSettled = false;
+    el('level-overlay').style.display = 'flex';
+    if (complete) el('level-msg').innerText = '🏆 恭喜通關！';
+    doUpload();
+}
+function doUpload() {
+    var msg = el('level-msg'), btn = el('level-btn');
+    if (uploadTimer) clearTimeout(uploadTimer);
+    if (conn && conn.open) {
+        msg.innerText = '⏫ 上傳中…';
+        btn.innerText = '⏫ 上傳中…';
+        btn.onclick = null;
+        try {
+            conn.send({ t: 'score', nick: myNick, kills: myKills, floor: myFloor,
+                seconds: pendingScore.seconds, complete: pendingScore.complete });
+        } catch (e) {}
+        scoreSent = true;
+        uploadTimer = setTimeout(onUploadAck, 3000); // send 後 3 秒都當成功
+    } else {
+        msg.innerText = '⚠️ 未連到大螢幕，分數冇上傳（房號啱？）';
+        btn.innerText = '重試';
+        btn.onclick = retryUpload; // 重新連線再 send
+    }
+}
+function onUploadAck() {
+    if (uploadSettled) return;
+    uploadSettled = true;
+    if (uploadTimer) clearTimeout(uploadTimer);
+    var sc = pendingScore ? pendingScore.score : 0;
+    pendingScore = null;
+    var msg = el('level-msg'), btn = el('level-btn');
+    msg.innerText = '✅ 已上傳 ' + sc + ' 分！去大螢幕睇排名！';
+    btn.innerText = '🔄 再玩一次';
+    btn.onclick = function () { location.reload(); };
+}
+function retryUpload() {
+    if (!pendingScore) return;
+    var msg = el('level-msg'), btn = el('level-btn');
+    msg.innerText = '⏳ 重新連線大螢幕…';
+    btn.innerText = '⏫ 連線中…';
+    btn.onclick = null;
+    attemptConnect(function () {
+        doUpload(); // 開返 conn 再 send 一次
+    }, function () {
+        msg.innerText = '❌ 重試失敗，仍然搵唔到大螢幕（房號啱？）';
+        btn.innerText = '重試';
+        btn.onclick = retryUpload;
+    }, false);
+}
+
+// =====================================================================
+//  大螢幕（host）部分：房號 + QR + 即時排行榜 + 動態 feed + 新一輪
+// =====================================================================
+var hostPeer = null, hostRoom = '', hostReady = false;
+var hostConnections = new Map(); // peerId -> DataConnection
+var hostPlayers = {};            // nick -> {nick,kills,floor,seconds,complete,score}
+var hostFeed = [];
+
+function buildHostJoinUrl() {
+    if (!location.origin || location.origin === 'null') return null; // file:// 開 → QR 冇用
+    return location.origin + location.pathname + '?mode=play&room=' + hostRoom;
+}
+function renderHostHeader() {
+    var r = el('screen-room'); if (r) r.innerText = '房號：' + hostRoom;
+    updateHostOnline();
+    var join = buildHostJoinUrl();
+    var img = el('screen-qr'), warn = el('screen-qr-warn'), hint = el('screen-join-hint');
+    if (join) {
+        img.src = 'https://api.qrserver.com/v1/create-qr-code/?size=320x320&data=' + encodeURIComponent(join) + '&margin=8';
+        img.style.display = 'inline';
+        warn.style.display = 'none';
+        if (hint) hint.innerText = join;
+    } else {
+        img.style.display = 'none';
+        warn.style.display = 'block';
+        if (hint) hint.innerText = '直接入：' + location.href + '?mode=play&room=' + hostRoom;
+    }
+}
+function setHostStatus(text) {
+    var s = el('screen-status'); if (s) s.innerText = text;
+}
+function updateHostOnline() {
+    var o = el('screen-online');
+    if (o) o.innerText = '👥 ' + hostConnections.size + ' 人';
+}
+function hostBoardList() {
+    return Object.keys(hostPlayers).map(function (k) { return hostPlayers[k]; })
+        .sort(function (a, b) { return (b.score - a.score) || (a.seconds - b.seconds); }); // 分高先，同分用時短先
+}
+function renderHostBoard() {
+    var w = el('screen-board'); if (!w) return;
+    var list = hostBoardList();
+    if (!list.length) {
+        w.innerHTML = '<div class="empty-board">⏳ 未有玩家上傳分數 — 叫學生入房玩！</div>';
+        return;
+    }
+    w.innerHTML = list.map(function (p, i) {
+        var rk = i + 1;
+        return '<div class="b-row rank-' + (rk <= 3 ? rk : 'x') + '">'
+            + '<span class="b-rank">' + (rk <= 3 ? '#' + rk : '') + '</span>'
+            + '<span class="b-nick">' + escHtml(p.nick) + (p.complete ? ' 🏆' : '') + '</span>'
+            + '<span class="b-score">' + p.score + '</span>'
+            + '<span class="b-detail">K ' + p.kills + '・F' + p.floor + '・' + fmtClock(p.seconds) + '</span></div>';
+    }).join('');
+}
+function renderHostFeed() {
+    var w = el('screen-feed'); if (!w) return;
+    if (!hostFeed.length) { w.innerHTML = '<div class="f-empty">未有動態 — 等學生 join…</div>'; return; }
+    w.innerHTML = hostFeed.map(function (it, i) {
+        return '<div class="f-row' + (i >= 4 ? ' dim' : '') + '">' + escHtml(it.text) + '</div>';
+    }).join('');
+}
+function pushHostFeed(text) {
+    hostFeed.unshift({ text: text });
+    if (hostFeed.length > 8) hostFeed.pop(); // 最新 8 條，舊 fade/dim
+    renderHostFeed();
+}
+function hostBroadcast(obj) {
+    hostConnections.forEach(function (c) {
+        if (c && c.open) { try { c.send(obj); } catch (e) {} }
+    });
+}
+function hostOnData(c, d) {
+    if (!d || typeof d !== 'object') return;
+    if (d.t === 'join' && d.nick) {
+        var txt = '🎮 ' + String(d.nick) + ' 加入！';
+        pushHostFeed(txt);
+        hostBroadcast({ t: 'feed', text: txt });
+    } else if (d.t === 'score') {
+        handleHostScore(c, d);
+    }
+}
+function handleHostScore(c, d) {
+    var nick = String(d.nick || '玩家').slice(0, 16);
+    var kills = Math.max(0, parseInt(d.kills, 10) || 0);
+    var floor = Math.max(1, parseInt(d.floor, 10) || 1);
+    var seconds = Math.max(0, parseInt(d.seconds, 10) || 0);
+    var complete = !!d.complete;
+    // host 計分：kills*100 + floor*500 + 通關 bonus(300 - 用時)
+    var score = kills * 100 + floor * 500 + (complete ? Math.max(0, 300 - seconds) : 0);
+    if (!hostPlayers[nick] || score > hostPlayers[nick].score) {
+        hostPlayers[nick] = { nick: nick, kills: kills, floor: floor, seconds: seconds, complete: complete, score: score }; // 同 nick 保留高分
+    }
+    try { c.send({ t: 'ack' }); } catch (e) {} // 即刻 ack 玩家
+    renderHostBoard();                        // host 自己畫面直接更新（唔使自己連自己）
+    hostBroadcast({ t: 'board', players: hostBoardList() });
+    var txt = complete ? ('🔥 ' + nick + ' 通關！' + score + ' 分') : ('✅ ' + nick + ' 上傳 ' + score + ' 分');
+    pushHostFeed(txt);
+    hostBroadcast({ t: 'feed', text: txt });
+}
+function bindHostConn(c) {
+    if (!hostConnections.has(c.peer)) hostConnections.set(c.peer, c);
+    updateHostOnline();
+    c.on('data', function (d) { hostOnData(c, d); });
+    c.on('close', function () { if (hostConnections.get(c.peer) === c) hostConnections.delete(c.peer); updateHostOnline(); });
+    c.on('error', function () { if (hostConnections.get(c.peer) === c) hostConnections.delete(c.peer); updateHostOnline(); });
+}
+function startHostPeer() {
+    if (hostPeer && !hostPeer.destroyed) { try { hostPeer.destroy(); } catch (e) {} }
+    hostPeer = null; hostReady = false;
+    setHostStatus('🟡 連線 PeerJS 伺服器…');
+    try {
+        hostPeer = new Peer('mathdoom-live-' + hostRoom); // 固定 id = 房號
+    } catch (e) { setHostStatus('❌ Peer 初始化失敗'); return; }
+    hostPeer.on('open', function () { hostReady = true; setHostStatus('🟢 廣播中'); });
+    hostPeer.on('connection', function (c) { bindHostConn(c); });
+    hostPeer.on('error', function (err) {
+        var t = err && err.type;
+        if (t === 'unavailable-id') {
+            hostRoom = randomRoom(); // 房號被其他 host 用咗 → 自動換新
+            renderHostHeader();
+            setHostStatus('⚠️ 房號被用，已自動換新房號');
+            startHostPeer();
+        } else if (t === 'network' || t === 'server-error' || t === 'socket-error' || t === 'socket-closed') {
+            setHostStatus('❌ 連唔到 PeerJS 雲端（要上網）');
+        } else {
+            setHostStatus('❌ 廣播錯誤：' + (t || 'unknown'));
+        }
+    });
+}
+function hostNewRound() {
+    if (!window.confirm('確定清空排行榜，開始新一輪？（已入房嘅學生唔使重新入房）')) return;
+    hostPlayers = {};
+    renderHostBoard();
+    var txt = '🔄 新一輪開始！快啲 join！';
+    pushHostFeed(txt);
+    hostBroadcast({ t: 'feed', text: txt });
+}
+function initHost() {
+    hostRoom = window.URL_ROOM || randomRoom(); // 冇帶房號就自動生成
+    document.title = '⚔️ MathDoom 3D 排行榜 — 房號 ' + hostRoom;
+    renderHostHeader();
+    renderHostBoard();
+    renderHostFeed();
+    startHostPeer();
+}
+
+// ---------- 啟動（按 mode 分流） ----------
+if (window.IS_SCREEN) { initHost(); } else { initPlayerLobby(); }
+</script>
+</body>
+</html>
