@@ -74,11 +74,33 @@
         #quiz-modal {
             display: none; position: absolute; top: 50%; left: 50%;
             transform: translate(-50%, -50%); background: rgba(20,20,20,0.95);
-            border: 3px solid #ff5555; padding: 20px; text-align: center; color: white;
-            width: 85%; max-width: 320px; z-index: 300; box-shadow: 0 0 15px #000;
+            border: 3px solid #ff5555; padding: 16px 14px; text-align: center; color: white;
+            width: 92%; max-width: 360px; z-index: 300; box-shadow: 0 0 15px #000;
+            max-height: 88vh; overflow-y: auto;
         }
-        #quiz-modal input { font-size: 24px; width: 110px; text-align: center; margin: 15px 0; padding: 5px; color: #000; font-weight: bold; }
-        #quiz-modal button { font-size: 18px; padding: 8px 20px; background: #ff5555; color: white; border: none; font-weight: bold; cursor: pointer; }
+        #quiz-q { line-height: 1.5; }
+        .quiz-hint { color: #b9b9b9; font-size: 13px; margin: 2px 0 10px; }
+        #mcq-options { display: flex; flex-direction: column; gap: 9px; }
+        #quiz-modal .mcq-btn {
+            display: flex; align-items: center; gap: 10px; width: 100%; min-height: 46px;
+            background: #15241a; color: #fff; border: 2px solid #3f7a3f; border-radius: 10px;
+            padding: 7px 10px; font-family: inherit; cursor: pointer; text-align: left;
+            font-weight: bold; margin: 0;
+        }
+        #quiz-modal .mcq-btn:hover { background: #1e4d28; border-color: #55ff55; box-shadow: 0 0 10px rgba(85,255,85,.4); }
+        #quiz-modal .mcq-btn.wrong {
+            background: #2a1414; border-color: #b33; color: #9a9a9a; box-shadow: none;
+            opacity: .85; cursor: default; pointer-events: none;
+        }
+        .mcq-letter {
+            flex: none; width: 28px; height: 28px; border-radius: 50%; display: inline-flex;
+            align-items: center; justify-content: center; background: #55ff55; color: #000;
+            font-weight: bold; font-size: 15px;
+        }
+        #quiz-modal .mcq-btn.wrong .mcq-letter { background: #b33; color: #fff; }
+        .mcq-body { display: inline-flex; align-items: center; flex: 1; font-size: 17px; min-height: 28px; line-height: 1.4; }
+        .mcq-body .katex { font-size: 1.1em; }
+        .mcq-or { margin: 0 6px; color: #55ff55; }
 
         #joystick-base {
             position: absolute; bottom: 30px; left: 30px;
@@ -158,6 +180,7 @@
         .f-empty { color: #668; font-size: 22px; padding: 20px 6px; }
         @keyframes feedIn { from { opacity: 0; transform: translateX(-14px); } to { opacity: 1; transform: none; } }
     </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
 </head>
 <body>
 <script>
@@ -179,7 +202,7 @@
 
     <div id="start-overlay">
         <h1>⚔️ MathDoom 3D 課堂挑戰 ⚔️</h1>
-        <p>1. 走近怪獸進行答題（答啱數學題先殺到怪獸）</p>
+        <p>1. 走近怪獸，答啱不等式射擊佢！</p>
         <p>2. 打倒怪獸後，走近門口點擊「按我開門」進入下個房間；每層尾有 BOSS</p>
         <p>3. 完場自動上傳分數去大螢幕排行榜（多人房）</p>
         <div id="lobby-form">
@@ -215,10 +238,9 @@
 
     <div id="quiz-modal">
         <h3 id="quiz-title" style="color:#ff5555; margin:0;">怪獸擋路！</h3>
-        <div id="quiz-q" style="font-size: 28px; font-weight: bold; margin: 10px 0;">7 x 8 = ?</div>
-        <input type="number" id="quiz-ans" inputmode="numeric">
-        <br>
-        <button onclick="submitAnswer()">攻擊 / Attack</button>
+        <div id="quiz-q" style="font-size: 24px; font-weight: bold; margin: 12px 0 4px;"></div>
+        <div class="quiz-hint">💡 撳正確答案攻擊怪獸！</div>
+        <div id="mcq-options"></div>
     </div>
 
     <div id="joystick-base">
@@ -423,7 +445,7 @@
         initMap();
 
         let currentFloor = 1, currentRoomIndex = 0;
-        let currentAns = 0, currentMonster = null;
+        let currentMonster = null, currentQ = null;
         let startTime = Date.now(), isPaused = true;
         let activeDoorToOpen = null;
 
@@ -435,7 +457,7 @@
         window.addEventListener('keydown', (e) => {
             keys[e.code] = true;
             if (e.code === 'KeyE') triggerDoorOpen();
-            if (e.code === 'Enter' && document.getElementById('quiz-modal').style.display === 'block') submitAnswer();
+            // MCQ 版：答題靠撳 4 個選項掣，Enter 唔再 trigger submit
         });
 
         window.addEventListener('keyup', (e) => { keys[e.code] = false; });
@@ -585,58 +607,316 @@
         }
         buildElevator();
 
-        function generateMathQuestion() {
-            let n1 = Math.floor(Math.random() * 9) + 2;
-            let n2 = Math.floor(Math.random() * 9) + 2;
-            if (currentFloor === 1) { currentAns = n1 + n2; return `${n1} + ${n2} = ?`; }
-            if (currentFloor === 2) { currentAns = n1 * n2; return `${n1} × ${n2} = ?`; }
-            currentAns = (n1 + n2) * 2; return `(${n1} + ${n2}) × 2 = ?`;
+        // ====================================================================
+        //  S5 不等式 MCQ 題目系統（取代原「算術題 generateMathQuestion」）
+        //  題型：A 一次線性 | B 複合 | C 二次。floor1=A；floor2=A+B(多B)；floor3=B+C(多C)；BOSS=混合較難。
+        //  全部單變數 x；答案同選項都係不等式 LaTeX 字串；sig 用嚟保證 4 個選項互不等價。
+        //  MCQ-GEN-START
+        var MCQ_OPS = ['>', '>=', '<', '<='];
+        function mcqRandInt(lo, hi) { return Math.floor(Math.random() * (hi - lo + 1)) + lo; }
+        function mcqPick(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+        function mcqShuffle(arr) {
+            var a = arr.slice();
+            for (var i = a.length - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var t = a[i]; a[i] = a[j]; a[j] = t;
+            }
+            return a;
         }
+        function mcqFlipOp(op) {
+            return op === '>' ? '<' : op === '<' ? '>' : op === '>=' ? '<=' : '>=';
+        }
+        function mcqSym(op) { return op === '>=' ? '\\geq' : op === '<=' ? '\\leq' : op; }
+        function mcqPlainSym(op) { return op === '>=' ? '≥' : op === '<=' ? '≤' : op; }
+        function mcqPlainLatex(latex) {
+            return String(latex)
+                .replace(/\^\{2\}/g, '²')
+                .replace(/\\text\{([^}]*)\}/g, '$1')
+                .replace(/\\geq/g, '≥').replace(/\\leq/g, '≤')
+                .replace(/\\,/g, ' ')
+                .replace(/\s+/g, ' ')
+                .trim();
+        }
+        // a x + b（a≠0）砌成 LaTeX；b=0 就冇常數項
+        function mcqLinLHS(a, b) {
+            var s = (a === 1) ? 'x' : (a === -1) ? '-x' : (a + 'x');
+            if (b > 0) s += ' + ' + b;
+            else if (b < 0) s += ' - ' + (-b);
+            return s;
+        }
+        // --- 題型 A：一次線性 ax + b [op] c → 答案 x [ansOp] n（先揀答案，c=a·n+b 反推）---
+        function mcqLinearQ(hard) {
+            var neg = Math.random() < (hard ? 0.55 : 0.4);          // 負 a 考反號
+            var a = neg ? -mcqRandInt(hard ? 2 : 1, hard ? 6 : 3)
+                        : mcqRandInt(2, hard ? 7 : 5);
+            var b = mcqRandInt(hard ? -10 : -8, hard ? 10 : 8);
+            var n = mcqRandInt(hard ? 3 : 2, hard ? 10 : 8);        // 答案邊界（整數）
+            var c = a * n + b;                                       // 由答案反推 c
+            var ansOp = mcqPick(MCQ_OPS);
+            var qOp = neg ? mcqFlipOp(ansOp) : ansOp;               // 負 a 除落要反號
+            var correct = { latex: 'x ' + mcqSym(ansOp) + ' ' + n, sig: 'L|' + ansOp + '|' + n };
+            var pool = [], seen = {};
+            function tryAdd(op, nn) {
+                var sig = 'L|' + op + '|' + nn;
+                if (sig === correct.sig || seen[sig]) return;
+                seen[sig] = true;
+                pool.push({ latex: 'x ' + mcqSym(op) + ' ' + nn, sig: sig });
+            }
+            MCQ_OPS.forEach(function (op) { if (op !== ansOp) tryAdd(op, n); });  // 換方向/嚴格度
+            for (var d = -3; d <= 3; d++) {
+                if (d !== 0) { var nn = n + d; if (nn >= 1 && nn <= 12) tryAdd(ansOp, nn); } // 郁邊界
+            }
+            MCQ_OPS.forEach(function (op) {                                          // 加碼：方向×邊界一齊改
+                if (op === ansOp) return;
+                for (var d = -2; d <= 2; d++) { if (d === 0) continue; var nn = n + d; if (nn >= 1 && nn <= 12) tryAdd(op, nn); }
+            });
+            return {
+                questionLatex: mcqLinLHS(a, b) + ' ' + mcqSym(qOp) + ' ' + c,
+                correct: correct, pool: pool,
+                meta: { type: 'linear', a: a, b: b, c: c, qOp: qOp, ansOp: ansOp, ansN: n }
+            };
+        }
+        // --- 題型 B：複合 B0 ≤ bx + c < B1 → 答案 n1 ≤ x < n2（邊界整數） ---
+        function mcqCompoundQ(hard) {
+            var n1 = mcqRandInt(hard ? -4 : -3, hard ? 3 : 2);
+            var n2 = Math.max(mcqRandInt(hard ? 5 : 4, hard ? 11 : 9), n1 + 3);
+            var b = mcqRandInt(hard ? 2 : 1, hard ? 4 : 3);
+            var k = mcqPick([0, 0, 0, 1, -1]);                       // 常數 c = b·k（多數 0）
+            var c = b * k;
+            var lOp = mcqPick(['<=', '<']), rOp = mcqPick(['<', '<=']);
+            var B0 = b * n1 + c, B1 = b * n2 + c;
+            var mid = (b === 1) ? 'x' : (b + 'x');
+            if (c > 0) mid += ' + ' + c; else if (c < 0) mid += ' - ' + (-c);
+            var correct = {
+                latex: n1 + ' ' + mcqSym(lOp) + ' x ' + mcqSym(rOp) + ' ' + n2,
+                sig: 'I|' + lOp + '|' + n1 + '|' + n2 + '|' + rOp
+            };
+            var pool = [], seen = {};
+            function tryAdd(lOp2, v1, v2, rOp2) {
+                if (!(v1 < v2)) return;
+                var sig = 'I|' + lOp2 + '|' + v1 + '|' + v2 + '|' + rOp2;
+                if (sig === correct.sig || seen[sig]) return;
+                seen[sig] = true;
+                pool.push({ latex: v1 + ' ' + mcqSym(lOp2) + ' x ' + mcqSym(rOp2) + ' ' + v2, sig: sig });
+            }
+            [['<=', '<'], ['<', '<='], ['<', '<'], ['<=', '<=']].forEach(function (pr) { // 換嚴格度
+                tryAdd(pr[0], n1, n2, pr[1]);
+            });
+            for (var d1 = -2; d1 <= 2; d1++) if (d1) tryAdd(lOp, n1 + d1, n2, rOp);      // 郁左界
+            for (var d2 = -2; d2 <= 2; d2++) if (d2) tryAdd(lOp, n1, n2 + d2, rOp);      // 郁右界
+            return {
+                questionLatex: B0 + ' ' + mcqSym(lOp) + ' ' + mid + ' ' + mcqSym(rOp) + ' ' + B1,
+                correct: correct, pool: pool,
+                meta: { type: 'compound', b: b, c: c, B0: B0, B1: B1, lOpQ: lOp, rOpQ: rOp,
+                        ansLOp: lOp, ansLVal: n1, ansROp: rOp, ansRVal: n2 }
+            };
+        }
+        // --- 題型 C：二次 x² −(r1+r2)x + r1·r2 [op] 0（根 r1<r2） ---
+        function mcqQuadQ(hard) {
+            var r1 = mcqRandInt(hard ? -6 : -4, hard ? -2 : 0);
+            var r2 = mcqRandInt(hard ? 3 : 2, hard ? 9 : 6);
+            var qOp = mcqPick(['<', '>', '<=', '>=', '<', '>']);     // 嚴格類多啲
+            var S = -(r1 + r2), P = r1 * r2;                          // x² + Sx + P = (x−r1)(x−r2)
+            var poly = 'x^{2}';
+            if (S !== 0) poly += (S === 1 ? ' + x' : S === -1 ? ' - x' : (S > 0 ? ' + ' + S + 'x' : ' - ' + (-S) + 'x'));
+            if (P !== 0) poly += (P > 0 ? ' + ' + P : ' - ' + (-P));
+            var inside = (qOp === '<' || qOp === '<=');
+            var lOp = inside ? ((qOp === '<') ? '<' : '<=') : null;    // r1 < x < r2 / r1 ≤ x ≤ r2
+            var out1 = (qOp === '>') ? '<' : (qOp === '>=') ? '<=' : '<';
+            var out2 = (qOp === '>') ? '>' : (qOp === '>=') ? '>=' : '>';
+            var correct;
+            if (inside) {
+                correct = {
+                    latex: r1 + ' ' + mcqSym(lOp) + ' x ' + mcqSym(lOp) + ' ' + r2,
+                    sig: 'I|' + lOp + '|' + r1 + '|' + r2 + '|' + lOp
+                };
+            } else {
+                correct = {
+                    latex: 'x ' + mcqSym(out1) + ' ' + r1 + ' \\text{ 或 } x ' + mcqSym(out2) + ' ' + r2,
+                    parts: ['x ' + mcqSym(out1) + ' ' + r1, 'x ' + mcqSym(out2) + ' ' + r2],
+                    sig: 'R|' + out1 + '|' + r1 + '|' + r2 + '|' + out2
+                };
+            }
+            var pool = [], seen = {};
+            function rayItem(o1, v1, o2, v2) {
+                return {
+                    latex: 'x ' + mcqSym(o1) + ' ' + v1 + ' \\text{ 或 } x ' + mcqSym(o2) + ' ' + v2,
+                    parts: ['x ' + mcqSym(o1) + ' ' + v1, 'x ' + mcqSym(o2) + ' ' + v2],
+                    sig: 'R|' + o1 + '|' + v1 + '|' + v2 + '|' + o2
+                };
+            }
+            function tryAddIn(l, v1, v2, r) {
+                if (!(v1 < v2)) return;
+                var sig = 'I|' + l + '|' + v1 + '|' + v2 + '|' + r;
+                if (sig === correct.sig || seen[sig]) return;
+                seen[sig] = true;
+                pool.push({ latex: v1 + ' ' + mcqSym(l) + ' x ' + mcqSym(r) + ' ' + v2, sig: sig });
+            }
+            function tryAddRay(o1, v1, o2, v2) {
+                if (!(v1 < v2)) return;
+                var it = rayItem(o1, v1, o2, v2);
+                if (it.sig === correct.sig || seen[it.sig]) return;
+                seen[it.sig] = true; pool.push(it);
+            }
+            if (inside) {
+                // 同一對根嘅「另一面」（>0 / ≥0 形）做 distractor
+                tryAddRay('<', r1, '>', r2);
+                tryAddRay('<=', r1, '>=', r2);
+                tryAddIn((lOp === '<') ? '<=' : '<', r1, r2, (lOp === '<') ? '<=' : '<'); // 嚴格度變體
+                for (var d = -2; d <= 2; d++) if (d) { tryAddIn('<', r1 + d, r2, '<'); tryAddIn('<=', r1, r2 + d, '<='); }
+            } else {
+                tryAddIn('<', r1, r2, '<');      // 反方向：r1 < x < r2
+                tryAddIn('<=', r1, r2, '<=');
+                tryAddRay((out1 === '<') ? '<=' : '<', r1, (out2 === '>') ? '>=' : '>', r2);
+                for (var d = -2; d <= 2; d++) if (d) { tryAddRay('<', r1 + d, '>', r2); tryAddRay('<', r1, '>', r2 + d); }
+            }
+            return {
+                questionLatex: poly + ' ' + mcqSym(qOp) + ' 0',
+                correct: correct, pool: pool,
+                meta: { type: 'quad', r1: r1, r2: r2, qOp: qOp, inside: inside }
+            };
+        }
+        function mcqAssemble(qLatex, correct, pool) {
+            var seen = {}, opts = [];
+            function add(it) {
+                if (!it || seen[it.sig] || opts.length >= 4) return;
+                seen[it.sig] = true; opts.push(it);
+            }
+            add(correct);
+            mcqShuffle(pool).forEach(add);
+            if (opts.length < 4) { // 極端後備（正常唔會行到）：補簡單選項
+                var nn2 = 1;
+                while (opts.length < 4 && nn2 <= 30) {
+                    MCQ_OPS.forEach(function (op) { add({ latex: 'x ' + mcqSym(op) + ' ' + nn2, sig: 'L|' + op + '|' + nn2 }); });
+                    nn2++;
+                }
+            }
+            var arr = mcqShuffle(opts);
+            var correctIdx = -1;
+            arr.forEach(function (o, i) { if (o.sig === correct.sig) correctIdx = i; });
+            return {
+                questionLatex: qLatex,
+                options: arr.map(function (o) {
+                    return { latex: o.latex, parts: o.parts || null, plain: mcqPlainLatex(o.latex), sig: o.sig };
+                }),
+                correctIdx: correctIdx
+            };
+        }
+        function mcqChooseType(floor, isBoss) {
+            if (!isBoss) {
+                if (floor <= 1) return 'A';
+                if (floor === 2) return Math.random() < 0.3 ? 'A' : 'B';   // A+B（多 B）
+                return Math.random() < 0.3 ? 'B' : 'C';                    // B+C（多 C）
+            }
+            if (floor <= 1) return Math.random() < 0.5 ? 'A' : 'B';        // BOSS：混合較難
+            if (floor === 2) return Math.random() < 0.4 ? 'B' : 'C';
+            var r = Math.random(); return r < 0.2 ? 'A' : (r < 0.55 ? 'B' : 'C'); // 最終 BOSS：全混合
+        }
+        function generateMCQ(isBoss, floorOverride) {
+            var floor = (typeof floorOverride === 'number') ? floorOverride
+                       : ((typeof currentFloor === 'number' && currentFloor >= 1) ? currentFloor : 1);
+            var type = mcqChooseType(floor, !!isBoss);
+            var built = (type === 'A') ? mcqLinearQ(!!isBoss)
+                       : (type === 'B') ? mcqCompoundQ(!!isBoss)
+                       : mcqQuadQ(!!isBoss);
+            var q = mcqAssemble(built.questionLatex, built.correct, built.pool);
+            q._meta = built.meta;   // 除錯/測試用（UI 唔會用）
+            return q;
+        }
+        // MCQ-GEN-END
 
+        // ---- KaTeX 渲染：katex 未 ready 就 fallback 原文字 ----
+        function fillLatex(elm, latex) {
+            if (!elm) return;
+            var html = null;
+            if (window.katex) {
+                try { html = window.katex.renderToString(latex, { throwOnError: false }); } catch (e) { html = null; }
+            }
+            if (html != null) elm.innerHTML = html;
+            else elm.textContent = mcqPlainLatex(latex);
+        }
+        function renderQuizOptions() {
+            var qEl = document.getElementById('quiz-q');
+            var wrap = document.getElementById('mcq-options');
+            if (!currentQ || !wrap) return;
+            fillLatex(qEl, currentQ.questionLatex);
+            var letters = ['A', 'B', 'C', 'D'];
+            wrap.innerHTML = '';
+            currentQ.options.forEach(function (op, i) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'mcq-btn';
+                btn.setAttribute('data-idx', String(i));
+                var badge = document.createElement('span');
+                badge.className = 'mcq-letter';
+                badge.textContent = letters[i];
+                var body = document.createElement('span');
+                body.className = 'mcq-body';
+                if (op.parts && op.parts.length === 2 && window.katex) {
+                    // 二次「x<r1 或 x>r2」：左右各自 KaTeX，「或」用純文字（避免 CJK 入 \text 缺字）
+                    var hl = document.createElement('span'); fillLatex(hl, op.parts[0]);
+                    var hr = document.createElement('span'); fillLatex(hr, op.parts[1]);
+                    var sep = document.createElement('span'); sep.className = 'mcq-or'; sep.textContent = '或';
+                    body.appendChild(hl); body.appendChild(sep); body.appendChild(hr);
+                } else {
+                    fillLatex(body, op.latex);
+                }
+                btn.appendChild(badge);
+                btn.appendChild(body);
+                btn.addEventListener('click', (function (idx) { return function () { answerMCQ(idx); }; })(i));
+                wrap.appendChild(btn);
+            });
+        }
         function triggerQuiz(m) {
             isPaused = true;
             currentMonster = m;
             if (document.pointerLockElement) document.exitPointerLock();
-            document.getElementById('quiz-title').innerText = m.userData.isBoss ? "🔥 樓層 BOSS 🔥" : "怪獸擋路！";
-            document.getElementById('quiz-q').innerText = generateMathQuestion();
-            document.getElementById('quiz-ans').value = '';
+            var isBoss = !!(m.userData && m.userData.isBoss);
+            document.getElementById('quiz-title').innerText = isBoss ? '🔥 樓層 BOSS 🔥' : '怪獸擋路！';
+            currentQ = generateMCQ(isBoss);
+            renderQuizOptions();
             document.getElementById('quiz-modal').style.display = 'block';
-            setTimeout(() => document.getElementById('quiz-ans').focus(), 100);
         }
 
-        function submitAnswer() {
-            const ans = parseInt(document.getElementById('quiz-ans').value);
-            if (ans === currentAns) {
-                // === 多人直播：答啱一隻怪獸 +1 kill，即時更新分數 UI ===
-                myKills++;
-                updateScoreUI();
-                document.getElementById('quiz-modal').style.display = 'none';
-                isPaused = false;
-                if (!isTouchDevice) container.requestPointerLock();
-                
-                scene.remove(currentMonster);
-                monsters = monsters.filter(item => item !== currentMonster);
+        function answerMCQ(idx) {
+            if (!currentQ || !currentMonster) return;
+            if (idx === currentQ.correctIdx) { onCorrectAnswer(); return; }
+            // 答錯：唔出 alert 唔懲罰 — 淨係鎖起錯嗰個選項（變紅），再撳第二個試
+            var wrap = document.getElementById('mcq-options');
+            if (!wrap) return;
+            var btns = wrap.querySelectorAll('.mcq-btn');
+            var b = btns[idx];
+            if (b) { b.classList.add('wrong'); b.setAttribute('disabled', 'true'); }
+        }
 
-                if (currentRoomIndex < 5) {
-                    const doorToUnlock = doors[currentRoomIndex];
-                    if (doorToUnlock) doorToUnlock.isUnlocked = true;
-                } else {
-                    // BOSS 打贏 → 電梯過關（唔係即刻切層）
-                    if (currentFloor < 3) {
-                        // 啟動電梯，俾玩家行入去
-                        elevator.active = true;
-                    } else {
-                        // 最後一層：直接通關畫面
-                        document.getElementById('level-msg').innerText = `🏆 恭喜通關全遊戲！總用時：${document.getElementById('timer-val').innerText}`;
-                        document.getElementById('level-btn').innerText = '完成';
-                        document.getElementById('level-overlay').style.display = 'flex';
-                        isPaused = true;
-                        // === 多人直播：撳「完成」→ finishGame(true) 上傳通關分數 ===
-                        document.getElementById('level-btn').onclick = function () { finishGame(true); };
-                    }
-                }
+        function onCorrectAnswer() {
+            // === 多人直播：答啱一隻怪獸 +1 kill，即時更新分數 UI（同原 submitAnswer 答啱分支完全一致） ===
+            myKills++;
+            updateScoreUI();
+            document.getElementById('quiz-modal').style.display = 'none';
+            isPaused = false;
+            if (!isTouchDevice) container.requestPointerLock();
+            
+            scene.remove(currentMonster);
+            monsters = monsters.filter(item => item !== currentMonster);
+
+            if (currentRoomIndex < 5) {
+                const doorToUnlock = doors[currentRoomIndex];
+                if (doorToUnlock) doorToUnlock.isUnlocked = true;
             } else {
-                alert("答錯了！再試一次！");
+                // BOSS 打贏 → 電梯過關（唔係即刻切層）
+                if (currentFloor < 3) {
+                    // 啟動電梯，俾玩家行入去
+                    elevator.active = true;
+                } else {
+                    // 最後一層：直接通關畫面
+                    document.getElementById('level-msg').innerText = `🏆 恭喜通關全遊戲！總用時：${document.getElementById('timer-val').innerText}`;
+                    document.getElementById('level-btn').innerText = '完成';
+                    document.getElementById('level-overlay').style.display = 'flex';
+                    isPaused = true;
+                    // === 多人直播：撳「完成」→ finishGame(true) 上傳通關分數 ===
+                    document.getElementById('level-btn').onclick = function () { finishGame(true); };
+                }
             }
         }
 
@@ -1238,5 +1518,7 @@ function initHost() {
 // ---------- 啟動（按 mode 分流） ----------
 if (window.IS_SCREEN) { initHost(); } else { initPlayerLobby(); }
 </script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 </body>
 </html>
