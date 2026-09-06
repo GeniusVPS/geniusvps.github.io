@@ -670,5 +670,61 @@
     "time_hkt": "09:18",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260906_049",
+    "date": "2026-09-06",
+    "headline_zh": "雲端技術入瓶：自建伺服器不再難",
+    "headline_en": "Cloud in a Bottle: making self-hosting accessible to everyone",
+    "summary_zh": "呢條新聞講緊一項新技術，將雲端服務技術簡化，令普通用戶可以方便地自建伺服器。這項技術由一間名為 Cloud in a Bottle嘅公司推出，旨在降低自建雲端服務嘅門檻，使更多人可以享受到雲端技術嘅優點。對於關注雲端技術嘅科技愛好者同企業而言，呢個消息都係一個好消息，可以為他們提供更多的靈活性同選擇。",
+    "category": "cloud",
+    "score": 8,
+    "source": "Hacker News Best",
+    "source_url": "https://cloudinabottle.org/blog/launch-post",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260906_050",
+    "date": "2026-09-06",
+    "headline_zh": "德國私企火箭成功发射，從歐洲本土進入太空",
+    "headline_en": "Private German rocket makes history, reaches orbit from European soil",
+    "summary_zh": "德國私企Isar Aerospace成功從挪威Andoya太空港發射火箭，成為首個從歐洲本土進入太空的私人火箭公司。這標誌著歐洲私人太空競賽取得重大突破，有望降低太空探索成本，促進太空技術發展。此消息對科技業內人士和太空科技迷來說極具意義，也吸引了全球關注。",
+    "category": "space",
+    "score": 8,
+    "source": "Hacker News Best",
+    "source_url": "https://www.space.com/space-exploration/launches-spacecraft/isar-aerospace-second-launch-norway-andoya-spaceport-spectrum-rocket",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260906_051",
+    "date": "2026-09-06",
+    "headline_zh": "讀者嘅反叛",
+    "headline_en": "The revolt of the reader",
+    "summary_zh": "呢篇文章講緊最近有好多讀者唔滿意電子書嘅高價同版權問題，開始嘅反叛行動，嘅話好多書店同出版社都開始嘗試新嘅商業模式，嘗試減低讀者嘅成本，同埋改善讀物嘅質素。呢個話題影響好多愛書之人，同埋影響電子書市場嘅發展趨勢。",
+    "category": "general",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://bcantrill.dtrace.org/2026/09/05/the-revolt-of-the-reader/",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260906_052",
+    "date": "2026-09-06",
+    "headline_zh": "谷歌又豁免自家設置訪問用戶網站數據呢條新聞講緊又一次利用浏覽器嘅優勢豁免自家平台唔用設置用戶網站數據。這意味可以更加自由地收集用戶嘅瀏覽習慣同資料令到其他應用程式同平台嘅數據設置更加複雜。呢個情況會引起用戶同監管機構嘅關注因為涉及用戶隱私同公平競賽嘅問題。",
+    "headline_en": "Chrome again exempts Google from user site data settings",
+    "summary_zh": "谷歌又豁免自家設置訪問用戶網站數據呢條新聞講緊又一次利用浏覽器嘅優勢豁免自家平台唔用設置用戶網站數據。這意味可以更加自由地收集用戶嘅瀏覽習慣同資料令到其他應用程式同平台嘅數據設置更加複雜。呢個情況會引起用戶同監管機構嘅關注因為涉及用戶隱私同公平競賽嘅問題。",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://lapcatsoftware.com/articles/2026/9/1.html",
+    "time_hkt": "15:18",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
