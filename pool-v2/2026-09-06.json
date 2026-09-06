@@ -642,5 +642,33 @@
     "time_hkt": "06:13",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260906_047",
+    "date": "2026-09-06",
+    "headline_zh": "西雅圖時報同 Newsday 最新起訴 OpenAI 及微軟",
+    "headline_en": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
+    "summary_zh": "兩間新聞機構西雅圖時報同 Newsday 最近起訴 OpenAI 及微軟，指对方涉嫌用到他們的報道去訓練 AI。事件引起關注，因為涉及大公司同 AI 技術之間的法律糾紛。此消息對科技業界關注 AI 種種的讀者都具吸引力，但內容屬於常見重複內容。",
+    "category": "ai",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+    "time_hkt": "09:18",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260906_048",
+    "date": "2026-09-06",
+    "headline_zh": "Steam 牌遊戲機 Deck 26 年仲值得買晒野嗎？",
+    "headline_en": "Is the Steam Deck still worth it in 2026?",
+    "summary_zh": "Steam 牌遊戲機 Deck 自推出以來受到不少 Gamer 欢迎，但現時多款競爭对手出現，加上價格上升，是否還值得入貨？本文會分析 Deck 的優點、競爭對手的挑戰，以及對 Gamer 的影響，幫助你決定 Deck 是否值得入手。",
+    "category": "gaming",
+    "score": 7,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2248094/is-steam-deck-still-worth-it/",
+    "time_hkt": "09:18",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
