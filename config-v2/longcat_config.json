@@ -1,5 +1,5 @@
 {
-  "longcat_api_key": "ollama-local",
-  "longcat_api_url": "http://127.0.0.1:11434/v1/chat/completions",
-  "longcat_model": "qwen2.5:7b"
+  "longcat_api_key": "lm-studio",
+  "longcat_api_url": "http://100.88.88.101:1234/v1/chat/completions",
+  "longcat_model": "qwen2.5-7b-instruct"
 }
