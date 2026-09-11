@@ -1,0 +1,9 @@
+{
+  "llm_api_key": "lm-studio",
+  "llm_api_url": "http://127.0.0.1:1234/v1/chat/completions",
+  "llm_model": "qwen3.8-27b-mlx",
+  "llm_max_tokens": 8000,
+  "llm_timeout": 600,
+  "llm_no_think": true,
+  "_note": "全部本地：Mac LM Studio :1234（新聞池／場景生成用 qwen2.5-7b-instruct-mlx，翻譯用 qwen3.8-27b-mlx）"
+}

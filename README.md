@@ -54,7 +54,7 @@
 
 | Secret | 說明 |
 |--------|------|
-| `LONGCAT_API_KEY` | LongCat API 金鑰 |
+| `LLM_API_KEY` | 本地 LLM API 金鑰（LM Studio 用任意值） |
 
 ## 🚀 手動觸發
 

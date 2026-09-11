@@ -33,20 +33,20 @@ except ImportError:
 CONFIG_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "config-v2")
 POOL_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "pool-v2")
 
-# LongCat API 設定 — 支援多種 config 格式 + 環境變數
-LONGCAT_CONFIG_PATH = os.path.join(CONFIG_DIR, "longcat_config.json")
-# 亦嘗試 techcanto 主 config 目錄
-TECHCANTO_CONFIG_PATH = os.path.expanduser("~/.hermes/techcanto/config/longcat_config.json")
+# 本地 LLM API 設定 — 支援多種 config 格式 + 環境變數
+LLM_CONFIG_PATH = os.path.join(CONFIG_DIR, "llm_config.json")
+# 亦嘗試共用 config 目錄（同一部機其他工具共用）
+SHARED_CONFIG_PATH = os.path.expanduser("~/.hermes/techcanto/config/llm_config.json")
 
-def load_longcat_config():
-    # 優先讀環境變數（GitHub Actions 注入）
-    env_key = os.environ.get("LONGCAT_API_KEY", "")
-    env_url = os.environ.get("LONGCAT_API_URL", "")
-    env_model = os.environ.get("LONGCAT_MODEL", "")
-    
+def load_llm_config():
+    # 優先讀環境變數（CI 注入）
+    env_key = os.environ.get("LLM_API_KEY", "")
+    env_url = os.environ.get("LLM_API_URL", "")
+    env_model = os.environ.get("LLM_MODEL", "")
+
     # 嘗試讀 config 檔案
     config = {}
-    for cfg_path in [LONGCAT_CONFIG_PATH, TECHCANTO_CONFIG_PATH]:
+    for cfg_path in [LLM_CONFIG_PATH, SHARED_CONFIG_PATH]:
         try:
             with open(cfg_path, "r", encoding="utf-8") as f:
                 config = json.load(f)
@@ -54,57 +54,53 @@ def load_longcat_config():
                 break
         except (FileNotFoundError, json.JSONDecodeError):
             continue
-    
+
     # 支援多種欄位名格式
-    api_key = env_key or config.get("longcat_api_key", "") or config.get("api_key", "")
-    base_url = env_url or config.get("longcat_api_url", "") or config.get("base_url", "")
-    model = env_model or config.get("longcat_model", "") or config.get("model", "")
+    api_key = env_key or config.get("llm_api_key", "") or config.get("api_key", "")
+    base_url = env_url or config.get("llm_api_url", "") or config.get("base_url", "")
+    model = env_model or config.get("llm_model", "") or config.get("model", "")
 
     # 生成參數（可選，寫喺 config；預設配合 reasoning model qwen3.8-27b-mlx）
     # reasoning model 會先出 reasoning tokens，max_tokens 太細 → content 會空白
     try:
-        max_tokens = int(config.get("longcat_max_tokens", 8000))
+        max_tokens = int(config.get("llm_max_tokens", 8000))
     except (TypeError, ValueError):
         max_tokens = 8000
     try:
-        timeout = int(config.get("longcat_timeout", 240))
+        timeout = int(config.get("llm_timeout", 240))
     except (TypeError, ValueError):
         timeout = 240
     # reasoning model 預設關 thinking：實測 qwen3.8-27b-mlx 開 thinking 每條 160-300s＋常 timeout，
     # 加 /no_think 之後 ~40-120s 而質素保留
-    no_think = bool(config.get("longcat_no_think", True))
-    
+    no_think = bool(config.get("llm_no_think", True))
+
     # 如果 base_url 唔係完整 endpoint URL，補上 path
     if base_url and "/v1/chat/completions" not in base_url:
-        # 檢查係 siliconflow 定 longcat.chat
-        if "siliconflow" in base_url:
-            api_key_url = f"{base_url}/v1/chat/completions"
-        else:
-            api_key_url = f"{base_url}/openai/v1/chat/completions"
+        api_key_url = f"{base_url}/v1/chat/completions"
     else:
-        api_key_url = base_url or "https://api.longcat.chat/openai/v1/chat/completions"
-    
+        api_key_url = base_url or "http://127.0.0.1:1234/v1/chat/completions"
+
     if api_key:
-        print(f"  ✅ LongCat API key 已載入 ({api_key[:8]}...)")
+        print(f"  ✅ LLM API key 已載入 ({api_key[:8]}...)")
     else:
-        print(f"  ⚠️  LongCat API key 未設定，翻譯將用 fallback")
-    
+        print("  ⚠️  LLM API key 未設定，翻譯將用本地 fallback")
+
     return {
-        "longcat_api_key": api_key,
-        "longcat_api_url": api_key_url,
-        "longcat_model": model or "LongCat-Flash-Lite",
-        "longcat_max_tokens": max_tokens,
-        "longcat_timeout": timeout,
-        "longcat_no_think": no_think
+        "llm_api_key": api_key,
+        "llm_api_url": api_key_url,
+        "llm_model": model or "qwen3.8-27b-mlx",
+        "llm_max_tokens": max_tokens,
+        "llm_timeout": timeout,
+        "llm_no_think": no_think,
     }
 
-LONGCAT_CONFIG = load_longcat_config()
-LONGCAT_API_URL = LONGCAT_CONFIG["longcat_api_url"]
-LONGCAT_MODEL = LONGCAT_CONFIG["longcat_model"]
-LONGCAT_API_KEY = LONGCAT_CONFIG["longcat_api_key"]
-LONGCAT_MAX_TOKENS = LONGCAT_CONFIG["longcat_max_tokens"]
-LONGCAT_TIMEOUT = LONGCAT_CONFIG["longcat_timeout"]
-LONGCAT_NO_THINK = LONGCAT_CONFIG["longcat_no_think"]
+LLM_CONFIG = load_llm_config()
+LLM_API_URL = LLM_CONFIG["llm_api_url"]
+LLM_MODEL = LLM_CONFIG["llm_model"]
+LLM_API_KEY = LLM_CONFIG["llm_api_key"]
+LLM_MAX_TOKENS = LLM_CONFIG["llm_max_tokens"]
+LLM_REQUEST_TIMEOUT = LLM_CONFIG["llm_timeout"]
+LLM_NO_THINK = LLM_CONFIG["llm_no_think"]
 
 # 本地 LM Studio API (fallback)
 LOCAL_LLM_API = "http://localhost:1234/v1/chat/completions"
@@ -307,29 +303,29 @@ def call_llm_api(prompt, api_url, api_key, model, max_tokens, timeout, no_think=
         return content
 
 
-def summarize_one(title, description="", use_longcat=True):
+def summarize_one(title, description="", use_llm=True):
     """智能分類 + 粵語口語翻譯 + 新聞評分
     返回 dict: {"headline_zh": "粵語標題", "category": "分類代碼", "score": 分數}
     如果失敗返回 None
     """
     prompt = build_translate_prompt(title, description)
 
-    # 優先使用 LongCat API（主模型）；reasoning model 偶爾 timeout，重試一次
-    if use_longcat and LONGCAT_API_KEY:
+    # 優先使用本地 LLM（主模型）；reasoning model 偶爾 timeout，重試一次
+    if use_llm and LLM_API_KEY:
         for attempt in (1, 2):
             try:
                 content = call_llm_api(
-                    prompt, LONGCAT_API_URL, LONGCAT_API_KEY,
-                    LONGCAT_MODEL, LONGCAT_MAX_TOKENS, LONGCAT_TIMEOUT,
-                    no_think=LONGCAT_NO_THINK
+                    prompt, LLM_API_URL, LLM_API_KEY,
+                    LLM_MODEL, LLM_MAX_TOKENS, LLM_REQUEST_TIMEOUT,
+                    no_think=LLM_NO_THINK
                 )
                 parsed = parse_llm_response(content)
                 if parsed:
                     return parsed
-                print(f"  ⚠️  LongCat 回覆解析唔到（第 {attempt} 次）")
+                print(f"  ⚠️  LLM 回覆解析唔到（第 {attempt} 次）")
             except Exception as e:
-                print(f"  ⚠️  LongCat API 失敗 ({type(e).__name__}，第 {attempt} 次)")
-        print("  ⚠️  LongCat 兩次都失敗，用本地 fallback")
+                print(f"  ⚠️  LLM API 失敗 ({type(e).__name__}，第 {attempt} 次)")
+        print("  ⚠️  LLM 兩次都失敗，用本地 fallback")
 
     # Fallback 到本地 LM Studio（快速模型）
     try:

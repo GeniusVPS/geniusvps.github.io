@@ -106,7 +106,7 @@
 - **每次抓取上限：** 20 條新聞
 - **RSS 超時：** 10 秒
 - **LLM 超時：** 60-180 秒
-- **API 優先級：** LongCat → LM Studio 本地 fallback
+- **API 優先級：** 全部本地 LM Studio（Mac :1234）：翻譯 `qwen3.8-27b-mlx`、新聞池／場景 `qwen2.5-7b-instruct-mlx`（雲端 LongCat 已於 2026-09 停用並清走）
 - **新聞 ID 格式：** `news_YYYYMMDD_NNN`（例如：news_20260516_001）
 - **GitHub Actions：** 每 3 小時運行（UTC 0 */3 * * *）
 
