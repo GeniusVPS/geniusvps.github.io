@@ -59,6 +59,20 @@ def load_longcat_config():
     api_key = env_key or config.get("longcat_api_key", "") or config.get("api_key", "")
     base_url = env_url or config.get("longcat_api_url", "") or config.get("base_url", "")
     model = env_model or config.get("longcat_model", "") or config.get("model", "")
+
+    # 生成參數（可選，寫喺 config；預設配合 reasoning model qwen3.8-27b-mlx）
+    # reasoning model 會先出 reasoning tokens，max_tokens 太細 → content 會空白
+    try:
+        max_tokens = int(config.get("longcat_max_tokens", 8000))
+    except (TypeError, ValueError):
+        max_tokens = 8000
+    try:
+        timeout = int(config.get("longcat_timeout", 240))
+    except (TypeError, ValueError):
+        timeout = 240
+    # reasoning model 預設關 thinking：實測 qwen3.8-27b-mlx 開 thinking 每條 160-300s＋常 timeout，
+    # 加 /no_think 之後 ~40-120s 而質素保留
+    no_think = bool(config.get("longcat_no_think", True))
     
     # 如果 base_url 唔係完整 endpoint URL，補上 path
     if base_url and "/v1/chat/completions" not in base_url:
@@ -78,18 +92,27 @@ def load_longcat_config():
     return {
         "longcat_api_key": api_key,
         "longcat_api_url": api_key_url,
-        "longcat_model": model or "LongCat-Flash-Lite"
+        "longcat_model": model or "LongCat-Flash-Lite",
+        "longcat_max_tokens": max_tokens,
+        "longcat_timeout": timeout,
+        "longcat_no_think": no_think
     }
 
 LONGCAT_CONFIG = load_longcat_config()
 LONGCAT_API_URL = LONGCAT_CONFIG["longcat_api_url"]
 LONGCAT_MODEL = LONGCAT_CONFIG["longcat_model"]
 LONGCAT_API_KEY = LONGCAT_CONFIG["longcat_api_key"]
+LONGCAT_MAX_TOKENS = LONGCAT_CONFIG["longcat_max_tokens"]
+LONGCAT_TIMEOUT = LONGCAT_CONFIG["longcat_timeout"]
+LONGCAT_NO_THINK = LONGCAT_CONFIG["longcat_no_think"]
 
 # 本地 LM Studio API (fallback)
 LOCAL_LLM_API = "http://localhost:1234/v1/chat/completions"
-LOCAL_LLM_MODEL = "nvidia/nemotron-3-nano-omni"
+LOCAL_LLM_MODEL = "qwen2.5-7b-instruct-mlx"   # 舊值 nemotron-3-nano-omni 唔存在 → 必定 HTTPError
 LOCAL_LLM_KEY = "lm-studio"
+LOCAL_LLM_MAX_TOKENS = 2000
+LOCAL_LLM_TIMEOUT = 120
+LOCAL_LLM_NO_THINK = False
 
 SIMILARITY_THRESHOLD = 0.85
 MAX_PER_FEED = 5       # 每來源最多 5 條
@@ -251,13 +274,17 @@ def build_translate_prompt(title, description=""):
 {{"headline_zh": "粵語口語標題", "summary_zh": "詳細粵語摘要 100-150 字", "category": "分類代碼", "score": 分數}}"""
 
 
-def call_llm_api(prompt, api_url, api_key, model, max_tokens, timeout):
+def call_llm_api(prompt, api_url, api_key, model, max_tokens, timeout, no_think=False):
     """通用 LLM API 調用函數"""
+    if no_think:
+        # Qwen3 系列：chat template 認 /no_think，會跳過 reasoning（唔加嘅話每條 160-300s）
+        prompt = prompt.rstrip() + "\n\n/no_think"
     payload = json.dumps({
         "model": model,
         "messages": [{"role": "user", "content": prompt}],
         "max_tokens": max_tokens,
-        "temperature": 0.5
+        "temperature": 0.5,
+        **({"chat_template_kwargs": {"enable_thinking": False}} if no_think else {}),
     }).encode("utf-8")
     
     req = HttpRequest(
@@ -272,7 +299,12 @@ def call_llm_api(prompt, api_url, api_key, model, max_tokens, timeout):
     
     with urlopen(req, timeout=timeout) as resp:
         result = json.loads(resp.read().decode("utf-8"))
-        return result["choices"][0]["message"]["content"].strip()
+        msg = result["choices"][0]["message"]
+        content = (msg.get("content") or "").strip()
+        if not content:
+            # reasoning model（如 qwen3.8-27b-mlx）答案可能落喺 reasoning_content
+            content = (msg.get("reasoning_content") or "").strip()
+        return content
 
 
 def summarize_one(title, description="", use_longcat=True):
@@ -281,23 +313,30 @@ def summarize_one(title, description="", use_longcat=True):
     如果失敗返回 None
     """
     prompt = build_translate_prompt(title, description)
-    
-    # 優先使用 LongCat API
+
+    # 優先使用 LongCat API（主模型）；reasoning model 偶爾 timeout，重試一次
     if use_longcat and LONGCAT_API_KEY:
-        try:
-            content = call_llm_api(
-                prompt, LONGCAT_API_URL, LONGCAT_API_KEY,
-                LONGCAT_MODEL, 300, 30
-            )
-            return parse_llm_response(content)
-        except Exception as e:
-            print(f"  ⚠️  LongCat API 失敗 ({type(e).__name__})，用本地 fallback")
-    
-    # Fallback 到本地 LM Studio
+        for attempt in (1, 2):
+            try:
+                content = call_llm_api(
+                    prompt, LONGCAT_API_URL, LONGCAT_API_KEY,
+                    LONGCAT_MODEL, LONGCAT_MAX_TOKENS, LONGCAT_TIMEOUT,
+                    no_think=LONGCAT_NO_THINK
+                )
+                parsed = parse_llm_response(content)
+                if parsed:
+                    return parsed
+                print(f"  ⚠️  LongCat 回覆解析唔到（第 {attempt} 次）")
+            except Exception as e:
+                print(f"  ⚠️  LongCat API 失敗 ({type(e).__name__}，第 {attempt} 次)")
+        print("  ⚠️  LongCat 兩次都失敗，用本地 fallback")
+
+    # Fallback 到本地 LM Studio（快速模型）
     try:
         content = call_llm_api(
             prompt, LOCAL_LLM_API, LOCAL_LLM_KEY,
-            LOCAL_LLM_MODEL, 500, 60
+            LOCAL_LLM_MODEL, LOCAL_LLM_MAX_TOKENS, LOCAL_LLM_TIMEOUT,
+            no_think=LOCAL_LLM_NO_THINK
         )
         return parse_llm_response(content)
     except Exception as e:
