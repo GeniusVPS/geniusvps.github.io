@@ -740,5 +740,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260913_054",
+    "date": "2026-09-13",
+    "headline_zh": "Real-SWE 出爐：用企業私隱代碼庫實測 AI 寫程式幾得",
+    "headline_en": "Real-SWE: Benchmarking AI models on private, real-world, enterprise codebases",
+    "summary_zh": "Real-SWE 係一個新 benchmark，用私人、真實嘅企業級 codebase 實測 AI 模型解決軟件工程任務。背景係 coding agent 喺公開 repo 已經幾強，但企業內部代碼更複雜、更私有。重點係佢模擬真實工作場景，睇模型點樣理解舊代碼、改 bug 同提交 patch。影響係幫企業評估 AI coding 工具，判斷邊個模型真係能提升開發效率。",
+    "category": "ai",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://withspecific.com/benchmarks/real-swe",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
