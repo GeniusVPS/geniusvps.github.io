@@ -614,5 +614,61 @@
     "time_hkt": "06:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260913_045",
+    "date": "2026-09-13",
+    "headline_zh": "...",
+    "headline_en": "Automattic confirms Mullenweg has returned as CEO after attempted ouster by board",
+    "summary_zh": "...",
+    "category": "business",
+    "score": 6,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/12/automattic-confirms-mullenweg-has-returned-as-ceo-after-attempted-ouster-by-board/",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260913_046",
+    "date": "2026-09-13",
+    "headline_zh": "字硬件、芯片、手機、平板、穿戴設備、「出咗一個套裝搞齊主機板、、水冷仲送《》。呢個組合對想組高階遊戲嘅人好有吸引力因為係現役遊戲強者主機板同記憶體都唔弱。不過價格以美元計香港買家要留意實際換算、運費同供應整體影響主要係令玩家多一個性價比選項。」字「推出一個套裝搞齊主機板、、水冷仲送《》。呢個組合對想",
+    "headline_en": "Build a high-end AMD gaming PC for less — Ryzen 7 9800X3D bundle includes an X870E motherboard, 32GB DDR5, AIO cooler and a game for $1,109.99",
+    "summary_zh": "字硬件、芯片、手機、平板、穿戴設備、「出咗一個套裝搞齊主機板、、水冷仲送《》。呢個組合對想組高階遊戲嘅人好有吸引力因為係現役遊戲強者主機板同記憶體都唔弱。不過價格以美元計香港買家要留意實際換算、運費同供應整體影響主要係令玩家多一個性價比選項。」字「推出一個套裝搞齊主機板、、水冷仲送《》。呢個組合對想",
+    "category": "general",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/pc-components/build-a-high-end-amd-gaming-pc-for-less-ryzen-7-9800x3d-bundle-includes-an-x870e-motherboard-32gb-ddr5-aio-cooler-and-a-game-for-usd1-109-99",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260913_047",
+    "date": "2026-09-13",
+    "headline_zh": "Android Auto 有個問題，簡單更新一次就搞掂",
+    "headline_en": "One problem with Android Auto can be fixed with a simple update",
+    "summary_zh": "如果你用AndroidAuto時連線或者操作唔順，未必一定係手機app問題。報道指就算你已經更新咗手機端，車載系統軟件都可能係元兇。簡單更新車頭機或者車廠推送嘅相關軟件，就有機會修正呢個bug。對用Android手機連車嘅人嚟講，成本幾低，值得試下；如果更新後仍然出問題，就要留意車廠後續patch。",
+    "category": "software",
+    "score": 4,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2252806/android-auto-problem-fixed-simple-firmware-update/",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260913_048",
+    "date": "2026-09-13",
+    "headline_zh": "你部 iPhone「免打擾」同 Focus 模式有咩分別？",
+    "headline_en": "What's the difference between your iPhone's Do Not Disturb and Focus modes?",
+    "summary_zh": "呢篇講 iPhone「免打擾」同 Focus 模式有咩分別。Focus 係一套情境化功能，可以按工作、睡眠等自動過濾通知、靜音手機；「免打擾」只係其中一種，主要負責減少打擾。瞭解兩者分別，可幫用家更聰明管理通知，提升專注力，對常返工、瞓覺同想減少手機幹擾嘅人真係特別實用。",
+    "category": "software",
+    "score": 4,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2252804/iphone-do-not-disturb-vs-focus-mode-difference-between/",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
