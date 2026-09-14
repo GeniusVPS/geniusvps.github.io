@@ -684,5 +684,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260914_050",
+    "date": "2026-09-14",
+    "headline_zh": "AI 會唔會壓埋人權？跨黨派議員要求出法處理",
+    "headline_en": "Committee calls for bill to address AI threat to human rights",
+    "summary_zh": "跨黨派國會議員同貴族議員成立小組，指出AI發展好快，現行法律未必跟得上，尤其可能影響私隱、歧視、言論自由同基本人權。佢哋要求政府出法，明確監管框架、責任分配同救濟機制。呢項舉動反映AI風險已經唔止技術層面，而係涉及社會公義同法治。如果成事，對AI合規、企業開發同用戶權益保護都會有影響。",
+    "category": "ai",
+    "score": 6,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cwyzvgj70y4o?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
