@@ -1272,5 +1272,47 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260915_092",
+    "date": "2026-09-15",
+    "headline_zh": "美軍破天頭首次證實：已經喺太空軌度部署武器",
+    "headline_en": "For the first time, the US military confirms it has deployed weapons in orbit",
+    "summary_zh": "美國軍方破天頭首次確認，已經喺太空軌道部署咗「太空控制武器」，可為聯合部隊提供防禦。呢項能力代表美國正式將軍事力量伸入軌道空間，未來衛星、通訊同預警系統都可能成為目標。消息令太空軍備競賽同國際安全緊張感升呢，對全球科技同國防格局影響好大。",
+    "category": "space",
+    "score": 8,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/space/2026/09/for-the-first-time-the-us-military-confirms-it-has-deployed-weapons-in-orbit/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260915_093",
+    "date": "2026-09-15",
+    "headline_zh": "Cisco 電郵安全閘門曝 root RCE 零日，正被人利用",
+    "headline_en": "Root RCE Zero-Day in Cisco Secure Email Gateway Under Active Exploitation",
+    "summary_zh": "Cisco 電郵安全閘門曝 root RCE 零日漏洞，攻擊者唔使登入就可以喺底層系統執行任意指令，仲攞到 root 權限。呢個 CVE-2026-76461 已經喺野被積極利用，意思係企業用嚟過濾釣魚同惡意電郵嘅設備可能早已被入侵。一旦中招，攻擊者可以橫向移動、偷取敏感資料甚至放勒索軟件。對企業嚟講，呢類郵件安全產品本係防線，但而家反成弱點。IT 團隊要即刻檢查版本、打補丁同審計日誌。",
+    "category": "security",
+    "score": 8,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/root-rce-zero-day-in-cisco-secure-email-gateway-under-active-exploitation/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260915_094",
+    "date": "2026-09-15",
+    "headline_zh": "特朗普臺上開喇叭打畀黃仁勳，話 AI 恐慌係吹大",
+    "headline_en": "Trump phoned Jensen Huang onstage at the All-In Summit to call AI fear a hoax",
+    "summary_zh": "週一早間，英偉達創辦人黃仁勳喺洛杉磯 All-In Summit 受訪時，電話突然響咗，原來係特朗普打落嚟。佢開喇叭，總統喺臺上話黃仁勳可以設計最複雜芯片，卻搞唔掂某啲事，仲將 AI 恐慌稱為「hoax」。呢幕罕見，顯示政治人物直接介入 AI 敘事，或影響市場對風險同監管嘅情緒。",
+    "category": "ai",
+    "score": 6,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/trump-phoned-jensen-huang-onstage-at-the-all-in-summit-to-call-ai-fear-a-hoax",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
