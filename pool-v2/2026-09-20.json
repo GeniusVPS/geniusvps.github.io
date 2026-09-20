@@ -460,5 +460,47 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260920_034",
+    "date": "2026-09-20",
+    "headline_zh": "GPT-6 Astra 破咗一戰德國無線電密碼",
+    "headline_en": "GPT-6 Astra Solves a WWI German Radio Cipher",
+    "summary_zh": "GPT-6 Astra 成功破解一戰德國無線電密碼，顯示 AI 唔止處理日常任務，仲可以應付歷史密碼學挑戰。呢類電臺密文過去靠人手分析，今次模型透過模式識別同上下文推理重組訊息。事件引起技術圈熱議，反映大模型喺跨學科問題上潛力，但實際可信度仍需獨立驗證。",
+    "category": "ai",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://www.prinzai.com/p/gpt-6-astra-solves-a-wwi-german-radio",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260920_035",
+    "date": "2026-09-20",
+    "headline_zh": "作者話你幾乎唔好將 AI 用嚟寫嘢",
+    "headline_en": "I think you should almost never use AI to write",
+    "summary_zh": "呢篇 Substack 文章喺 Hacker News 引起討論，作者話除非有特別需要，否則你幾乎唔應該用 AI 代筆。佢認為寫作係思考、判斷同建立風格嘅過程，依賴 AI 會令文字平滑但缺乏靈魂，亦削弱個人表達。文章有 260 分同 131 則留言，反映創作者好關注 AI 寫作邊界。對香港讀者嚟講，呢話題提醒我哋用 AI 時要保留主腦判斷同責任。",
+    "category": "ai",
+    "score": 6,
+    "source": "Hacker News Best",
+    "source_url": "https://erichgrunewald.substack.com/p/why-you-should-almost-never-use-ai",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260920_036",
+    "date": "2026-09-20",
+    "headline_zh": "PlanetScale 推 Tin：Postgres 全文搜尋變咗更簡單",
+    "headline_en": "Tin: full-text search for Postgres",
+    "summary_zh": "PlanetScale 今次推出咗一個叫 Tin 嘅新工具，專為 Postgres 資料庫提供全文搜尋。背景係好多開發者想喺 Postgres 做文字搜索，但原生功能有限制，要自己整索引、調參數。Tin 會將呢個過程簡化，令搵資料同整搜索功能更方便。對做後端、資料庫同需要處理大量文字內容嘅應用嚟講，呢個工具有一定實用價值。不過佢主要針對特定技術棧，影響範圍未算太廣。",
+    "category": "software",
+    "score": 6,
+    "source": "Hacker News Best",
+    "source_url": "https://planetscale.com/blog/introducing-tin",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
