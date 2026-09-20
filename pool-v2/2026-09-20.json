@@ -432,5 +432,33 @@
     "time_hkt": "06:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260920_032",
+    "date": "2026-09-20",
+    "headline_zh": "Apple CarPlay 同 CarPlay Ultra 有咩分別？",
+    "headline_en": "What is the difference between Apple CarPlay and CarPlay Ultra?",
+    "summary_zh": "Apple CarPlay 係將 iPhone 介面、導航同音樂搬到車機，用慣 iOS 嘅人會覺得好順手。CarPlay Ultra 係升級版，整合更深入，車機體驗更接近 Apple 生態。不過現時未普遍可用，主要限於部分新車或特定車型。對香港車主嚟講，買新車想享受更完整 Apple 體驗，要留意有冇支援；短期影響有限，但長期會提升 Apple 喺車載市場嘅吸引力。",
+    "category": "software",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2259087/apple-carplay-vs-ultra-differences-explained/",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260920_033",
+    "date": "2026-09-20",
+    "headline_zh": "唔係所有 AI 工程師都信科技會滅世",
+    "headline_en": "Not all AI workers think the tech could kill everyone",
+    "summary_zh": "有報道指，部分大型科技公司 AI 工程師同研究員對「AI 可能滅世」警告唔太信。佢哋認為講 AI 會搞到人類完蛋未必準確，更多係放大風險。呢個聲音反映業界對安全議題有分歧：有人憂心存在性風險，有人覺得技術發展同監管先係重點。對投資者同公眾而言，呢種討論會影響 AI 安全投入、監管方向同市場信心。",
+    "category": "ai",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cm5y7qj54klpo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
