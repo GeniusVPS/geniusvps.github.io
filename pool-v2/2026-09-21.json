@@ -628,5 +628,61 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260921_046",
+    "date": "2026-09-21",
+    "headline_zh": "Google 開源咗 AX：開放式 AI Agent 統籌器",
+    "headline_en": "AX – Google’s Open Agentic Orchestrator",
+    "summary_zh": "Google 今次開源咗 AX，係一個開放式 AI Agent 統籌器，主要用嚟協調多個智能體執行任務。佢可以將唔同模型、工具同流程串埋，方便開發者搭建自動化工作流。對想將 LLM 智能體落實生產嘅團隊有幫助，但實際效能同生態成熟度仲要睇後續更新。短期內會吸引開發者關注，亦可能影響 AI 工具生態。",
+    "category": "ai",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://agentexecutor.io",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260921_047",
+    "date": "2026-09-21",
+    "headline_zh": "美取消電廠氣候排污限制，排放管制鬆綁",
+    "headline_en": "US Revokes Limits on Power Plants' Climate Pollution",
+    "summary_zh": "美國政府宣佈取消針對電廠氣候污染嘅限制，令發電廠排放管制鬆綁。呢項政策背景係美國近年喺能源同環保監管上有反覆，取消限制可能令煤電、氣電等傳統發電排放增加。重點係環境團體憂慮會推高碳排放，影響氣候目標；能源業則認為可以減少成本同穩定電價。對香港受眾而言，反映全球能源政策轉向，或間接影響國際碳市場、綠色投資同科技減排需求。",
+    "category": "general",
+    "score": 6,
+    "source": "Hacker News Best",
+    "source_url": "https://text.hrw.org/news/2026/09/17/us-revokes-limits-on-power-plants-climate-pollution",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260921_048",
+    "date": "2026-09-21",
+    "headline_zh": "Snowden 檔案到底點收場？",
+    "headline_en": "What happened to the Snowden archive",
+    "summary_zh": "呢篇講返 Snowden 檔案而家點樣處理同去向。當年佢洩露 NSA 大量監控資料，揭發政府大規模蒐集通訊數據，引起全球私隱同國家安全討論。文章重點係交代檔案保存、公開或封存情況，以及對今日網絡監管、數據保護同公民私隱嘅持續影響。對香港讀者嚟講，呢單事提醒我哋數據被收集嘅風險，私隱同透明監管仍然重要。",
+    "category": "security",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://libroot.org/posts/what-happened-to-the-snowden-archive",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260921_049",
+    "date": "2026-09-21",
+    "headline_zh": "法案想禁 PE 持有醫療診所",
+    "headline_en": "Bill to Ban Private Equity from Owning Medical Practices",
+    "summary_zh": "美國參議員 Warren 提出法案，想禁止私募股權基金擁有醫療診所。背景係近年 PE 大量收購基層醫療，令服務逐利化、加價同縮減。法案重點係限制資本控制醫療營運，防止私人機構主導診所決策。影響方面，呢單事會引發金融、保險同醫療界大討論，或改變美國醫療市場規則；對香港讀者而言，可參考資本介入醫療會點樣推高成本、影響服務。",
+    "category": "general",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://truthout.org/articles/warren-introduces-bill-to-ban-private-equity-from-owning-medical-practices/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
