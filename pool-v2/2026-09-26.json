@@ -1076,5 +1076,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260926_078",
+    "date": "2026-09-26",
+    "headline_zh": "部『eSUV』電動單車真係可以行山又入城？",
+    "headline_en": "Can an &#8216;eSUV&#8217; e-bike really go from trail to town?",
+    "summary_zh": "有一類叫『eSUV』嘅電動單車，主打好似電動 SUV 咁，配寬胎、前後避震、擋泥板同貨架，聲稱可以由城市柏油路過到碎石泥地。對想一部車搞掂返工、行街同郊遊嘅人好吸引，但實際續航、重量同操控邊度最得意，仲要睇實測。如果真係多用途，或會成為通勤同出遊之間嘅新選擇。",
+    "category": "hardware",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/transportation/999785/amflow-tl-review-avinox-esuv-e-bike-avinox",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
