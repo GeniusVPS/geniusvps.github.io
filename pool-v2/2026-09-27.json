@@ -600,5 +600,47 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20260927_044",
+    "date": "2026-09-27",
+    "headline_zh": "PNOĒ 新面罩：8分鐘自測VO₂ max，唔使專人操作",
+    "headline_en": "PNOE’s new face mask wants to make lab-grade breath testing a self-serve affair",
+    "summary_zh": "美國初創公司 PNOĒ 推出新款自助呼吸分析面罩，10月1日上市。呢款設計更輕巧，健身人士唔使受訓操作員，8分鐘即可量度 VO₂ max 等同化代謝指標。佢將原本實驗室級別嘅呼吸測試變成本人自助檢測，有助健身室、運動愛好者追蹤體能同訓練效果，對健康監測都有幫助。",
+    "category": "hardware",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/26/pnoes-new-face-mask-wants-to-make-lab-grade-breath-testing-a-self-serve-affair/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260927_045",
+    "date": "2026-09-27",
+    "headline_zh": "我們需要回答使用者要求作為粵語科技新聞編輯做四件事並只回。需要翻譯英文標題成粵語口語風格中文標題根據新聞標題同描述寫詳細粵語口語摘要字包含新聞背景、重點同影響從分類選一個根據評分標準給分。只回不要其他文字。使用者最後有可能代表不要顯示思考我們最終只輸出。需要確保字中文字數大概。需要計數。新聞分類可能",
+    "headline_en": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+    "summary_zh": "我們需要回答使用者要求作為粵語科技新聞編輯做四件事並只回。需要翻譯英文標題成粵語口語風格中文標題根據新聞標題同描述寫詳細粵語口語摘要字包含新聞背景、重點同影響從分類選一個根據評分標準給分。只回不要其他文字。使用者最後有可能代表不要顯示思考我們最終只輸出。需要確保字中文字數大概。需要計數。新聞分類可能",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20260927_046",
+    "date": "2026-09-27",
+    "headline_zh": "點解你部 iPhone 咁憎打印線？",
+    "headline_en": "Why your iPhone hates printer cables",
+    "summary_zh": "iPhone 想打印，最方便就係 AirPrint，仲可以裝其他 app 幫手。但如果你諗住直接插條打印線入手機，Apple 基本上唔支援呢種做法。原因係蘋果一直推無線生態，接口同配件都有限制，所以線接打印機會好麻煩。對一般用戶影響唔算大，但如果屋企或辦公室網絡唔穩，或者想即插即用，呢個限制就會好影響體驗。",
+    "category": "hardware",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2266565/why-iphone-hates-printer-cables/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
