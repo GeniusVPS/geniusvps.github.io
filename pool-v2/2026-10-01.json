@@ -1314,5 +1314,61 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261001_095",
+    "date": "2026-10-01",
+    "headline_zh": "英銀行長：AI 投資熱好離譜，小心搞到市場震盪",
+    "headline_en": "AI boom could trigger market shocks, Bank of England boss warns",
+    "summary_zh": "近期全球人工智能投資熱得離譜，大量資金湧入大模型同相關科技股。英銀行長安德魯·貝利表示央行好小心留意呢啲資金流入人工智能，擔心過度投機會令市場出現劇烈震盪。對投資者而言，人工智能雖然係未來趨勢，但估值同資金流可能吹大泡沫；一旦回報唔及預期，股價同金融市場都可能受衝擊。",
+    "category": "business",
+    "score": 7,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cv8e30enrkxyo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261001_096",
+    "date": "2026-10-01",
+    "headline_zh": "Google 試住畀錢網站俾 AI Overviews 用，賺幾多原來差好遠",
+    "headline_en": "Here’s how much Google is testing paying web publishers for AI Overview usage",
+    "summary_zh": "Google 正試住向網站出版商付費，因為 AI Overviews 會引用網頁內容。報告指報酬唔統一，收入視乎內容、流量同被引用次數，差異好大。面對 AI 搜索改變流量分佈，呢個渠道對網站主有幫助但未必穩定；用戶方面，AI 答案會更依賴網站內容，未來版權同分成機制將係焦點。",
+    "category": "ai",
+    "score": 7,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/09/30/google-ai-overview-payout-test-details/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261001_097",
+    "date": "2026-10-01",
+    "headline_zh": "3D神器Blender明年推Android版；iPad版繼續停",
+    "headline_en": "Blender, the 3D modeling app, is launching for Android next year; iPad app still on pause",
+    "summary_zh": "Google想將Android變得更似桌面平臺，但專業軟件一直係難點。3D神器Blender話明年推出Android版，令手機同平板用戶可以喺流動裝置做專業建模、動畫同渲染。對免費開源創作圈有實際影響；不過iPad版仍暫停，平板用戶短期要再等。對動畫、遊戲同設計工作者，呢步算正面信號。",
+    "category": "software",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/09/30/blender-android-app-2027/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261001_098",
+    "date": "2026-10-01",
+    "headline_zh": "Apple TV 癱瘓中",
+    "headline_en": "Apple TV is down",
+    "summary_zh": "9月30日下晝，Apple多個服務曾因為維護而短暫癱瘓，不過大部分已經恢復正常。目前仍然未通嘅就係Apple TV，用戶可能睇唔到影片或者登入有問題。呢次事件主要影響依賴Apple TV嘅串流體驗，對其他服務影響有限。Apple未公佈具體原因同恢復時間，用戶要留意官方狀態頁更新。",
+    "category": "software",
+    "score": 4,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2274184/apple-tv-is-down/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
