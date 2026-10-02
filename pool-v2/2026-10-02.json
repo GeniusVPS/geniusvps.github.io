@@ -1244,5 +1244,33 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261002_090",
+    "date": "2026-10-02",
+    "headline_zh": "好設計可以阻到內容創作者在自動駕駛出租車入面『做親密事』？",
+    "headline_en": "Can good design stop content creators from having sex in robotaxis?",
+    "summary_zh": "隨著自動駕駛出租車漸普及，設計團隊唔止要搞掂行車安全，仲要處理乘客行為。有內容創作者可能喺車廂入面拍親密片段，令營運商要面對公共空間私隱同道德壓力。好設計可以透過隔間、提示、空間規劃同監控政策去減少呢類事件，但亦要平衡乘客體驗。對自動駕駛行業嚟講，呢個議題會影響監管、車內設計同品牌聲譽。",
+    "category": "general",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/cars/2026/10/can-good-design-stop-content-creators-from-having-sex-in-robotaxis/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261002_091",
+    "date": "2026-10-02",
+    "headline_zh": "Google 電話 App 加返『聯絡』底部分頁",
+    "headline_en": "Google Phone app brings back Contacts bottom bar tab",
+    "summary_zh": "Google 電話 App 早前跟住 Material 3 Expressive 大改，底部『聯絡』分頁被移除，好多用戶要轉去主頁搵人。而家官方將呢個 tab 加返，重點係恢復熟悉導航，方便用戶快速切換電話、訊息同聯絡人。呢次調整對日常用 Android 打電話、查聯繫人嘅人嚟講實用，亦反映 Google 會根據用戶習慣微調介面。",
+    "category": "software",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/10/01/google-phone-contacts-tab/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
