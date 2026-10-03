@@ -1118,5 +1118,33 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261003_081",
+    "date": "2026-10-03",
+    "headline_zh": "望遠鏡影咗 12 年，拍實一顆星同四顆行星行軌道",
+    "headline_en": "A 12-year sequence of telescope images of a star and four planets orbiting",
+    "summary_zh": "天文學家用望遠鏡連續 12 年拍攝同一區域，捕捉到一顆恆星同四顆行星行軌道嘅影像序列。呢個長週期觀測好罕見，可以幫手研究行星形成、軌道遷移同系外行星系統動力學。對天文愛好者嚟講，呢類影像令宇宙運行更加直觀；對行業嚟講，反映長期巡天數據同影像分析技術成熟，有助未來發現更多行星系統。",
+    "category": "space",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://bsky.app/profile/theplanetaryguy.com/post/3mwucf5ert22f",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261003_082",
+    "date": "2026-10-03",
+    "headline_zh": "Pixel 4 仲係我最鍾意嘅 Google 手機硬件，用落去都抵受",
+    "headline_en": "The Pixel 4 is still my favorite Google smartphone hardware, and it holds up",
+    "summary_zh": "Google Pixel 系列行咗十年，每代設計都有大改動。作者認為 Pixel 4 依然係佢最鍾意嘅 Google 手機硬件，唔單止外觀經典，整體手感、設計語言同實用性都經得起時間，仲有吸引力。對舊機用家而言，呢篇文提醒我哋唔好淨係追新機，舊旗艦嘅硬件質素同耐用度仍然有參考價值。",
+    "category": "hardware",
+    "score": 4,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/10/02/google-pixel-4-favorite-hardware-revisit/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
