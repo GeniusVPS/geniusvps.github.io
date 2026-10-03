@@ -1146,5 +1146,33 @@
     "time_hkt": "15:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261003_083",
+    "date": "2026-10-03",
+    "headline_zh": "放落海度十年先撈返！科學家揭開深海「深層珊瑚礁」之謎",
+    "headline_en": "A Decade-Long Experiment Is Unlocking the Mysteries of the Ocean’s ‘Deep Reefs’",
+    "summary_zh": "科學家早前將一批結構物放置喺海面下約一百米深嘅海水中，進行咗一個長達十年嘅長期實驗。而家佢哋將呢啲結構物撈返上嚟，發現咗大量關於深海「深層珊瑚礁」嘅新線索。呢項研究對於瞭解海洋生態系統、珊瑚生長環境以及深海生物多樣性有重要意義，亦可能為未來保護海洋生態提供寶貴參考。",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/inside-decade-long-experiment-to-understand-oceans-mysterious-deep-reefs/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261003_084",
+    "date": "2026-10-03",
+    "headline_zh": "勁大隻『智能』網站上線",
+    "headline_en": "Extra Big Ass Intelligence",
+    "summary_zh": "『勁大隻智能』係一個新上線網站，名號疑似玩 AI 同大模型雙關。佢喺 HN 攞咗 281 分同 61 條留言，討論度唔低，反映讀者對新智能產品好好奇。雖然具體功能未清楚，但呢種命名同社羣討論已經吸引開發者、創作者同媒體留意。對想搵 AI 工具或者追蹤科技新嘢嘅人嚟講，值得留意。",
+    "category": "ai",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://www.extrabigassintelligence.com/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
