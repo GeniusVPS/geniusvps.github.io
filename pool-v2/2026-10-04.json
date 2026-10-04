@@ -614,5 +614,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261004_045",
+    "date": "2026-10-04",
+    "headline_zh": "點解而家淨係剩返一款粉色 MacBook 得買？",
+    "headline_en": "Why is this the only pink MacBook available right now?",
+    "summary_zh": "蘋果MacBook而家被討論，主要係因為粉色選擇好似淨係剩返一款，令到鍾意彩色外殼嘅用戶覺得唔夠新鮮。呢件事反映大家希望筆電除咗效能，仲要有更多顏色同風格可以揀。對蘋果嚟講，顏色策略會影響入門機吸引年輕用戶；如果選擇太少，可能會令產品少咗個性化賣點。",
+    "category": "hardware",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2273771/why-only-pink-macbook-available-right-now/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
