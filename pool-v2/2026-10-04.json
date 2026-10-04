@@ -642,5 +642,33 @@
     "time_hkt": "15:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261004_047",
+    "date": "2026-10-04",
+    "headline_zh": "捉到「地球中微子」！全球探測器畫出地球內部新地圖",
+    "headline_en": "Elusive ‘Geoneutrinos’ Are Building a New Map of Earth’s Volatile Interior",
+    "summary_zh": "全球一套探測器網絡，捕捉到由深層地下放射性元素產生嘅「地球中微子」，並得出迄今最實質嘅量度結果。呢啲中微子來自驅動地球板塊活動嘅放射性物質，科學家可以藉此反推地球內部組成、熱源分佈同地核狀態。呢項研究有助繪製一份嶄新嘅地球活躍內部地圖，對地震、火山同地核模型都有幫助。雖然對一般讀者影響唔算直接，但屬罕見且重要嘅地球科學突破。",
+    "category": "general",
+    "score": 6,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/elusive-geoneutrinos-are-building-a-new-map-of-earths-volatile-interior/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261004_048",
+    "date": "2026-10-04",
+    "headline_zh": "Keurig Alta 首發：唔使塑料 K-Cup，環保膠囊但貴",
+    "headline_en": "Keurig Alta First-Look: No More Plastic K-Cups",
+    "summary_zh": "Keurig 推 Alta，用可堆肥、冇塑料同鋁嘅膠囊取代 K-Cup。背景係環保壓力加大，一次性咖啡包裝受關注。重點係新膠囊較環保，但價格偏貴，未必容易普及。影響上，若平價化成功，會推動咖啡膠囊行業轉型；否則只係小眾選擇。對香港用戶嚟講，環保選擇多咗，但成本要留意。",
+    "category": "general",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/keurig-alta-coffee-brewer/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
