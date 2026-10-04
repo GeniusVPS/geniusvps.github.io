@@ -376,5 +376,61 @@
     "time_hkt": "03:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261005_028",
+    "date": "2026-10-05",
+    "headline_zh": "Google 凍結開源漏洞賞金計劃，AI 垃圾報告湧現",
+    "headline_en": "Google froze its open source bug bounty program due to a ‘significant rise’ in AI submissions",
+    "summary_zh": "Google 宣佈凍結其開源漏洞賞金計劃，原因係收到大量由 AI 生成嘅低質報告。呢啲所謂「AI slop」即係人工智能批量生產嘅垃圾內容，令審計團隊難以處理。呢個情況反映咗 AI 工具正日益影響網絡安全生態，開發者同安全團隊需要應對新挑戰。對香港科技界嚟講，呢個趨勢值得關注，因為 AI 生成內容正滲透入各行業。",
+    "category": "security",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261005_029",
+    "date": "2026-10-05",
+    "headline_zh": "傳Apple OLED觸控MacBook Pro會輕好多，下月登場",
+    "headline_en": "The upcoming touchscreen OLED MacBook Pro is reportedly 'significantly lighter'",
+    "summary_zh": "傳聞指Apple即將推出嘅OLED觸控MacBook Pro會明顯變輕，呢部高階筆電預計下月登場。對追求效能同便攜嘅用家嚟講，輕量化同觸控介面係重要升級，可能吸引專業人士同創作者換機。不過消息仍屬爆料，實際規格、定價同上市日期都要等官方確認，市場關注度仍然好高。",
+    "category": "hardware",
+    "score": 7,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2276786/the-upcoming-touchscreen-oled-macbook-pro-is-reportedly-significantly-lighter/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261005_030",
+    "date": "2026-10-05",
+    "headline_zh": "『超級智能』加份非約束安全協議，真係可以救返 AI 形象？",
+    "headline_en": "Can ‘super intelligence’ and a non-binding safety pact solve AI’s image problem?",
+    "summary_zh": "呢條新聞講特朗普政府想重新包裝 AI，提出用『超級智能』同份非約束性安全協議去改善公眾對 AI 嘅觀感。背景係 AI 技術快速發展，但社會對安全、隱私同就業影響好擔心。重點係政府希望將 AI 塑造為正面力量，同時以自願安全承諾回應批評；不過協議冇法律約束力，實際效果存疑。呢個動作可能影響未來 AI 監管、企業策略同市場信心，對關注科技政策嘅人都有用。",
+    "category": "ai",
+    "score": 6,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261005_031",
+    "date": "2026-10-05",
+    "headline_zh": "...",
+    "headline_en": "The new Fitbit Edge leaks",
+    "summary_zh": "...",
+    "category": "hardware",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/gadgets/1004616/the-new-fitbit-edge-leaks",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
