@@ -628,5 +628,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261004_046",
+    "date": "2026-10-04",
+    "headline_zh": "十月 Prime Day 未開波已有早鳥優惠，Amazon 自家硬件先平",
+    "headline_en": "The best early October Prime Day deals happening now",
+    "summary_zh": "亞馬遜仲未入十月，已經先放出一波 Prime Big Deal Day 早鳥優惠，涵蓋自家硬件同熱門產品，為十月六日開始嘅 Prime Day 造勢。重點係電子產品、家居用品同訂閱先有優惠，吸引用家提前掃貨。對香港讀者嚟講，如果要買嘢，要留意運費、關稅同匯率，先至知道有冇真抵。",
+    "category": "general",
+    "score": 4,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/gadgets/999447/best-early-amazon-prime-day-big-deals-sale-october",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
