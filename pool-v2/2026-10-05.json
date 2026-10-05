@@ -544,5 +544,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261005_040",
+    "date": "2026-10-05",
+    "headline_zh": "特朗普組『超級智能特遣隊』，情報首腦領軍管 AI",
+    "headline_en": "Trump unveils 'Super Intelligence Force' to oversee AI policy",
+    "summary_zh": "特朗普成立『超級智能特遣隊』，由國家情報首腦領軍，統籌人工智能政策。背景係美國擔心大型模型、自動化同安全風險，怕影響就業同國家安全。呢個安排顯示白宮將人工智能治理提升到情報層面，未來監管、出口同研發政策會收緊。對科技業而言，合規成本增加，融資同產品部署受影響。",
+    "category": "ai",
+    "score": 7,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cqj6jenp26zyo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
