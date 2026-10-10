@@ -390,5 +390,61 @@
     "time_hkt": "03:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261011_029",
+    "date": "2026-10-11",
+    "headline_zh": "Microsoft CEO Nadella：AI 大模型急得需要「緊急停」",
+    "headline_en": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+    "summary_zh": "Microsoft CEO Satya Nadella 近日發表公開文章，強調人工智能大模型亟需要「緊急停」機制。他呼籲技術團隊暫時中暫停發展，重新評估 AI 的架構及信任機制。這觀點反映業界對 AI 安全及可控性，提醒開發者應更嚴謹監控模型行為，避免潛在風險，引發關注於 AI 治理及未來發展趨勢。",
+    "category": "ai",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261011_030",
+    "date": "2026-10-11",
+    "headline_zh": "Apple 簽上協議：僱團隊及授權技術從 AI 播 podcast startup Huxe",
+    "headline_en": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+    "summary_zh": "Apple 宣佈正式簽署協議，僱團隊及授權技術從 AI 播 podcast startup Huxe。這意味著 Apple 可能正在進入 AI 生成 podcast 的業務領域。此新聞背景在於 Apple 的擴展技術領域，重點在於 Apple 的協議與 Huxe 的技術授權，影響在於 Apple 的 AI 播 podcast 業務發展。",
+    "category": "ai",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261011_031",
+    "date": "2026-10-11",
+    "headline_zh": "Samsung 升級 Galaxy 手機/平板到 Android 17",
+    "headline_en": "Samsung has updated these Galaxy devices to Android 17",
+    "summary_zh": "Samsung 宣佈推出 Android 17 版本，一 UI 9 更新，適用於其 Galaxy 系列智能手機及平板。此更新涵蓋多個現有 Galaxy 裝置，包括 Galaxy X5、X6、X7 等型，以及相應平板型。Android 17 帶來新 API 及性能優化，提升開發效率。受眾關注此更新為未來應用開發趨勢，影響開發團隊及硬體供應商。",
+    "category": "hardware",
+    "score": 5,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/10/10/samsung-galaxy-android-17-update-list/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261011_032",
+    "date": "2026-10-11",
+    "headline_zh": "K-pop 明星 Sunmi 愛 Notion 及耳淨視頻",
+    "headline_en": "K-pop star Sunmi loves Notion and ear cleaning videos",
+    "summary_zh": "Wonder Girls 成員 Sunmi，作為 K-pop 先大突破明星，其英語單曲《Nobody》成為首 K-pop 歌曲進入 Billboard Hot 100。現時她公開分享個人興趣，特別愛使用 Notion 平臺管理內容，以及觀看「耳淨」（ear cleaning） videos。這類視頻通常展示細緻清潔過程，吸引觀眾通過 ASMR 元素。此分享人展現 Sunmi 的私人生活及放鬆 hobbies，提供粉絲瞭解其非音樂領域興趣，並可能影響 Notion 用戶趨勢及 ASMR 社區互動。",
+    "category": "general",
+    "score": 4,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/entertainment/1008654/k-pop-sunmi-wonder-girls-interview",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
