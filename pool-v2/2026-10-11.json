@@ -614,5 +614,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261011_045",
+    "date": "2026-10-11",
+    "headline_zh": "城市建造遊戲：城市其實不想你住",
+    "headline_en": "A city-building game in which the city would prefer you didn't",
+    "summary_zh": "Housing Over Pizza 是一款新開發的城市建造策略遊戲，但有個 twist：玩家試圖擴張城市，卻被遊戲機制不斷反擊，城市本身「不想」你住。這幽默設計反映現實住房壓力，玩家面對資源爭、稅高與隨機事件。點數 204、評論 78 顯示 Hacker News 社區熱烈討論。這遊戲結合策略與 satire，挑戰玩家適應到 hostile 環境，引發思考 about 現代生活 struggle。獨特 concept，適合 tech 幽默 lovers。",
+    "category": "gaming",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://housing.over.pizza/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
