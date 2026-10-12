@@ -712,5 +712,61 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261012_052",
+    "date": "2026-10-12",
+    "headline_zh": "通鑰匙（Passkeys）是陷阱：不要使用它們",
+    "headline_en": "Passkeys are a trap",
+    "summary_zh": "最近文章揭露 Google's Passkeys API，即官方推薦的現代 OAuth 解決方案，其實背後隱藏設計陷阱。作者指出它缺乏標準化、破壞兼容性且易誤用。此消息源來自非功能 Substack，Hacker News 有 336 點及 190 條評論，顯示社區強烈反對。為開發者，這影響安全與維護代碼；為公眾，提醒避官方「推薦」工具。",
+    "category": "security",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://nonfunctional.substack.com/p/passkeys-are-a-trap-do-not-use-them",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261012_053",
+    "date": "2026-10-12",
+    "headline_zh": "LLM 能力誤理解差距 widening 出",
+    "headline_en": "The gap in shared understanding of LLM capability is widening",
+    "summary_zh": "Twitter 用戶 Karpathy 引發討論，指出公眾對大語言模型（LLM）的能力的共識與實際能力差距正在擴大。這趨勢反映技術複雜ity 及黑箱特性，導致誤interpretation 累積。影響 AI 開發、應用安全及學術研究，需更嚴 rigorous 評估機制。",
+    "category": "ai",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://twitter.com/karpathy/status/2109361546505966046",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261012_054",
+    "date": "2026-10-12",
+    "headline_zh": "評：4小時Musk documentary感覺像兩檔不同影片",
+    "headline_en": "Review: 4-hour Musk documentary feels like two different films",
+    "summary_zh": "Alex Gibney的 provocative 影片雖然吸引，但卻太長，且沒有太多新內容。對於Ars讀者，這 documentary 感覺像是兩檔不同影片。",
+    "category": "general",
+    "score": 4,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/culture/2026/10/review-4-hour-musk-documentary-feels-like-two-different-films/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261012_055",
+    "date": "2026-10-12",
+    "headline_zh": "Tesla 廠靠近小學，家長質疑排放計劃",
+    "headline_en": "Parents near Tesla’s Fremont plant question emissions plan, SFGate reports",
+    "summary_zh": "Tesla 公司申請變更排放限制，影響兩間鋁煉爐，導致可能增加工廠排放。鄰近 Lila Bringhurst 小學，距離僅不到 1,000 英尺，家長擔憂影響環境。Matthew Brown 為 SFGate 報道此事，強調家長需要更多時間質疑此計劃。此事件關注科技環保影響，涉及 Tesla 技術與環境政策，影響當地居民健康與環境質量，引發公眾關注與質疑行動。",
+    "category": "general",
+    "score": 4,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/tesla-fremont-emissions-school-parents-sfgate",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
