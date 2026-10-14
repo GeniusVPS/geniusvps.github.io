@@ -1272,5 +1272,47 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261014_092",
+    "date": "2026-10-14",
+    "headline_zh": "SAP 緊急修 NetWeaver 漏洞，防系統被破解",
+    "headline_en": "SAP Patches Critical NetWeaver, S/4HANA Vulnerabilities",
+    "summary_zh": "SAP（Simple Access Protocol）系統修 patched 了 Critical NetWeaver 和 S/4HANA 漏洞。這些漏洞讓攻擊者invoke內部操作，執行代碼，完全破系統。這修防止黑客利用漏洞，確保系統安全。影響：保護數據，防止洩漏，維持網絡安全。背景：NetWeaver漏洞曾讓攻擊者操作代碼，修 fixes 這個。",
+    "category": "security",
+    "score": 7,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/sap-patches-critical-netweaver-s-4hana-vulnerabilities/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261014_093",
+    "date": "2026-10-14",
+    "headline_zh": "法院封禁後，Trump 反敵廣告仍繼續播出！",
+    "headline_en": "Trump commercial railing against his enemies kept airing after court blocked it",
+    "summary_zh": "美國律師向法院道歉，聲政府已停止播放 Trump 廣告，但數據顯示廣告仍持續 airing。這事件反映爭議性廣告投放機制，可能影響用戶隱私及算法運作。為科技關注，影響廣告系統及網絡安全，特別在粵語受眾關注隱私及網絡安全方面。",
+    "category": "security",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/tech-policy/2026/10/trumps-taxpayer-funded-ads-kept-airing-on-tv-the-day-after-judge-blocked-them/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261014_094",
+    "date": "2026-10-14",
+    "headline_zh": "Martin Shkreli 直直播違反藥監禁，FTC 指",
+    "headline_en": "Martin Shkreli livestreamed himself violating lifetime pharma ban, FTC says",
+    "summary_zh": "Martin Shkreli 在直播中公然違反其被禁的藥物消費，聲說「我始終可以找到幾種生物科技股票」。FTC（Federal Trade Commission）確認此行為，引發關注於其違規行為及潛在風險。此事件反映Shkreli的公開違規與FTC的監控，可能影響公眾對其行為及藥物監管。",
+    "category": "general",
+    "score": 4,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/health/2026/10/martin-shkreli-livestreamed-himself-violating-lifetime-pharma-ban-ftc-says/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
