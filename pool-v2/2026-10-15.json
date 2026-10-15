@@ -1314,5 +1314,61 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261015_095",
+    "date": "2026-10-15",
+    "headline_zh": "Palo Alto Networks 緊急修修 PAN-OS 漏洞：防止遠代執行攻擊",
+    "headline_en": "Palo Alto Networks Patches PAN-OS Zero-Day Exploited for Remote Code Execution",
+    "summary_zh": "Palo Alto Networks 近日發現客戶防火牆被 exploited 利用 PAN-OS 組進行遠代執行攻擊。公司已即時修修漏洞並提供 IoC（指示）工具。這緊緊影響網絡安全領域，防止黑客利用此漏洞來竊數據或執行代代。用戶應更新其系統確保安全。此緊急修修顯示公司對漏洞迅速反應，確保客戶安全。",
+    "category": "security",
+    "score": 7,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/palo-alto-networks-patches-pan-os-zero-day-exploited-for-remote-code-execution/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261015_096",
+    "date": "2026-10-15",
+    "headline_zh": "Cisco 警警：電郵安全門漏洞被 exploited！",
+    "headline_en": "Cisco Warns of Exploited Secure Email Gateway Vulnerability",
+    "summary_zh": "Cisco 系統警告發現其電郵安全門有漏洞。未經授權遠攻擊者可寫任意文件到 OS 及執行命令以 root 權。這潛在安全洩漏風險，影響網絡安全及隱私保護。需即時修修復或監測。",
+    "category": "security",
+    "score": 7,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/cisco-warns-of-exploited-secure-email-gateway-vulnerability/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261015_097",
+    "date": "2026-10-15",
+    "headline_zh": "Figma 新功能揭：AI 代理設定開放測試",
+    "headline_en": "Figma announces new features to define how agents work on its platform",
+    "summary_zh": "Figma 平臺近期推出新功能，讓用戶更靈活設定 AI 代理運作邏輯，同時開放代層功能進行開放測試。這意味著設計師與開發者可以更精控制 AI 工具在協工作流程，提升效率。此更新影響創作流 significantly，特別為那些依賴 AI 輔助設計。行業動態，但並非極重大突破性，中等價值。",
+    "category": "software",
+    "score": 6,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/14/figma-announces-new-features-to-define-how-agents-work-on-its-platform/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261015_098",
+    "date": "2026-10-15",
+    "headline_zh": "OpenAI 舊員工返 Apple 帶過 100 份祕祕文件",
+    "headline_en": "OpenAI says ex-employee took device files before returning to Apple",
+    "summary_zh": "OpenAI 揭露一名舊員工，曾從 Apple 加入 OpenAI 工作六個月，然後返 Apple 前，偷偷竊超過 100 份未公開產品祕祕文件。加州法院文證實此行為，顯示員工將文件至私人帳戶。這事件引發關注，可能影響 OpenAI 產品安全及員工忠誠，突顯數據洩漏風險及隱私保護重要性，為科技行業動態。",
+    "category": "security",
+    "score": 6,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/openai-ex-employee-device-files-apple",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
