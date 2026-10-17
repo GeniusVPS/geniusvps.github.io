@@ -1006,5 +1006,33 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261017_073",
+    "date": "2026-10-17",
+    "headline_zh": "Mark Wahlberg 推出平價健康健身品牌！無需鉅財，冷浴、血測試及蛋白 muffin 皆可",
+    "headline_en": "Mark Wahlberg wants to take on the longevity-startup crowd with an affordable gym concept",
+    "summary_zh": "Mark Wahlberg 回歸健身市場，創立新平價健身概念。他曾投資在 NYSE 被踢出連鎖，但這次獨立自建。承諾提供冷浴、血面板及蛋白 muffin，無需巨財。影響：推動健康健身創新，吸引大眾，挑戰傳統高成本健身場景。",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/16/mark-wahlberg-wants-to-take-on-the-longevity-startup-crowd-with-an-affordable-gym-concept/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261017_074",
+    "date": "2026-10-17",
+    "headline_zh": "Tesla Roadster 2028 出？唔要賭你嘅希望",
+    "headline_en": "The Tesla Roadster should go into production in 2028, but don't get your hopes up",
+    "summary_zh": "Elon Musk 宣新 Tesla Roadster 車型預計 2028 年生產，但實際發布可能延遲。此車型乃 2021 年 100 萬美元競-winning 勝利，設計以「顫頭」或「倒顫頭」玩法。Musk 強調此為娛樂性玩具，非實用車輛，且生產日期僅預測。受眾興趣高，但價值低，常見重複內容，舊聞。",
+    "category": "general",
+    "score": 4,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2289475/tesla-roadster-2028-production-dont-get-hopes-up/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
