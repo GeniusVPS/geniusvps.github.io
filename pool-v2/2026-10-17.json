@@ -1034,5 +1034,33 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261017_075",
+    "date": "2026-10-17",
+    "headline_zh": "HP Googlebook 14 評：良款手機，但 OS 唔好",
+    "headline_en": "HP Googlebook 14 Review: Great laptop, shame about the OS",
+    "summary_zh": "HP 首次試 Googlebook 平臺作手機，硬件方面表現絕，符合所有期待。然而，Googlebook 作為操作系統（OS）留很多待改進，其功能及體驗未盡理想。這評評價指出硬件是贏，但整體體驗受限由 OS 限制。影響用戶選擇，若需高性能 OS 功能，可能尋其他平臺。",
+    "category": "hardware",
+    "score": 6,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/10/16/hp-googlebook-14-review/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261017_076",
+    "date": "2026-10-17",
+    "headline_zh": "Codex 加速開發：Benefit Street Partners 用 AI 幫快速答貸款查詢",
+    "headline_en": "Benefit Street Partners answers questions faster with Codex",
+    "summary_zh": "Anant Kumar 開發工具來比較貸款估值及分析信協議，利用 OpenAI Codex 進行代碼審查，從而大幅縮回答時間。這新聞展示 AI 輔助開發效能，特別在金融數據處理領域。雖然技術應用是實用，但內容聚焦於個人開發者的工具優化而非大規模行業變動，缺乏廣-reaching 影響或獨家突破性資訊，因此評分反映其中等實用性但低大眾 relevance.",
+    "category": "software",
+    "score": 5,
+    "source": "OpenAI Blog",
+    "source_url": "https://openai.com/index/benefit-street-partners",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
