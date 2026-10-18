@@ -796,5 +796,33 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261018_058",
+    "date": "2026-10-18",
+    "headline_zh": "我們日常用的最好 AirPods 殼（2026）",
+    "headline_en": "The Best AirPods Cases We’ve Used In Our Day-to-Day Lives (2026)",
+    "summary_zh": "Apple 提供免費耳機殼，但這些配件加 personality 到殼，讓它們容易找到，並且提供 some 保護。",
+    "category": "hardware",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/best-airpods-case/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261018_059",
+    "date": "2026-10-18",
+    "headline_zh": "氣候變改打破世界頂級波！",
+    "headline_en": "Climate Change Has It In for the World’s Best Surfing",
+    "summary_zh": "全球氣候變改導致海岸線改變，影響最佳浪點。這可能導致頂級波消失，以及依賴於它們的旅遊經濟。",
+    "category": "general",
+    "score": 4,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/climate-change-has-it-in-for-the-worlds-best-surfing/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
