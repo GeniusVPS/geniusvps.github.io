@@ -572,5 +572,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261019_042",
+    "date": "2026-10-19",
+    "headline_zh": "AI 外銷爆爆衝！中國雖內家弱，但外賣撐成長加速",
+    "headline_en": "China's growth accelerates as AI export boom outweighs domestic weakness",
+    "summary_zh": "中國經濟增長加速，主要原因是人工智能產品出口大規模爆發，這抵消國內消費弱點。雖然外銷幫助撐經濟，但貿易緊張關係及對AI產業的疑慮仍影響未來 outlook。此新聞反映全球科技貿易動態，特別是AI產業的國際移動，影響投資者及消費者信心，並顯示中國經濟結構依賴於外賣而非內消費。",
+    "category": "ai",
+    "score": 7,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cm5yn098xz8lo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
