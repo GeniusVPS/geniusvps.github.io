@@ -320,5 +320,33 @@
     "time_hkt": "03:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261025_024",
+    "date": "2026-10-25",
+    "headline_zh": "星鏈在烏克蘭又正常咗",
+    "headline_en": "Starlink seems to be working normally again in Ukraine",
+    "summary_zh": "Elon Musk 據報道下令 SpaceX 限制烏克蘭地區使用星鏈服務。最近有消息指，烏克蘭用戶嘅星鏈網絡又恢復正常使用。這對當地居民獲取通訊服務至關重要，特別是在戰爭期間。星鏈網絡嘅穩定運行對於保障資訊流通、協助人道救援等方面有著重大意義。",
+    "category": "cloud",
+    "score": 8,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/24/starlink-seems-to-be-working-normally-again-in-ukraine/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261025_025",
+    "date": "2026-10-25",
+    "headline_zh": "AI會揭穿互聯網嘅破爛底子架？",
+    "headline_en": "Will AI expose the rickety infrastructure of the internet?",
+    "summary_zh": "有新聞提到，AI可能會揭示互聯網結構上嘅問題。現在大家都知道互聯網好似用膠水同夢想粘起咗一樣，其實底子都好爛。但係現在AI技術發展嘅速度驚人，可能會揭穿這些問題。呢條新聞對科技界同一般網民都好重要，因為它會影響到互聯網嘅未來發展。",
+    "category": "general",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/",
+    "time_hkt": "06:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
