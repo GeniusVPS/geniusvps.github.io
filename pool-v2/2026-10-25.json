@@ -502,5 +502,33 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261025_037",
+    "date": "2026-10-25",
+    "headline_zh": "Samsung電視被揭用AI偷聽用戶說話",
+    "headline_en": "Cybersecurity bounty hunter says Samsung TVs use AI to record audio and screenshots for ads",
+    "summary_zh": "有黑客破解了自己的Samsung電視，發現其內置有人工智能程式，會利用連接設備的麥克風偷聽用戶說話，並將截圖用作廣告用途。這項發現令人擔心中企利用智能電視收集用戶隱私，或影響廣大Samsung電視用戶。",
+    "category": "security",
+    "score": 8,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/tech-industry/cyber-security/hacker-finds-own-samsung-tv-collecting-scary-amounts-of-user-information-and-gets-banned-by-openai-for-cyber-abuse-tv-runs-an-ai-model-that-collects-audio-screenshots-and-plenty-of-other-user-data-for-ad-targeting",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261025_038",
+    "date": "2026-10-25",
+    "headline_zh": "我們將150個宜家十元喇叭連起來造出一堵音牆",
+    "headline_en": "We Linked 150 of Ikea’s $10 Speakers to Make a Wall of Sound",
+    "summary_zh": "WIRED嘅團隊試圖將宜家最便宜嗰款Bluetooth喇叭一一連上，製造出一堵音牆嘅效果。即使宜家都冇做到過，但團隊成功將150個喇叭連成一體，試圖創造出震憾嘅聆聽體驗。雖然成本極低，但團隊嘅努力可能會吸引科技愛好者嘅關注，因為它展示了小型設備如何協同工作製造出令人驚訝嘅效果。",
+    "category": "general",
+    "score": 7,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/we-linked-150-ikea-speakers-to-make-a-wall-of-sound/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
