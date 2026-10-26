@@ -488,5 +488,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261026_036",
+    "date": "2026-10-26",
+    "headline_zh": "最佳App助你睇書追進步",
+    "headline_en": "The best apps for tracking your reading and discovering new books",
+    "summary_zh": "現在有很多Apps都係咪可以幫你記錄閱讀情況同發現新書，但好多都好複雜。所以呢篇新聞就介紹幾款最好用嘅Apps，助你挑選到最適合自己嘅閱讀助手。這些Apps可以幫助你管理書籍、追蹤閱讀進度，甚至推薦新書。無論係學生、職員或者愛好閱讀嘅人，都適合使用這些工具去提升自己嘅閱讀體驗。",
+    "category": "general",
+    "score": 6,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/25/5-best-apps-track-reading-discover-new-books/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
