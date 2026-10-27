@@ -1370,5 +1370,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261027_099",
+    "date": "2026-10-27",
+    "headline_zh": "大家係咪搞錯囉？X 社交平臺點頭叫人推文",
+    "headline_en": "X is nudging users to promote their posts with a pointing hand, and people are confused",
+    "summary_zh": "最近X社交平臺上出現了一個指向的手指圖標，鼓勵用戶推廣他們的文章，但很多用戶都感到困惑。有人質疑這是X平臺的官方行為還是內部人員的操作。這個新功能引發了網絡上的討論和爭議，用戶們對此感到不解。",
+    "category": "general",
+    "score": 6,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/26/x-is-nudging-users-to-promote-their-posts-with-a-pointing-hand-and-people-are-confused/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
