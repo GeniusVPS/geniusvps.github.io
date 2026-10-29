@@ -1342,5 +1342,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261029_097",
+    "date": "2026-10-29",
+    "headline_zh": "英國監管局提出方法驗證社交平臺用戶年齡",
+    "headline_en": "Ofcom outlines ways social media can verify ages of users",
+    "summary_zh": "英國監管局Ofcom提出方法，建議社交平臺可以使用相片、數碼身份證書、銀行查覈或面部年齡估算等方法，證明用戶是否滿16歲。這些措施有助於保護年輕用戶免受不適內容影響，並保障他們的隱私安全。",
+    "category": "general",
+    "score": 7,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/c6ly3027820lo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
