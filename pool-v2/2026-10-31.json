@@ -1300,5 +1300,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261031_094",
+    "date": "2026-10-31",
+    "headline_zh": "VC投資人背後的金主開腔：派錢、放慢節奏",
+    "headline_en": "Pile-ins, payouts, and pacing pressure: the investors behind the VCs open up",
+    "summary_zh": "最近VC投資市場熱火朝天，但背後的金主卻不約而同地開口表態。他們認為現在投資環境過於熱烈，建議放慢節奏。這羣金主包括多個知名投資基金和企業。他們表示，雖然目前市場十分活躍，但過度熱情可能會導致投資泡沫。因此，他們決定暫緩部分投資計劃，以確保長期收益。",
+    "category": "business",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/10/30/pile-ins-payouts-and-pacing-pressure-the-investors-behind-the-vcs-open-up/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
