@@ -712,5 +712,33 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261102_052",
+    "date": "2026-11-02",
+    "headline_zh": "借閱閱讀：來自擴展同事的故事",
+    "headline_en": "Borrowed reading: stories from our extended colleagues",
+    "summary_zh": "今日爲大家帶來五篇由 CIO、Computerworld、Macworld 及 PCWorld 的擴展同事分享的故事。這些故事涵蓋了最新的科技趨勢和深度分析，爲讀者提供了豐富的資訊來源。無論是行業動態還是實用指南，都能幫助大家瞭解最新的科技發展和應用。",
+    "category": "general",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/01/borrowed-reading-stories-from-our-extended-colleagues/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261102_053",
+    "date": "2026-11-02",
+    "headline_zh": "Jackery推出最細型便攜電源站",
+    "headline_en": "Jackery made its portable power stations even smaller",
+    "summary_zh": " JACKERY最近推出一款全新便攜式電源站，名為Explorer 100D。它使用了公司首次於2023年推出的更安全、壽命更長的鋰鐵磷酸（LFP）電池。Explorer 100D是Jackery目前最細型的便攜式電源站，體積僅4.6 x 3.4 x 3.4吋，重量只有1.87磅。這款新產品將為露營、野餐或緊急情況提供更便捷的能量補給，特別適合愛好戶外活動的香港市民。",
+    "category": "general",
+    "score": 7,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/tech/1023173/jackery-explorer-100d-portable-power-station-battery-lithium-iron-phosphate",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
