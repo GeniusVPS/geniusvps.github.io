@@ -698,5 +698,19 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261102_051",
+    "date": "2026-11-02",
+    "headline_zh": "Android Auto同CarPlay嘅GoogleMaps差多點",
+    "headline_en": "6 Google Maps features that work better on Android Auto vs. CarPlay",
+    "summary_zh": "今次講緊係Android Auto同CarPlay上Google Maps嘅分別。雖然兩者都係用Google Maps，但Android Auto同CarPlay上嘅功能有差別。例如Android Auto可以顯示實時交通資訊同路線預測，而CarPlay就沒有。此外，Android Auto可以喺車上直接控制手機功能，但CarPlay就要手機同汽車之間有線連接。呢個新聞對揸車同科技迷都好有用，因為可以知哪種系統更適合你。",
+    "category": "general",
+    "score": 7,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2300327/google-maps-features-work-better-android-auto-vs-carplay/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
