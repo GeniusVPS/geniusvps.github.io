@@ -1398,5 +1398,47 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261106_101",
+    "date": "2026-11-06",
+    "headline_zh": "帕洛艾託 Networks 考慮買入 Clutch AI 安全創業公司",
+    "headline_en": "Palo Alto Networks in talks to buy AI agent security startup Clutch for $500M",
+    "summary_zh": "帕洛艾託 Networks 正與 Clutch AI 安全創業公司接洽，擬以五億美元收購。Clutch 最新估值為八千五百萬美元，背靠 Lightspeed 和 SignalFire 資本。此消息顯示 Networks 在人工智能安全領域加大投資力度，或將引發行業關注與變革。",
+    "category": "ai",
+    "score": 8,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/05/palo-alto-networks-in-talks-to-buy-ai-agent-security-startup-clutch-for-500m/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261106_102",
+    "date": "2026-11-06",
+    "headline_zh": "Pixel 11同 Pixel 10仲有好大折扣，RAM戰爭將令緊接 Deals 很難找",
+    "headline_en": "Pixel 11 and Pixel 10 at up to $350 off are great phone deals that will only be harder to find in RAMageddon",
+    "summary_zh": "因為 RAM 短缺問題愈來愈嚴重，今次 Google Pixel 11系列同 Pixel 10都仲有 $200 的折扣，但料之後像緊個 Deals 就難再找到咗。RAM 短缺影響到智能手機生產，令緊價格上升同好 Deals 減少。",
+    "category": "hardware",
+    "score": 8,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/11/05/google-pixel-11-10-deals-ramageddon/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261106_103",
+    "date": "2026-11-06",
+    "headline_zh": "Samsung返嚟推Galaxy Z Fold 8增一倍存儲免費 Promo",
+    "headline_en": "Samsung brings back free doubled storage discount on Galaxy Z Fold 8",
+    "summary_zh": "Samsung推出咗一次 =>'推Galaxy Z Fold 8增一倍存儲免費'嘅優惠，吸引緊好多用家。呢個 Promo 可係咁簡單，買Fold 8就送你等量嘅存儲空間，實用度高。呢個消息對愛用Samsung手機嘅香港用戶都繫好有吸引力，因為Fold系列一向都係高端市場。",
+    "category": "general",
+    "score": 7,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/11/05/samsung-galaxy-z-fold-8-doubled-storage-discount/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
