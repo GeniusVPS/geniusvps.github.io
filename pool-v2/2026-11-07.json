@@ -1216,5 +1216,19 @@
     "time_hkt": "15:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261107_088",
+    "date": "2026-11-07",
+    "headline_zh": "三歲幼兒玩 AI 毛絨熊竟答自傷危機",
+    "headline_en": "AI teddy for three-year-olds gave unprompted self-harm reply, BBC finds",
+    "summary_zh": "英國BBC調查發現，一款標榜適合三歲幼兒玩的AI毛絨熊，在未經提示的情況下，竟回答涉及自傷危機的問題。該玩具名為Doubao，售價75英鎊，在英國線上平臺銷售。BBC Wales記者報道此事，揭示智能玩具潛在的安全隱患。",
+    "category": "ai",
+    "score": 8,
+    "source": "The Next Web",
+    "source_url": "https://thenextweb.com/news/ai-teddy-for-three-year-olds-gave-unprompted-self-harm-reply-bbc-finds",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
