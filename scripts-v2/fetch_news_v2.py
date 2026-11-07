@@ -250,6 +250,30 @@ SCORING_CRITERIA = """
 - 1-2: 無價值，廣告、促銷、低質內容
 """
 
+
+_CJK = "[\u4e00-\u9fff]"
+_CJK_PUNCT = "[，。！？；：、（）「」『』]"
+
+
+def format_headline(h):
+    """標題排版：中英加空格、標點去空格、細楷英文開頭轉大楷、異體字統一。"""
+    import re as _re
+    t = (h or "").strip()
+    if not t:
+        return ""
+    t = _re.sub(r"\s+", " ", t)
+    for _a, _b in (("臺", "台"), ("裡面", "裏面"), ("妳", "你")):
+        t = t.replace(_a, _b)
+    t = _re.sub("(" + _CJK + ")([A-Za-z0-9])", r"\1 \2", t)
+    t = _re.sub("([A-Za-z0-9])(" + _CJK + ")", r"\1 \2", t)
+    t = _re.sub(r"\s*(" + _CJK_PUNCT + ")", r"\1", t)
+    t = _re.sub("(" + _CJK_PUNCT + r")\s*", r"\1", t)
+    m = _re.match(r"[A-Za-z][A-Za-z0-9]*", t)
+    if m and not _re.search(r"[a-z][A-Z]", m.group(0)):
+        t = t[0].upper() + t[1:]
+    return t.strip()
+
+
 def build_translate_prompt(title, description=""):
     """建構智能分類 + 粵語口語翻譯 + 詳細摘要 + 評分嘅 prompt"""
     return f"""你係香港科技新聞編輯。請做四件事：
@@ -355,7 +379,18 @@ def summarize_one(title, description="", use_llm=True):
 
 
 def parse_llm_response(content):
-    """解析 LLM 返回嘅 JSON 響應"""
+    """解析 LLM 返回嘅 JSON 響應（2026-11-07：出口統一 format_headline 排版）"""
+    _r = _parse_llm_response_raw(content)
+    if isinstance(_r, dict) and _r.get("headline_zh"):
+        try:
+            _r["headline_zh"] = format_headline(_r["headline_zh"])
+        except Exception:
+            pass
+    return _r
+
+
+def _parse_llm_response_raw(content):
+    """解析 LLM 返回嘅 JSON 響應（原始版本，唔做排版）"""
     # 嘗試直接解析 JSON
     try:
         data = json.loads(content)
