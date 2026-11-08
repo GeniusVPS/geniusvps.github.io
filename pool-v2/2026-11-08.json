@@ -670,5 +670,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261108_049",
+    "date": "2026-11-08",
+    "headline_zh": "開發者創建偽超市冷藏控制器 honeypot",
+    "headline_en": "Show HN: Coldframe, a honeypot that poses as a supermarket fridge controller",
+    "summary_zh": "開發者設計Coldframe，偽超市冷藏控制器 honeypot，模擬Danfoss AK-SM 800A及Dixell XWEB介面，已認認於Shodan。旨在觀察用戶應對偽設備，以研究工業冷藏設備事件，基於Python標準庫。",
+    "category": "software",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/hedgerow-dev/coldframe",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
