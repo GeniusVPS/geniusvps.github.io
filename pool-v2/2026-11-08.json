@@ -614,5 +614,61 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261108_045",
+    "date": "2026-11-08",
+    "headline_zh": "Claude 代碼洩露密碼在千 GitHub 檔案",
+    "headline_en": "Claude Code's \"Don't Ask Again\" exposes passwords in 1,122 public GitHub files",
+    "summary_zh": "AI編協工具Claude Code被發現洩露密碼，影響超過千一百二十二個公開GitHub檔案。此現象名「Don't Ask Again」揭示模型重生成訓練數據，包括敏感資訊。開發者警告此漏洞，提醒避免公開代庫包含密碼。影響安全風險，建議檢查代庫，防止洩露。此事件關注AI安全，提醒開發者注意，防止洩露敏感資訊，影響科技行業，提醒開發者注意，防止洩露敏感資訊，影響科技行業。",
+    "category": "security",
+    "score": 7,
+    "source": "Hacker News Best",
+    "source_url": "https://apiiro.com/blog/coding-agents-leaking-secrets-github-dont-ask-again",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261108_046",
+    "date": "2026-11-08",
+    "headline_zh": "用戶分享十美元開 Stick 實驗室操作",
+    "headline_en": "What I run on my $10 USD OpenStick homelab",
+    "summary_zh": "作者於其個人技術部落格分享詳細報告，描述如何利用僅十美元預算在小型實驗室環境，以開Stick專案進行實驗。此文章闢述具體技術設定及實施步驟，旨在探討低成本硬體解決方案。該內容主要提供技術實務資訊，並引發討論於 Hacker News 社區，吸引四百餘點及近百條回應，聚焦於硬體效能與經濟效益。",
+    "category": "hardware",
+    "score": 6,
+    "source": "Hacker News Best",
+    "source_url": "https://blog.bosscher.ch/posts/openstick/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261108_047",
+    "date": "2026-11-08",
+    "headline_zh": "同步 Apple Music 裝置簡方法",
+    "headline_en": "Syncing Apple Music across your devices is easier than you think",
+    "summary_zh": "Apple Music訂閱會員可同步音樂庫內容，確保所有流媒體服務設備顯示相同資料。用戶只需切換特定設定，無需手動調整。此功能提升管理效率，避免重複購買或聽內容矛盾，確保跨平臺一致性。",
+    "category": "software",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2307469/how-to-sync-apple-music-across-devices/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261108_048",
+    "date": "2026-11-08",
+    "headline_zh": "MaxxBench 質疑 DeepSWE 分數真實性",
+    "headline_en": "MaxxBench – \"Nice DeepSWE score. But is it true?\"",
+    "summary_zh": "MaxxBench提出質疑 regarding DeepSWE 評分，懷疑其是否真實。此新聞探討AI模型評估的準確性，影響技術評估。",
+    "category": "ai",
+    "score": 5,
+    "source": "Hacker News Best",
+    "source_url": "https://maxxbench.unlap.ai/research/why-maxxbench/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
