@@ -628,5 +628,61 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261109_046",
+    "date": "2026-11-09",
+    "headline_zh": "黃仁俊洩與中國特工關係 Nvidia 調查",
+    "headline_en": "Nvidia will investigate CEO Jensen Huang’s relationship with possible Chinese spy",
+    "summary_zh": " Nvidia 公司收到內部報告，CEO 黃仁俊承認有關係與中國特工。此事件引發 Nvidia 的 investigation 過程，可能影響公司運營及股價。此新聞涉及科技企業管理與隱私洩漏，重要行業動態。受眾相關性：香港科技新聞關注。獨 uniqueness：罕見消息。時性性：最新消息。價值：高價值。",
+    "category": "security",
+    "score": 7,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/08/nvidia-says-its-investigating-ceo-jensen-huangs-relationship-with-possible-chinese-spy/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261109_047",
+    "date": "2026-11-09",
+    "headline_zh": "USB 連接故障：MacBook 顯示問題及修復方法",
+    "headline_en": "Why your USB device isn't showing up on your MacBook and how you can fix it",
+    "summary_zh": "用戶報告 USB 連接未在顯示於 MacBook 平臺時，常見原因包括損損連接線或軟件功能故障。此狀況影響設備識別及運作，解決方案涉及檢查線結構與軟件調。維修步驟涵蓋確認連接狀態及調整系統參，確保設備正確識別。此資訊幫助用戶解決技術故障，提升設備穩定性及功能，避免潛在數據損失或操作中斷，提升技術效能及穩定性。",
+    "category": "hardware",
+    "score": 6,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2309279/why-usb-device-not-showing-up-macbook-fixes/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261109_048",
+    "date": "2026-11-09",
+    "headline_zh": "英董事黃建濬與中國特工關係英董事板宣佈啟動獨立調查針對黃建濬與執行黃之關係。據報告黃被受中國國家委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委",
+    "headline_en": "Nvidia is investigating Jensen Huang’s relationship with a Chinese spy",
+    "summary_zh": "英董事黃建濬與中國特工關係英董事板宣佈啟動獨立調查針對黃建濬與執行黃之關係。據報告黃被受中國國家委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委委",
+    "category": "general",
+    "score": 5,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/1029562/nvidia-investigating-jensen-huang-relationship-chinese-spy",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261109_049",
+    "date": "2026-11-09",
+    "headline_zh": "利用備為雙螢幕用戶擁有多餘可連結至主透過無線或有線連接構成免費雙螢幕系統。此方法節省成本提升工作效率。技術需適當設定。適合辦公或研究。節省費用。提升效率。節省空間。提升功能。節省開。提升效能。節省資。提升利。節省開。提升效。節省資。提升功。節省開。提升利。節省資。提升效。節省開。提升功。節省資。提升",
+    "headline_en": "How to use your laptop as a second monitor",
+    "summary_zh": "利用備為雙螢幕用戶擁有多餘可連結至主透過無線或有線連接構成免費雙螢幕系統。此方法節省成本提升工作效率。技術需適當設定。適合辦公或研究。節省費用。提升效率。節省空間。提升功能。節省開。提升效能。節省資。提升利。節省開。提升效。節省資。提升功。節省開。提升利。節省資。提升效。節省開。提升功。節省資。提升",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2309277/how-to-use-laptop-second-desktop-monitor/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
