@@ -684,5 +684,47 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261109_050",
+    "date": "2026-11-09",
+    "headline_zh": "黃仁俊被疑與中國客戶關係，Nvidia 董事仍 confident",
+    "headline_en": "Nvidia CEO Jensen Huang admits to having an affair with suspected Chinese spy",
+    "summary_zh": "Nvidia董事正在調查有關黃仁俊涉嫌與客戶關係的報告，但仍堅定在黃仁俊及領導團隊。",
+    "category": "general",
+    "score": 6,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/pc-components/gpus/nvidia-ceo-jensen-huang-admits-to-having-an-affair-with-suspected-chinese-spy-jensen-apologizes-in-letter-to-staff-company-board-forms-independent-committee-to-investigate",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261109_051",
+    "date": "2026-11-09",
+    "headline_zh": "黃建森致 Nvidia 員工書：承認與 AI 代理關係",
+    "headline_en": "Here’s the full text of Jensen Huang’s memo to Nvidia",
+    "summary_zh": " Nvidia 宣佈調查 CEO 黃建森與中國政府 AI 代理 Alice 黃關係，董事板亦介入。黃致員工書承認關係，公開全文。此事件涉及 AI 領域、網絡安全及科技商業，影響員工及公司運作，引發關注.",
+    "category": "security",
+    "score": 4,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/ai-artificial-intelligence/1029595/full-text-jensen-huang-affair-memo-nvidia",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261109_052",
+    "date": "2026-11-09",
+    "headline_zh": "Soul Glo 新作 NA I'M GON GRAB ALLAT 即將發布",
+    "headline_en": "Soul Glo’s Diaspora Problems is a hardcore record like no other",
+    "summary_zh": "音樂藝術家 Soul Glo 即將於一月推出新錄音作品，名為 NA I'M GON GRAB ALLAT。雖然此前已釋放兩單曲，但這些作品未能完全滿足粉絲，因此作者回顧其 2022 年 favourite 專輯 Diaspora Problems。此新聞關注藝術家最新創作進度及音樂市場發展，反映當前音樂行業動態與藝術家之間互動。",
+    "category": "general",
+    "score": 4,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/entertainment/1029579/soul-glo-diaspora-problems-hardcore-punk-review",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
