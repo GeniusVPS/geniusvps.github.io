@@ -1244,5 +1244,47 @@
     "time_hkt": "15:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261114_090",
+    "date": "2026-11-14",
+    "headline_zh": "Workday 平臺故障鎖百萬員工出賬",
+    "headline_en": "Outage at HR platform Workday locks millions of employees out of their account",
+    "summary_zh": "Workday平臺發生故障，導致千間家企業員工無法 accessing workplace tasks。此 outage 影響數以百萬名員工，導致他無法 accessing 其 account。此事件影響員工 productivity 和 workplace management。",
+    "category": "software",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2316804/workday-outage-locks-millions-employees-out-of-account/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261114_091",
+    "date": "2026-11-14",
+    "headline_zh": "Microsoft 服務中斷 客戶獲部分退款",
+    "headline_en": "Outlook Went Down? Microsoft May Owe You Money",
+    "summary_zh": "Microsoft近日公告，若用戶使用其業務服務而該服務中斷運作，客戶可申請部分退款。此政策適用於訂閱服務期間，若服務未能提供全功能，賬款會按比例扣款。這項措施旨在保障客戶權益，減少爭議，並確保公平收費。Microsoft強調此政策僅適用於特定業務服務，並非所有產品。客戶需檢查賬款，確認退款金額，並遵守條款。此政策影響多用戶，特別是訂閱者。Microsoft希望此政策減少爭議，保障客戶權益。",
+    "category": "software",
+    "score": 5,
+    "source": "Wired",
+    "source_url": "https://www.wired.com/story/outlook-went-down-microsoft-may-owe-you-money/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261114_092",
+    "date": "2026-11-14",
+    "headline_zh": "FAA 停無黑客跡 FBI 疑軟件更新",
+    "headline_en": "No Signs of Hacking in FAA Ground Stop as FBI Reportedly Probes Software Update",
+    "summary_zh": "美國聯邦航空管理局（FAA）全國停事件，官員確認無證據為網絡攻擊或黑客技術。報告指出，故障可能原因為軟件更新。此事件影響航空運作，但無安全洩漏或隱私問題。此消息來自SecurityWeek，為科技新聞。",
+    "category": "security",
+    "score": 4,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/no-signs-of-hacking-in-faa-ground-stop-as-fbi-reportedly-probes-software-update/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
