@@ -852,5 +852,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261116_062",
+    "date": "2026-11-16",
+    "headline_zh": "Apple 推出研究 App 提升 AI 醫療工具易用",
+    "headline_en": "Apple's new research app is designed to make AI health tools more user-friendly",
+    "summary_zh": "Apple Inc. 已 unveiling 新研究應用，旨在探討使用者如何利用 AI 醫療工具。此 initiative 旨在優化用戶體驗，確保 AI 健康輔助工具更加直易用。Apple 透過此 research 收集數據，深入瞭解使用者互動，從而提升產品 usability 及 user experience。此行動推動 AI 醫療領域發展，確保工具符合用戶需求，提升 accessibility 及 usability 為未來應用。",
+    "category": "ai",
+    "score": 6,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2317303/apple-new-research-app-designed-to-make-ai-health-tools-user-friendly/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
