@@ -1146,5 +1146,61 @@
     "time_hkt": "15:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261121_083",
+    "date": "2026-11-21",
+    "headline_zh": "Samsung Odyssey OLED G9 降至最低 854 美元",
+    "headline_en": "Samsung’s gorgeous 49-inch Odyssey OLED G9 hits a new all-time low price of $854 — Amazon Black Friday deal slashes 33% off gaming monitor upgrade",
+    "summary_zh": "Amazon 黑五促售 Samsung 49 吋 Odyssey OLED G9 遊戲監測，降至歷史新低 854 美元，幅度達 33%。此型 QD-OLED 螢幕提供高動態範圍，適合電競及視覺體驗，為消費者機會。",
+    "category": "hardware",
+    "score": 6,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/monitors/gaming-monitors/samsungs-gorgeous-49-inch-odyssey-oled-g9-hits-a-new-all-time-low-price-of-usd854-amazon-black-friday-deal-slashes-33-percent-off-gaming-monitor-upgrade",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261121_084",
+    "date": "2026-11-21",
+    "headline_zh": "ASUS ROG Strix Scope II 96 早黑五價降 39%",
+    "headline_en": "Asus ROG Strix Scope II 96 gaming keyboard crashes to all-time low in early Black Friday offer — grab 39% off a premium board packed full of features",
+    "summary_zh": "Amazon 推出 ASUS ROG Strix Scope II 96 遊戲鍵盤，早黑五促降 39% 至歷史低價。此 premium 鍵盤具備多項功能，適合電競玩家。限時優惠，建議趁時機購買。",
+    "category": "hardware",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/peripherals/gaming-keyboards/asus-rog-strix-scope-ii-96-gaming-keyboard-crashes-to-all-time-low-in-early-black-friday-offer-grab-39-percent-off-a-premium-board-packed-full-of-features",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261121_085",
+    "date": "2026-11-21",
+    "headline_zh": "Amazon 黑五促：Naga V2 遊戲鼠降至歷史低",
+    "headline_en": "Razer's MMO mouse hits all-time low price at under $60 at Amazon in Black Friday deal — Naga V2 Hyperspeed price craters by 42% in stellar gaming mouse offer",
+    "summary_zh": "Amazon 在黑五促推出 Naga V2 Hyperspeed 遊戲鼠，售價降至五十六美元，達到歷史最低水平。此價格跌幅達四十二%，為消費者帶來顯著節省。此促促即時生效，適合玩家尋求最新 gaming mouse 設備。",
+    "category": "gaming",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/peripherals/gaming-mice/razers-mmo-mouse-hits-all-time-low-price-at-under-usd60-at-amazon-in-black-friday-deal-naga-v2-hyperspeed-price-craters-by-42-percent-in-stellar-gaming-mouse-offer",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261121_086",
+    "date": "2026-11-21",
+    "headline_zh": "美國 Startup 訴訟 Apple 印度 Tap-to-Share 功能",
+    "headline_en": "Startup sues Apple in India over tap-to-share contacts feature",
+    "summary_zh": "美國 Startup 公司尋求 1.62 億美元賠償及禁令，針對 iPhone 及 Apple Watch 產品進入印度市場，涉及 Tap-to-Share 接觸功能。此訴訟旨在打擊 Apple 的進口業務，強調技術專利爭議與商業影響，引發關注於科技產品版權及市場競爭。",
+    "category": "software",
+    "score": 4,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/20/startup-sues-apple-in-india-over-tap-to-share-contacts-feature/",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
