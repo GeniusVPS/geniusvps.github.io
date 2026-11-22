@@ -880,5 +880,61 @@
     "time_hkt": "15:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261122_064",
+    "date": "2026-11-22",
+    "headline_zh": "Amazon 黑五促 Ugreen NAS 櫃降 20%",
+    "headline_en": "Ditch cloud subscriptions with a $132 discount on a 4-Bay UGreen DXP4800 GT NAS enclosure in Amazon Black Friday deal — offers dual 10GbE ports and supports up to 144TB of storage",
+    "summary_zh": "Amazon在黑五促促Ugreen DXP4800 GT 4-Bay NAS櫃降20%，達到歷史低價，減雲儲存費。雙10GbE端口，144TB儲存，適合大數據存。此促第二次至低價，吸引科技買，節省雲費，推動硬件需求。",
+    "category": "hardware",
+    "score": 7,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/pc-components/nas/ditch-cloud-subscriptions-with-a-usd132-discount-on-a-4-bay-ugreen-dxp4800-gt-nas-enclosure-in-amazon-black-friday-deal-offers-dual-10gbe-ports-and-supports-up-to-144tb-of-storage",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261122_065",
+    "date": "2026-11-22",
+    "headline_zh": "Amazon 黑五促 Alienware Aurora PC 降至 1899 美元",
+    "headline_en": "Alienware Aurora PC with RTX 5070, 32GB of RAM drops to $1,899 in Amazon Black Friday offer — Core Ultra 7 equipped PC is one of the best value prebuilt deals we’ve seen so far",
+    "summary_zh": "Amazon於黑五促推出Alienware Aurora PC，搭載RTX 5070組及32GB DDR5記憶體，售價降至1899美元。此預-built配置，包含Core Ultra 7，乃市場所見最價值前-built優惠。此促吸引技術 enthusiasts及 gamers，提供高性性硬件組合，為節節購物推薦。",
+    "category": "hardware",
+    "score": 7,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/desktops/gaming-pcs/alienware-aurora-pc-with-rtx-5070-32gb-of-ram-drops-to-usd1-899-in-amazon-black-friday-offer-core-ultra-7-equipped-pc-is-one-of-the-best-value-prebuilt-deals-weve-seen-so-far",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261122_066",
+    "date": "2026-11-22",
+    "headline_zh": "MSI 32 吋 4K QD-OLED 遊戲螢幕降至 569 美元",
+    "headline_en": "MSI's magnificent 32-inch 4K QD-OLED gaming monitor tumbles to just $569 — save $130 at B&H Photo with this Black Friday MAG 321UP deal, the perfect gaming upgrade for your PC",
+    "summary_zh": "MSI 推出 32 吋 4K QD-OLED 遊戲螢幕，現價降至 569 美元，節省 130 美元。此型 OLED 螢幕提供清晰視覺，適合升級 PC 遊戲體驗。B&H Photo 提供 Black Friday 優惠，強調性色對比及高品質顯示，吸引玩家尋求升級硬體。",
+    "category": "hardware",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/monitors/gaming-monitors/msis-magnificent-32-inch-4k-qd-oled-gaming-monitor-tumbles-to-just-usd569-save-usd130-at-b-and-h-photo-with-this-black-friday-mag-321up-deal-the-perfect-gaming-upgrade-for-your-pc",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261122_067",
+    "date": "2026-11-22",
+    "headline_zh": "黑五優惠電競電腦降至千三百四十九美元黑五促活動商店推出有機發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發",
+    "headline_en": "OLED gaming laptop with RTX 5060 and Intel Core Ultra 7 CPU price crashes by $650 in Black Friday offer — Lenovo Legion 5i laptop drops to $1,349 with free games at B&H",
+    "summary_zh": "黑五優惠電競電腦降至千三百四十九美元黑五促活動商店推出有機發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發發",
+    "category": "general",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/laptops/gaming-laptops/oled-gaming-laptop-with-rtx-5060-and-intel-core-ultra-7-cpu-price-crashes-by-usd650-in-black-friday-offer-lenovo-legion-5i-laptop-drops-to-usd1-349-with-free-games-at-b-and-h",
+    "time_hkt": "18:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
