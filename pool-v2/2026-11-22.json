@@ -866,5 +866,19 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261122_063",
+    "date": "2026-11-22",
+    "headline_zh": "減零新續作品評評電影《減零》由山崎貴監督描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描",
+    "headline_en": "Review: Godzilla Minus Zero joins the list of truly stellar sequels",
+    "summary_zh": "減零新續作品評評電影《減零》由山崎貴監督描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描描",
+    "category": "general",
+    "score": 5,
+    "source": "Ars Technica",
+    "source_url": "https://arstechnica.com/culture/2026/11/review-godzilla-minus-zero-is-everything-we-could-want-in-a-sequel/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
