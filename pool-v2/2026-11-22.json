@@ -824,5 +824,47 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261122_060",
+    "date": "2026-11-22",
+    "headline_zh": "Pixel 9 至 11 升級評估",
+    "headline_en": "Attention Pixel 9 and 10 owners: is it actually worth upgrading to the Pixel 11?",
+    "summary_zh": "Google 推出 Pixel 11 語言模型，但專家分析指出新版本未必 always 最佳。針對 Pixel 9 及 10 用戶，評估升級是否 worthwhile 需考慮經濟效益與性能增益。此資訊幫助決策者判斷新技術是否值得額外成本，避免盲目升級。",
+    "category": "ai",
+    "score": 6,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2319300/pixel-11-is-it-worth-upgrading-from-9-10/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261122_061",
+    "date": "2026-11-22",
+    "headline_zh": "Samsung 與 LG OLED 電視差異分析",
+    "headline_en": "Samsung vs. LG OLED TVs: What's the difference between them?",
+    "summary_zh": "Samsung與LG Electronics兩家品牌競爭為OLED電視供應商，兩者技術基礎皆源自美國OLED公司。Samsung採用早期技術，擁有較寬發發色光譜，適合多色顯示；LG Electronics採用後開發技術，具備較狹發發色光譜，適合單一色顯示。選擇適合視需求，Samsung適合多色，LG適合單一色。",
+    "category": "hardware",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2310887/samsung-vs-lg-oled-tv-difference-between/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261122_062",
+    "date": "2026-11-22",
+    "headline_zh": "白 House 選 Kirsten Davies 為國家 Cyber Director",
+    "headline_en": "President Trump Taps Kirsten Davies as National Cyber Director",
+    "summary_zh": "白House宣佈選擇Kirsten Davies擔任國家Cyber Director，旨在推動「美國優先」Cyber策略。此選選強調其經驗及領導能力，確保Cyber領域的穩定及安全。此決策影響美國Cyber策略及未來的發展。",
+    "category": "security",
+    "score": 5,
+    "source": "Security Week",
+    "source_url": "https://www.securityweek.com/president-trump-taps-kirsten-davies-as-national-cyber-director/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
