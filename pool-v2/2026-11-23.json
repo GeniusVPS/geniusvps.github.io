@@ -712,5 +712,61 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261123_052",
+    "date": "2026-11-23",
+    "headline_zh": "知名投資者大賭前 IPO",
+    "headline_en": "How Notable Capital, GIC, and Baillie Gifford bet big on Anthropic before its IPO",
+    "summary_zh": "知名資本、GIC及Baillie Gifford對Anthropic公司進行大投資，分享其信念及原因。",
+    "category": "business",
+    "score": 6,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/22/how-notable-capital-gic-and-baillie-gifford-bet-big-on-anthropic-before-its-ipo/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261123_053",
+    "date": "2026-11-23",
+    "headline_zh": "Kodak 推出微型數位相片框追蹤器",
+    "headline_en": "Kodak’s next collectible is a tiny digital photo frame that doubles as a tracker",
+    "summary_zh": "Kodak 系列推出新微型數位相片框追蹤器，已於早此年擴 Charmera 系列與 Y2K 主題 Millennium Edition。此 Kodak SlideTag 追蹤器功能超越僅捕捉圖像，提供用戶進一步實用性。此產品設計為小尺寸，適合展示用戶影像，並作為追蹤器功能。 Kodak 系列持續擴展其獨特產品線，吸引科技愛好者與設計師興趣。此創新產品展現 Kodak 品牌持續發展，提供新實用性與設計元素。",
+    "category": "software",
+    "score": 6,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/tech/1038650/kodak-slidetag-keychain-photo-display-tracker-find-my-hub-google-apple-e-ink",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261123_054",
+    "date": "2026-11-23",
+    "headline_zh": "新 Elizabeth Holmes documentary 全球版已賺逾一億美金",
+    "headline_en": "‘You Can See Everything’ has made more than $100M worldwide",
+    "summary_zh": "新Elizabeth Holmes documentary 正在開始國際版，全球版已賺逾一億美金。此 documentary 是關於Elizabeth Holmes，她是一個著名人物。此 documentary 是正在開始國際版，全球版已賺逾一億美金。此 documentary 是關於Elizabeth Holmes，她是一個著名人物。此 documentary 是正在開始國際版，全球版已賺逾一億美金。此 documentary 是關於Elizabeth Holmes，她是一個著名人物。此 documentary 是正在開始國際版，全球版已賺逾一億美金。此 documentary 是關於Eli",
+    "category": "general",
+    "score": 5,
+    "source": "TechCrunch",
+    "source_url": "https://techcrunch.com/2026/11/22/you-can-see-everything-has-made-more-than-100m-worldwide/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261123_055",
+    "date": "2026-11-23",
+    "headline_zh": "Google TV 清除記憶體機制探討",
+    "headline_en": "How to clear your cache on Google TV",
+    "summary_zh": "Google TV 平臺記憶體管理並非單一解決方案，但清除記憶體是首要步驟。若用戶遭遇性能問題或故障，此操作有助於解決 glitches。此機制提供基礎 troubleshooting 方法，提升應用程式穩定性及響應效率，為技術使用者之重要參考。",
+    "category": "software",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2319567/how-to-clear-cache-google-tv/",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
