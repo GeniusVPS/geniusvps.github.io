@@ -1188,5 +1188,33 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261126_086",
+    "date": "2026-11-26",
+    "headline_zh": "Android 小型電池提升容量無增成本",
+    "headline_en": "‘Enough Phone’ is stuffing a bigger battery, more RAM & storage into its small Android phone at no extra cost",
+    "summary_zh": "開發名「Enough Phone」旨在實現理想小型 Android 電池架構，並進行規格升級。此項目增加電池容量、隨機存取記憶體及存空間，提升效能同時維持原成本，並無額外費用。此技術優化為小型系統設計，提供更高效資源管理，有利於應用開發及硬體優化領域，展現技術創新與效率提升。",
+    "category": "hardware",
+    "score": 7,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/11/25/enough-phone-ram-storage-battery-upgrades/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261126_087",
+    "date": "2026-11-26",
+    "headline_zh": "紐約州禁止銷售 AI 聊天玩具",
+    "headline_en": "New York state bans AI chatbot toys for kids",
+    "summary_zh": "紐約州高官凱西·霍庫爾簽署法律，將禁止銷售人工智能聊天玩具為兒童，實施五年禁令。此措施旨在防止年輕用戶與AI互動，保護兒童免受潛在安全風險及濫行為。禁令涵蓋所有AI聊天玩具，包括玩具及相關產品。此政策影響兒童玩具市場及AI應用領域，關注兒童安全及AI發展趨勢。",
+    "category": "general",
+    "score": 5,
+    "source": "Engadget",
+    "source_url": "https://www.engadget.com/2328996/new-york-state-bans-ai-chatbot-toys-for-kids/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
