@@ -698,5 +698,61 @@
     "time_hkt": "06:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261127_051",
+    "date": "2026-11-27",
+    "headline_zh": "亞洲科技企業重聚焦 NVIDIA 大語言模型",
+    "headline_en": "Asia made a big AI bet on Nvidia. What happens now?",
+    "summary_zh": "亞洲科技企業近期經歷股價波動，因 CEO Jensen Huang 重新專注於 NVIDIA 大語言模型發展。此決策影響亞洲 AI 市場，企業重聚焦於 NVIDIA，可能帶來競爭優勢或挑戰。投資者需關注 NVIDIA 發展趨勢，影響亞洲科技企業股價及市場動態。此新聞價值中，影響亞洲科技企業，但並非極大突破性新聞。",
+    "category": "ai",
+    "score": 6,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/cqevr4lnd1nxo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261127_052",
+    "date": "2026-11-27",
+    "headline_zh": "促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑",
+    "headline_en": "The best Black Friday soldering iron deals for hobbyists and makers right now",
+    "summary_zh": "促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑促黑",
+    "category": "general",
+    "score": 5,
+    "source": "Tom's Hardware",
+    "source_url": "https://www.tomshardware.com/gift-guides-seasonal-sales/the-best-black-friday-soldering-iron-deals-for-hobbyists-and-makers-right-now-limited-time-sale-discounts-on-digital-irons-premium-solder-and-heat-proof-accessories",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261127_053",
+    "date": "2026-11-27",
+    "headline_zh": "電梯維修人員短缺原因分析",
+    "headline_en": "Why is there a shortage of 'wizard' elevator mechanics?",
+    "summary_zh": "此新聞探討為何電梯維修人員面臨短缺，儘管薪資較高與工作量充足。內容分析背原因，例如培訓、經驗門檻及競爭與其他職業等。影響相關行業勞工市場供需，需更仔細研究。",
+    "category": "general",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/c52e8k19y94mo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261127_054",
+    "date": "2026-11-27",
+    "headline_zh": "YouTube 黑五促降收 Streaming 費最多 66 美元",
+    "headline_en": "YouTube’s Black Friday sale could save you as much as $66 on streaming services",
+    "summary_zh": "YouTube 平臺實施黑五促降，訂閱選特定 Streaming 服務者可節省高達66美元。此優惠僅適用於今 week 訂閱新會員，鼓勵用戶即時啟用服務。此活動旨在吸引更多創ators 及 viewers 參與，提升平臺 engagement。用戶需快速決策，否則錯過此 discount。",
+    "category": "gaming",
+    "score": 4,
+    "source": "9to5Google",
+    "source_url": "https://9to5google.com/2026/11/26/youtube-streaming-black-friday-sales/",
+    "time_hkt": "09:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
