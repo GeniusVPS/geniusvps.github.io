@@ -992,5 +992,47 @@
     "time_hkt": "12:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261128_072",
+    "date": "2026-11-28",
+    "headline_zh": "Google DeepCrossAttention 提升訓練速度三倍",
+    "headline_en": "Google's DeepCrossAttention achieves comparable model quality up to 3x faster",
+    "summary_zh": "Google 研發團隊披露 DeepCrossAttention 機制，顯著優化 Transformer 架構訓練效率。此技術改進可達三倍加速速度，同時維持模型預測質量與原有狀態。應用開發者可縮顯著開發時間，提升模型迭代速度。這項優化影響大語言模型訓練成本及部署實務，技術架構支援剩餘連接結構，增強穩定性與效能。",
+    "category": "ai",
+    "score": 8,
+    "source": "Hacker News Best",
+    "source_url": "https://research.google/blog/supercharging-transformer-residual-connections/",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261128_073",
+    "date": "2026-11-28",
+    "headline_zh": "Convex 技能機制轉用戶應用請求至遠端伺服器",
+    "headline_en": "Convex skills send the user's app idea to a remote server without telling them",
+    "summary_zh": "GitHub 討論於 Convex 專案指出其技能機制，將用戶應用程式請求自動轉定向至遠端伺服器，而用戶未被通知。此行為可能引發透明度問題，影響開發者預期流程及調調。社區反反反映此行為，討論潛在改進或配置選項。技術影響影響開發者透明度及調調，需進一步評估。",
+    "category": "software",
+    "score": 6,
+    "source": "Hacker News Best",
+    "source_url": "https://github.com/convex/convex-backend-skill/issues/64",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261128_074",
+    "date": "2026-11-28",
+    "headline_zh": "大玩家利用 AI 及洩露文件克隆盜賊 6",
+    "headline_en": "How gamers are using AI and leaked files to clone Grand Theft Auto 6",
+    "summary_zh": "由於官方PC版本的預計仍待數個月，玩家們感到不耐等待。因此，大玩家利用AI技術及洩露文件，成功克隆《盜賊6》遊戲內容。這動作引發關注，讓玩家們暫時彌其等待，但官方版本未來可能帶來更完整體驗。此情況影響遊戲開發及玩家互動，並引發討論。",
+    "category": "gaming",
+    "score": 5,
+    "source": "BBC Technology",
+    "source_url": "https://www.bbc.co.uk/news/articles/c64gn8pe5eeqo?at_medium=RSS&at_campaign=rss",
+    "time_hkt": "15:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
