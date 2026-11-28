@@ -964,5 +964,33 @@
     "time_hkt": "09:00",
     "used_in_episodes": [],
     "verified": true
+  },
+  {
+    "id": "news_20261128_070",
+    "date": "2026-11-28",
+    "headline_zh": "Apple MacBook Air 型五折最大折扣",
+    "headline_en": "The M5 MacBook Air just got its biggest discount since Apple raised the price",
+    "summary_zh": "Apple 於六月上漲 MacBook Air 售價二百美元，但今黑五期間 Amazon 及 Best Buy 提供最大折扣。型五（M5）容量一三吋，擁有一六GB RAM 及五百一十二GB 存儲，售價降至九百九十九美元，減三百美元。此價格乃自漲後最低，適合消費者考慮購買，節省開成本而獲得最新技術設備。",
+    "category": "hardware",
+    "score": 6,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/gadgets/1044771/m5-macbook-air-black-friday-2026-deal-sale",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
+  },
+  {
+    "id": "news_20261128_071",
+    "date": "2026-11-28",
+    "headline_zh": "黑 friday 精選百美元以下優惠",
+    "headline_en": "We found 60-odd Black Friday deals we love for $100 or less",
+    "summary_zh": "因應節-season 開出旅、禮物及物價上升，開支可迅速累積。此報導選六十餘項黑 friday 優惠，每件價格低於百美元，讓消費者無需動用大儲蓄，即可享好 deals。涵蓋多樣產品，旨在幫助節省開開，特別針對預算-conscious  shoppers。",
+    "category": "general",
+    "score": 4,
+    "source": "The Verge",
+    "source_url": "https://www.theverge.com/gadgets/1043445/black-friday-best-cheap-tech-deals-under-100-2026",
+    "time_hkt": "12:00",
+    "used_in_episodes": [],
+    "verified": true
   }
 ]
